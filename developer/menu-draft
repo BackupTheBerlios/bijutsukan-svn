@@ -1,0 +1,145 @@
+Main Menu:
+------------------------
+Find File:		[Enter]
+Input New File:		[Enter]
+Options:		[Enter]
+
+
+Find File:
+------------------------
+File List:		[Enter]
+Category List:		[Enter]
+Label List:		[Enter]
+Person List:		[Enter]
+Position List:		[Enter]
+------------------------
+Find by Filename:	[Enter]
+Find by Name:		[Enter]
+Find by Label:		[Enter]
+Find by Category:	[Enter]
+Find by Persons:	[Enter]
+Find by Objects:	[Enter]
+Find by Locations:	[Enter]
+Find by Positions:	[Enter]
+Find by Description:	[Enter]
+Find by Comments:	[Enter]
+
+
+Input New File:
+------------------------
+File Path:		[Enter]
+Directory Path:		[Enter]
+URL:			[Enter]
+URL Mirroring:		[Enter]
+
+
+Options:
+-----------------------
+...
+
+
+
+Image Menu:
+------------------------
+File Path:		/path/to/some/file.jpg
+Meta Path:		/path/to/some/file.jpg.bnf
+Name:			"some lame picture"
+------------------------
+Exif Information:	[Enter]
+Categorization:		[Enter]
+Personal Information:	[Enter]
+------------------------
+Change Name:		[Enter]
+Show File:		[Enter]
+Rename File:		[Enter]
+Move File:		[Enter]
+Copy File:		[Enter]
+Remove File:		[Enter]
+
+
+
+Exif Information:
+------------------------
+Re-Retrieve:		[Execute]
+Change:			[Enter]
+------------------------
+File Name:		/path/to/some/file.jpg
+File size:		1087242 bytes
+File date:		2007:12:28 20:05:06
+Camera make:		NIKON CORPORATION
+Camera model:		NIKON D1 
+Date/Time: 		2007:12:28 20:05:06
+Resolution: 		2000 x 1312
+Focal length:		32.0mm
+Exposure time:		2.000 s 
+Aperture: 		f/3.8
+Exposure bias: 		1.50
+Metering Mode: 		matrix
+Exposure: 		Manual
+
+Categorization:
+-----------------------
+Category:		"Uncategorized"
+Labels:			"Unlabeld"
+			"Nature"
+			"Night"
+			"Abstract"
+Description:		"This is a Picture Showing the
+			 Menu-Layout of Bijutsukan"
+Comments:		1) "Another Comment made in the Online-Gallery"
+			2) "And Yet Another"
+------------------------
+Set Category:		[Enter]
+Manage Labels:		[Enter]
+Set Description:	[Enter]
+Retrieve Comments:	[Enter]
+Manage Comments:	[Enter]
+
+
+Manage Labels:
+------------------------
+Labels:			1) "Unlabeld"
+			2) "Nature"
+			3) "Night"
+			4) "Abstract"
+------------------------
+Add Label:		[Enter]
+Remove Label:		[Enter]
+Change Label:		[Enter]
+
+
+
+Manage Comments:
+------------------------
+Comments:		1) "Another Comment made in the Online-Gallery"
+			2) "And Yet Another"
+Working Mode:		Online
+------------------------
+Set Working Mode:	[Enter]
+Retrieve Comments:	[Enter]
+View Comment Details:	[Enter]
+Delete Comment:		[Enter]
+Edit Comment:		[Enter]
+Add Comment:		[Enter]
+
+
+Personal Information:
+------------------------
+Persons Shown:		1) "a good friend"
+			2) "another good friend"
+Objects Shown:		1) "a waterfall"
+			2) "great rocks"
+Locations Shown:	1) "the rainbow"
+Position:		1) "somewhere over the rainbow, the upper left"
+
+
+
+
+
+
+
+
+
+
+
+

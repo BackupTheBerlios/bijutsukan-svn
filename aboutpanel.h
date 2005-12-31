@@ -3,6 +3,7 @@
 
 #include <wx/wx.h>
 #include <wx/panel.h>
+#include <wx/font.h>
 
 class aboutPanel: public wxPanel
 {
@@ -10,12 +11,12 @@ class aboutPanel: public wxPanel
  public:
   aboutPanel(wxWindow *parent);
 
-
  private:
   wxBoxSizer *mainSizer;
-  wxBoxSizer *textSizer;
   wxStaticText *logoText;
   wxStaticText *aboutText;
+  wxStaticText *descText;
+  wxStaticText *contactText;
 
 };
 

@@ -5,6 +5,7 @@ using namespace std;
 
 BEGIN_EVENT_TABLE(mainFrame, wxFrame)
 EVT_MENU(ID_fileOpenDB, mainFrame::eventHandler )
+EVT_MENU(ID_fileAbout, mainFrame::eventHandler )
 EVT_MENU(ID_fileExit, mainFrame::eventHandler )
 EVT_MENU(ID_findFileList, mainFrame::eventHandler )
 EVT_MENU(ID_findLabelList, mainFrame::eventHandler )
@@ -35,6 +36,7 @@ END_EVENT_TABLE()
 mainFrame::mainFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
   :wxFrame((wxFrame *)NULL, -1, title, pos, size)
 {
+  currentEvent=0;
   makeMenu();
 }
 
@@ -49,6 +51,8 @@ void mainFrame::makeMenu()
   optionsMenu = new wxMenu;
 
   fileMenu->Append(ID_fileOpenDB, _("Open Database"));
+  fileMenu->AppendSeparator();
+  fileMenu->Append(ID_fileAbout, _("About"));
   fileMenu->Append(ID_fileExit, _("Exit"));
   
 
@@ -93,11 +97,30 @@ void mainFrame::makeMenu()
 void mainFrame::eventHandler(wxCommandEvent &event)
 {
   wxCommandEvent *myEvent = &event;
-  cout<<myEvent->GetId()<<endl;
+  int eventId = myEvent->GetId();
 
+  deletePanel();
+
+  switch (eventId)
+    {
+    case ID_fileExit:
+      Close(true);
+    case ID_fileAbout:
+      currentEvent = ID_fileAbout;
+      myAboutPanel = new aboutPanel(this);
+      myAboutPanel->Show(true);
+    }
 }
 
-void mainFrame::onQuit(wxCommandEvent& WXUNUSED(event))
+void mainFrame::deletePanel()
 {
-  Close(true);
+  if(currentEvent!=0)
+    {
+      switch(currentEvent)
+	{
+	case ID_fileAbout:{
+	  myAboutPanel->Show(false);
+	  myAboutPanel->Destroy();}
+	}
+    }
 }

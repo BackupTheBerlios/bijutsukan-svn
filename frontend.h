@@ -4,6 +4,9 @@
 #include <wx/wx.h>
 #include <wx/panel.h>
 
+#include "aboutpanel.h"
+#include "mainpanel.h"
+
 class mainFrame: public wxFrame
 {
 public:
@@ -12,7 +15,11 @@ public:
   void eventHandler(wxCommandEvent& event);
 private:
   void makeMenu();
-  
+  void deletePanel();
+
+  int currentEvent;
+  aboutPanel *myAboutPanel;
+
   wxMenuBar *menuBar;
   wxMenu *fileMenu;
   wxMenu *findMenu;
@@ -27,7 +34,8 @@ private:
 
 enum
   {
-    ID_fileOpenDB = 0,
+    ID_fileOpenDB = 1,
+    ID_fileAbout,
     ID_fileExit,
     ID_findFileList,
     ID_findLabelList,

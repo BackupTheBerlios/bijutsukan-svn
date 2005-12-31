@@ -1,5 +1,5 @@
-#include "frontend.hh"
-#include "main.hh"
+#include "frontend.h"
+#include "main.h"
 
 bool bijutsukan::OnInit()
 {

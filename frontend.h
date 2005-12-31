@@ -43,6 +43,12 @@ enum
     ID_findByPositions,
     ID_findByDescription,
     ID_findByComments,
+    ID_optionsEmpty,
+    ID_categoryEmpty,
+    ID_inputInputPath,
+    ID_inputDirectory,
+    ID_inputURL,
+    ID_inputULRMirror,
   };
 
 #endif

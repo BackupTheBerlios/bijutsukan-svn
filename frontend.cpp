@@ -4,23 +4,7 @@
 using namespace std;
 
 BEGIN_EVENT_TABLE(mainFrame, wxFrame)
-     EVT_MENU( ID_fileOpenDB, mainFrame::empty )
-     EVT_MENU( ID_fileExit, mainFrame::empty )
-     EVT_MENU( ID_findFileList, mainFrame::empty )
-     EVT_MENU( ID_findLabelList, mainFrame::empty )
-     EVT_MENU( ID_findPersonList, mainFrame::empty )
-     EVT_MENU( ID_findPositionList, mainFrame::empty )
-     EVT_MENU( ID_findBy, mainFrame::empty )
-     EVT_MENU( ID_findByFileName, mainFrame::empty )
-     EVT_MENU( ID_findByName, mainFrame::empty )
-     EVT_MENU( ID_findByLabel, mainFrame::empty )
-     EVT_MENU( ID_findByCategory, mainFrame::empty )
-     EVT_MENU( ID_findByPersons, mainFrame::empty )
-     EVT_MENU( ID_findByObjects, mainFrame::empty )
-     EVT_MENU( ID_findByLocations, mainFrame::empty )
-     EVT_MENU( ID_findByPositions, mainFrame::empty )
-     EVT_MENU( ID_findByDescription, mainFrame::empty )
-     EVT_MENU( ID_findByComments, mainFrame::empty )
+
 END_EVENT_TABLE()
 
 
@@ -62,9 +46,21 @@ void mainFrame::makeMenu()
   findMenu->Append(ID_findPositionList, _("Position List"));
   findMenu->AppendSeparator();
   findMenu->Append(ID_findBy, _("Find By"), findBySubMenu);
-  
+
+  inputMenu->Append(ID_inputInputPath, _("Input New File"));
+  inputMenu->Append(ID_inputDirectory, _("Input New Directory"));
+  inputMenu->Append(ID_inputURL, _("Input New URL"));
+  inputMenu->Append(ID_inputULRMirror, _("Input New URL Directory"));
+
+  categoryMenu->Append(ID_categoryEmpty, _("Empty"));
+
+  optionsMenu->Append(ID_optionsEmpty, _("Empty"));
+
   menuBar->Append(fileMenu, _("File"));
   menuBar->Append(findMenu, _("Find"));
+  menuBar->Append(inputMenu, _("New"));
+  menuBar->Append(categoryMenu, _("Manage Categories"));
+  menuBar->Append(optionsMenu, _("Options"));
   
   SetMenuBar(menuBar);
 }

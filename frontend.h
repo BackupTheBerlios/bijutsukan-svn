@@ -1,14 +1,14 @@
 #ifndef FRONTEND_H
 #define FRONTEND_H 1
 
-#include "wx/wx.h"
+#include <wx/wx.h>
 
 class mainFrame: public wxFrame
 {
 public:
   mainFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
   void onQuit(wxCommandEvent& event);
-
+  void empty(wxCommandEvent& event);
 private:
   void makeMenu();
   
@@ -23,6 +23,7 @@ private:
   DECLARE_EVENT_TABLE();
 };
 
+
 enum
   {
     ID_fileOpenDB = 0,
@@ -31,24 +32,17 @@ enum
     ID_findLabelList,
     ID_findPersonList,
     ID_findPositionList,
+    ID_findBy,
     ID_findByFileName,
     ID_findByName,
     ID_findByLabel,
     ID_findByCategory,
     ID_findByPersons,
-    ID_findByyObjects,
+    ID_findByObjects,
     ID_findByLocations,
     ID_findByPositions,
     ID_findByDescription,
     ID_findByComments,
-    ID_,
-    ID_,
-    ID_,
-    ID_,
-    ID_,
-    ID_,
-    ID_,
   };
-
 
 #endif

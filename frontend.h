@@ -2,13 +2,14 @@
 #define FRONTEND_H 1
 
 #include <wx/wx.h>
+#include <wx/panel.h>
 
 class mainFrame: public wxFrame
 {
 public:
   mainFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
   void onQuit(wxCommandEvent& event);
-  void empty(wxCommandEvent& event);
+  void eventHandler(wxCommandEvent& event);
 private:
   void makeMenu();
   

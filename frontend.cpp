@@ -4,7 +4,7 @@
 using namespace std;
 
 BEGIN_EVENT_TABLE(mainFrame, wxFrame)
-EVT_MENU(ID_fileOpenDB = 0, mainFrame::eventHandler )
+EVT_MENU(ID_fileOpenDB, mainFrame::eventHandler )
 EVT_MENU(ID_fileExit, mainFrame::eventHandler )
 EVT_MENU(ID_findFileList, mainFrame::eventHandler )
 EVT_MENU(ID_findLabelList, mainFrame::eventHandler )
@@ -90,12 +90,11 @@ void mainFrame::makeMenu()
   SetMenuBar(menuBar);
 }
 
-void mainFrame::empty(wxCommandEvent &event)
+void mainFrame::eventHandler(wxCommandEvent &event)
 {
   wxCommandEvent *myEvent = &event;
   cout<<myEvent->GetId()<<endl;
-  wxWindow *testWindow = new wxWindow(this, -1, wxPoint(500,300), wxSize(100,100), 0, _("test"));
-  testWindow->Show(true);
+
 }
 
 void mainFrame::onQuit(wxCommandEvent& WXUNUSED(event))

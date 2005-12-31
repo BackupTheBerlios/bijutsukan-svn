@@ -4,7 +4,30 @@
 using namespace std;
 
 BEGIN_EVENT_TABLE(mainFrame, wxFrame)
-
+EVT_MENU(ID_fileOpenDB = 0, mainFrame::eventHandler )
+EVT_MENU(ID_fileExit, mainFrame::eventHandler )
+EVT_MENU(ID_findFileList, mainFrame::eventHandler )
+EVT_MENU(ID_findLabelList, mainFrame::eventHandler )
+EVT_MENU(ID_findPersonList, mainFrame::eventHandler )
+EVT_MENU(ID_findPositionList, mainFrame::eventHandler )
+EVT_MENU(ID_findBy, mainFrame::eventHandler )
+EVT_MENU(ID_findByFileName, mainFrame::eventHandler )
+EVT_MENU(ID_findByName, mainFrame::eventHandler )
+EVT_MENU(ID_findByLabel, mainFrame::eventHandler )
+EVT_MENU(ID_findByCategory, mainFrame::eventHandler )
+EVT_MENU(ID_findByPersons, mainFrame::eventHandler )
+EVT_MENU(ID_findByObjects, mainFrame::eventHandler )
+EVT_MENU(ID_findByLocations, mainFrame::eventHandler )
+EVT_MENU(ID_findByPositions, mainFrame::eventHandler )
+EVT_MENU(ID_findByDescription, mainFrame::eventHandler )
+EVT_MENU(ID_findByComments, mainFrame::eventHandler )
+EVT_MENU(ID_optionsEmpty, mainFrame::eventHandler )
+EVT_MENU(ID_categoryEmpty, mainFrame::eventHandler )
+EVT_MENU(ID_inputInputPath, mainFrame::eventHandler )
+EVT_MENU(ID_inputDirectory, mainFrame::eventHandler )
+EVT_MENU(ID_inputURL, mainFrame::eventHandler )
+EVT_MENU(ID_inputULRMirror, mainFrame::eventHandler )
+EVT_MENU(ID_inputWizard, mainFrame::eventHandler )
 END_EVENT_TABLE()
 
 
@@ -47,6 +70,8 @@ void mainFrame::makeMenu()
   findMenu->AppendSeparator();
   findMenu->Append(ID_findBy, _("Find By"), findBySubMenu);
 
+
+  inputMenu->Append(ID_inputWizard, _("Input Wizard"));
   inputMenu->Append(ID_inputInputPath, _("Input New File"));
   inputMenu->Append(ID_inputDirectory, _("Input New Directory"));
   inputMenu->Append(ID_inputURL, _("Input New URL"));
@@ -69,6 +94,8 @@ void mainFrame::empty(wxCommandEvent &event)
 {
   wxCommandEvent *myEvent = &event;
   cout<<myEvent->GetId()<<endl;
+  wxWindow *testWindow = new wxWindow(this, -1, wxPoint(500,300), wxSize(100,100), 0, _("test"));
+  testWindow->Show(true);
 }
 
 void mainFrame::onQuit(wxCommandEvent& WXUNUSED(event))

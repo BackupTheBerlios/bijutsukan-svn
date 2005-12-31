@@ -49,6 +49,7 @@ enum
     ID_inputDirectory,
     ID_inputURL,
     ID_inputULRMirror,
+    ID_inputWizard
   };
 
 #endif

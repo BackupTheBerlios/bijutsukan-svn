@@ -124,8 +124,8 @@ void mainFrame::deletePanel()
 	    {
 	      myAboutPanel->Show(false);
 	      myAboutPanel->Destroy();
-	      currentEvent = 0;
 	    }
 	}
     }
+  currentEvent = 0;
 }

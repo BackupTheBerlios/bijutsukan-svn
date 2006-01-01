@@ -1,0 +1,2 @@
+bin_PROGRAMS=bijutsukan
+bijutsukan_SOURCES=aboutpanel.cpp mainpanel.cpp

@@ -106,9 +106,11 @@ void mainFrame::eventHandler(wxCommandEvent &event)
     case ID_fileExit:
       Close(true);
     case ID_fileAbout:
-      currentEvent = ID_fileAbout;
-      myAboutPanel = new aboutPanel(this);
-      myAboutPanel->Show(true);
+      {
+	currentEvent = ID_fileAbout;
+	myAboutPanel = new aboutPanel(this);
+	myAboutPanel->Show(true);
+      }
     }
 }
 
@@ -118,9 +120,12 @@ void mainFrame::deletePanel()
     {
       switch(currentEvent)
 	{
-	case ID_fileAbout:{
-	  myAboutPanel->Show(false);
-	  myAboutPanel->Destroy();}
+	  case ID_fileAbout:
+	    {
+	      myAboutPanel->Show(false);
+	      myAboutPanel->Destroy();
+	      currentEvent = 0;
+	    }
 	}
     }
 }

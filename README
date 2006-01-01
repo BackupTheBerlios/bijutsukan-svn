@@ -1,0 +1,1 @@
+If you have gentoo with wxGTK in both versions 2.4 and 2.6 installed, it may be a good idea to run "WX_CONFIG_NAME=wx-config-2.6 ./configure" instead of "./configure". If you know how to fix that, please tell me.

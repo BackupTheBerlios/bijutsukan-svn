@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT(bijutsukan)
+AC_INIT(src/main.cpp)
 AM_INIT_AUTOMAKE(bijutsukan, SVN)
 AC_CONFIG_HEADER(config.h)
 
@@ -10,6 +10,7 @@ AC_CONFIG_HEADER(config.h)
 AC_PROG_CXX
 AC_PROG_CC
 AC_PROG_INSTALL
+AC_PROG_MAKE_SET
 
 # Checks for libraries.
 
@@ -39,5 +40,6 @@ CXXFLAGS="$CXXFLAGS $WX_CXXFLAGS_ONLY"
 CFLAGS="$CFLAGS $WX_CFLAGS_ONLY"
 LDFLAGS="$LDFLAGS $WX_LIBS"
 
+AC_LANG_CPLUSPLUS
 
-AC_OUTPUT(Makefile)
+AC_OUTPUT([Makefile src/Makefile])

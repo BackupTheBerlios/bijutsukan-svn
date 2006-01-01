@@ -4,8 +4,8 @@
 #include <wx/wx.h>
 #include <wx/panel.h>
 
-#include "aboutpanel.h"
-#include "mainpanel.h"
+#include "panels/aboutpanel.h"
+#include "panels/mainpanel.h"
 
 class mainFrame: public wxFrame
 {

@@ -11,6 +11,7 @@ AC_PROG_CXX
 AC_PROG_CC
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
+AC_PROG_RANLIB
 
 # Checks for libraries.
 
@@ -42,4 +43,4 @@ LDFLAGS="$LDFLAGS $WX_LIBS"
 
 AC_LANG_CPLUSPLUS
 
-AC_OUTPUT([Makefile src/Makefile])
+AC_OUTPUT([Makefile panels/Makefile src/Makefile])

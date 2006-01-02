@@ -98,8 +98,8 @@ void mainFrame::makeMenu()
 
 void mainFrame::eventHandler(wxCommandEvent &event)
 {
-  wxCommandEvent *myEvent = &event;
-2  int eventId = myEvent->GetId();
+
+  int eventId = event.GetId();
 
   deletePanel();
 
@@ -107,7 +107,6 @@ void mainFrame::eventHandler(wxCommandEvent &event)
     {
     case ID_fileNewDB:
       {
-	currentEvent = ID_fileAbout;
 	dbFileName = wxFileSelector(_("Select a new Bijutsukan database file"),  _(""), _(""), _(""), _("Bijtsukan Database Files (*.bdf)|*.bdf"), wxSAVE | wxHIDE_READONLY, this, -1, -1 );
 	if(!dbFileName.empty())
 	  {
@@ -138,6 +137,7 @@ void mainFrame::deletePanel()
 	      myAboutPanel->Show(false);
 	      myAboutPanel->Destroy();
 	    }
+	case ID_fileNewDB:{}
 	}
     }
   currentEvent = 0;

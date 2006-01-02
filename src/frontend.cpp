@@ -110,8 +110,8 @@ void mainFrame::eventHandler(wxCommandEvent &event)
 	dbFileName = wxFileSelector(_("Select a new Bijutsukan database file"),  _(""), _(""), _(""), _("Bijtsukan Database Files (*.bdf)|*.bdf"), wxSAVE | wxHIDE_READONLY, this, -1, -1 );
 	if(!dbFileName.empty())
 	  {
-		const char *dbFileName_char = dbFileName.fn_str();
-		cout << dbFileName_char << endl;	  
+
+		cout << dbFileName.fn_str() << endl;	  
 	  }
 	break;
       }

@@ -22,6 +22,7 @@ private:
   void deletePanel();
 
   int currentEvent;
+  bool dbIsOpen;
   wxString dbFileString;
   wxFileName *dbFileName;
   

@@ -38,6 +38,7 @@ mainFrame::mainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
   :wxFrame((wxFrame *)NULL, -1, title, pos, size)
 {
   currentEvent=0;
+  dbIsOpen=false;
   makeMenu();
 }
 
@@ -105,18 +106,38 @@ void mainFrame::eventHandler(wxCommandEvent &event)
 
   switch (eventId)
     {
+
     case ID_fileNewDB:
       {
-	dbFileString = wxFileSelector(_("Select a new Bijutsukan database file"),  _(""), _(""), _(""), _("Bijtsukan Database Files (*.bdf)|*.bdf"), wxSAVE | wxHIDE_READONLY, this, -1, -1 );
+	dbFileString = wxFileSelector(_("Select a new Bijutsukan database file"),  _(""), _(""), _(""), _("Bijtsukan Database Files (*.bdf)|*.bdf"), wxSAVE | wxHIDE_READONLY , this, -1, -1 );
 	if(!dbFileString.empty())
 	  {
-		dbFileName = new wxFileName(dbFileString);
-		cout << dbFileName->GetFullPath().ToAscii() << endl;
+	    if(dbFileString.Lower().Matches(_("*.bdf*"))); // TODO: doesnt seem to work Oo
+	    {
+	      dbFileString.Append(_(".bdf"));
+	    }
+	    dbFileName = new wxFileName(dbFileString);
+	    cout << dbFileName->GetFullPath().ToAscii() << endl;
+	    dbIsOpen=true;
 	  }
 	break;
       }
+
+    case ID_fileOpenDB:
+      {
+	dbFileString = wxFileSelector(_("Select a new Bijutsukan database file"),  _(""), _(""), _(""), _("Bijtsukan Database Files (*.bdf)|*.bdf"), wxOPEN | wxFILE_MUST_EXIST | wxHIDE_READONLY , this, -1, -1 );
+	if(!dbFileString.empty())
+	  {
+	    dbFileName = new wxFileName(dbFileString);
+	    cout<<dbFileName->GetFullPath().ToAscii()<<endl;
+	    dbIsOpen=true;
+	  }
+	break;
+      }
+
     case ID_fileExit:
       Close(true);
+
     case ID_fileAbout:
       {
 	currentEvent = ID_fileAbout;
@@ -139,10 +160,6 @@ void mainFrame::deletePanel()
 	      myAboutPanel->Destroy();
 	      break;
 	    }
-	case ID_fileNewDB:
-	  {
-	    break;
-	  }
 	}
     }
   currentEvent = 0;

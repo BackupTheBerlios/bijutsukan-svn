@@ -4,6 +4,7 @@
 using namespace std;
 
 BEGIN_EVENT_TABLE(mainFrame, wxFrame)
+EVT_MENU(ID_fileNewDB, mainFrame::eventHandler)
 EVT_MENU(ID_fileOpenDB, mainFrame::eventHandler )
 EVT_MENU(ID_fileAbout, mainFrame::eventHandler )
 EVT_MENU(ID_fileExit, mainFrame::eventHandler )
@@ -50,6 +51,7 @@ void mainFrame::makeMenu()
   categoryMenu = new wxMenu;
   optionsMenu = new wxMenu;
 
+  fileMenu->Append(ID_fileNewDB, _("New Database"));
   fileMenu->Append(ID_fileOpenDB, _("Open Database"));
   fileMenu->AppendSeparator();
   fileMenu->Append(ID_fileAbout, _("About"));
@@ -97,12 +99,23 @@ void mainFrame::makeMenu()
 void mainFrame::eventHandler(wxCommandEvent &event)
 {
   wxCommandEvent *myEvent = &event;
-  int eventId = myEvent->GetId();
+2  int eventId = myEvent->GetId();
 
   deletePanel();
 
   switch (eventId)
     {
+    case ID_fileNewDB:
+      {
+	currentEvent = ID_fileAbout;
+	dbFileName = wxFileSelector(_("Select a new Bijutsukan database file"),  _(""), _(""), _(""), _("Bijtsukan Database Files (*.bdf)|*.bdf"), wxSAVE | wxHIDE_READONLY, this, -1, -1 );
+	if(!dbFileName.empty())
+	  {
+	    cout<<dbFileName<<endl;
+	    cout<<&dbFileName<<endl;
+	    cout<<*dbFileName<<endl;
+	  }
+      }
     case ID_fileExit:
       Close(true);
     case ID_fileAbout:

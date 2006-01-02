@@ -12,7 +12,7 @@ class mainPanel: public wxPanel
 
 
  private:
-
+  
 };
 
 #endif

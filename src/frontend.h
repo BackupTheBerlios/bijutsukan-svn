@@ -3,6 +3,7 @@
 
 #include <wx/wx.h>
 #include <wx/panel.h>
+#include <wx/filedlg.h>
 
 #include "panels/aboutpanel.h"
 #include "panels/mainpanel.h"
@@ -13,11 +14,16 @@ public:
   mainFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
   void onQuit(wxCommandEvent& event);
   void eventHandler(wxCommandEvent& event);
+
+
 private:
   void makeMenu();
   void deletePanel();
 
   int currentEvent;
+  wxString dbFileName;
+  
+ 
   aboutPanel *myAboutPanel;
 
   wxMenuBar *menuBar;
@@ -34,7 +40,8 @@ private:
 
 enum
   {
-    ID_fileOpenDB = 1,
+    ID_fileNewDB = 1,
+    ID_fileOpenDB,
     ID_fileAbout,
     ID_fileExit,
     ID_findFileList,

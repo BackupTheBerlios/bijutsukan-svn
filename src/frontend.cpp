@@ -112,7 +112,7 @@ void mainFrame::eventHandler(wxCommandEvent &event)
 	dbFileString = wxFileSelector(_("Select a new Bijutsukan database file"),  _(""), _(""), _(""), _("Bijtsukan Database Files (*.bdf)|*.bdf"), wxSAVE | wxHIDE_READONLY , this, -1, -1 );
 	if(!dbFileString.empty())
 	  {
-	    if(dbFileString.Lower().Matches(_("*.bdf*"))); // TODO: doesnt seem to work Oo
+	    if(dbFileString.Lower().Find(_("bdf")) < 0)
 	    {
 	      dbFileString.Append(_(".bdf"));
 	    }

@@ -43,4 +43,4 @@ LDFLAGS="$LDFLAGS $WX_LIBS"
 
 AC_LANG_CPLUSPLUS
 
-AC_OUTPUT([Makefile panels/Makefile src/Makefile])
+AC_OUTPUT([Makefile panels/Makefile src/Makefile tinyxml/Makefile])

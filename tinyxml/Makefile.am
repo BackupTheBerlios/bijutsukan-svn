@@ -1,0 +1,2 @@
+noinst_LIBRARIES=libtinyxml.a
+libtinyxml_a_SOURCES=tinyxml.cpp tinyxmlerror.cpp tinyxmlparser.cpp tinystr.cpp

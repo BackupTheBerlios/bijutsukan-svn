@@ -100,7 +100,7 @@ void mainFrame::eventHandler(wxCommandEvent &event)
 {
 
   int eventId = event.GetId();
-
+  
   deletePanel();
 
   switch (eventId)
@@ -114,6 +114,7 @@ void mainFrame::eventHandler(wxCommandEvent &event)
 	    cout<<&dbFileName<<endl;
 	    cout<<*dbFileName<<endl;
 	  }
+	break;
       }
     case ID_fileExit:
       Close(true);
@@ -122,6 +123,7 @@ void mainFrame::eventHandler(wxCommandEvent &event)
 	currentEvent = ID_fileAbout;
 	myAboutPanel = new aboutPanel(this);
 	myAboutPanel->Show(true);
+	break;
       }
     }
 }

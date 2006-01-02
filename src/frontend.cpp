@@ -107,11 +107,11 @@ void mainFrame::eventHandler(wxCommandEvent &event)
     {
     case ID_fileNewDB:
       {
-	dbFileName = wxFileSelector(_("Select a new Bijutsukan database file"),  _(""), _(""), _(""), _("Bijtsukan Database Files (*.bdf)|*.bdf"), wxSAVE | wxHIDE_READONLY, this, -1, -1 );
-	if(!dbFileName.empty())
+	dbFileString = wxFileSelector(_("Select a new Bijutsukan database file"),  _(""), _(""), _(""), _("Bijtsukan Database Files (*.bdf)|*.bdf"), wxSAVE | wxHIDE_READONLY, this, -1, -1 );
+	if(!dbFileString.empty())
 	  {
-
-		cout << dbFileName.fn_str() << endl;	  
+		dbFileName = new wxFileName(dbFileString);
+		cout << dbFileName->GetFullPath().ToAscii() << endl;
 	  }
 	break;
       }
@@ -137,8 +137,12 @@ void mainFrame::deletePanel()
 	    {
 	      myAboutPanel->Show(false);
 	      myAboutPanel->Destroy();
+	      break;
 	    }
-	case ID_fileNewDB:{}
+	case ID_fileNewDB:
+	  {
+	    break;
+	  }
 	}
     }
   currentEvent = 0;

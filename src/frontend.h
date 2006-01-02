@@ -4,6 +4,7 @@
 #include <wx/wx.h>
 #include <wx/panel.h>
 #include <wx/filedlg.h>
+#include <wx/filename.h>
 
 #include "panels/aboutpanel.h"
 #include "panels/mainpanel.h"
@@ -21,7 +22,8 @@ private:
   void deletePanel();
 
   int currentEvent;
-  wxString dbFileName;
+  wxString dbFileString;
+  wxFileName *dbFileName;
   
  
   aboutPanel *myAboutPanel;

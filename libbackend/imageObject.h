@@ -49,7 +49,7 @@ class imageObject{
   wxArrayString filePersons;
   wxArrayString fileObjects;
   wxArrayString fileLocations;
-  wxArrayString filePosition;
+  wxArrayString filePositions;
   
 
 };

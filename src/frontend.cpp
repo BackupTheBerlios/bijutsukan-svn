@@ -4,8 +4,6 @@
 using namespace std;
 
 BEGIN_EVENT_TABLE(mainFrame, wxFrame)
-EVT_MENU(ID_fileNewDB, mainFrame::eventHandler)
-EVT_MENU(ID_fileOpenDB, mainFrame::eventHandler )
 EVT_MENU(ID_fileAbout, mainFrame::eventHandler )
 EVT_MENU(ID_fileExit, mainFrame::eventHandler )
 EVT_MENU(ID_findFileList, mainFrame::eventHandler )
@@ -52,8 +50,6 @@ void mainFrame::makeMenu()
   categoryMenu = new wxMenu;
   optionsMenu = new wxMenu;
 
-  fileMenu->Append(ID_fileNewDB, _("New Database"));
-  fileMenu->Append(ID_fileOpenDB, _("Open Database"));
   fileMenu->AppendSeparator();
   fileMenu->Append(ID_fileAbout, _("About"));
   fileMenu->Append(ID_fileExit, _("Exit"));
@@ -106,34 +102,6 @@ void mainFrame::eventHandler(wxCommandEvent &event)
 
   switch (eventId)
     {
-
-    case ID_fileNewDB:
-      {
-	dbFileString = wxFileSelector(_("Select a new Bijutsukan database file"),  _(""), _(""), _(""), _("Bijtsukan Database Files (*.bdf)|*.bdf"), wxSAVE | wxHIDE_READONLY , this, -1, -1 );
-	if(!dbFileString.empty())
-	  {
-	    if(dbFileString.Lower().Find(_("bdf")) < 0)
-	    {
-	      dbFileString.Append(_(".bdf"));
-	    }
-	    dbFileName = new wxFileName(dbFileString);
-	    cout << dbFileName->GetFullPath().ToAscii() << endl;
-	    dbIsOpen=true;
-	  }
-	break;
-      }
-
-    case ID_fileOpenDB:
-      {
-	dbFileString = wxFileSelector(_("Select a new Bijutsukan database file"),  _(""), _(""), _(""), _("Bijtsukan Database Files (*.bdf)|*.bdf"), wxOPEN | wxFILE_MUST_EXIST | wxHIDE_READONLY , this, -1, -1 );
-	if(!dbFileString.empty())
-	  {
-	    dbFileName = new wxFileName(dbFileString);
-	    cout<<dbFileName->GetFullPath().ToAscii()<<endl;
-	    dbIsOpen=true;
-	  }
-	break;
-      }
 
     case ID_fileExit:
       Close(true);

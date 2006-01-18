@@ -28,3 +28,8 @@ void fileIndex::delFile(wxString filePath)
 {
   pathIndex.Remove( filePath.wc_str() );
 }
+
+imageObject makeImageObject(wxString filePaht)
+{
+
+}

@@ -1,2 +1,2 @@
 noinst_LIBRARIES=libbackend.a
-libbackend_a_SOURCES=fileIndex.cpp #wxArchive.cpp
+libbackend_a_SOURCES=fileIndex.cpp imageObject.cpp #wxArchive.cpp

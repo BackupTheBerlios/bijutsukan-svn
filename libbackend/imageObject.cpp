@@ -6,113 +6,106 @@ imageObject::imageObject()
 
 imageObject::imageObject(wxString path)
 {
-  filePath = path.Append( _(".bdf").wc_str() );
-  readInfo()
+  filePath = path.Append( _(".bdf") );
+  // readInfo() // or something
 }
 
-wxString imageObject::getFilePath();
+wxString imageObject::getFilePath()
 {
   return filePath;
 }
-wxString imageObject::getFileName();
+wxString imageObject::getFileName()
 {
   return fileName;
 }
-wxString imageObject::getFileDescription();
+wxString imageObject::getFileDescription()
 {
   return fileDescription;
 }
-wxString imageObject::getFileCategory();
+wxString imageObject::getFileCategory()
 {
   return fileCategory;
 }
 
-wxString imageObject::setFilePath(wxString nfilePath);
+wxString imageObject::setFilePath(wxString nfilePath)
 {
   filePath = nfilePath;
 }
-wxString imageObject::setFileName(wxString nfileName);
+wxString imageObject::setFileName(wxString nfileName)
 {
-  fileName = nfileName
+  fileName = nfileName;
 }
-wxString imageObject::setFileDescription(wxString nfileDescription);
+wxString imageObject::setFileDescription(wxString nfileDescription)
 {
   fileDescription = nfileDescription;
 }
-wxString imageObject::setFileCategory(wxString nfileCategory);
+wxString imageObject::setFileCategory(wxString nfileCategory)
 {
-  if(checkCategory(nfileCategory)=1)
-    {
-      fileCategory = nfileCategory;
-    }
-  else
-    {
-      // do something?
-    }
+  fileCategory = nfileCategory; // TODO: errorchecking if the category really exists
 }
 
 
-wxArrayString imageObject::getFileLabels();
+wxArrayString imageObject::getFileLabels()
 {
   return fileLabels;
 }
-wxArrayString imageObject::getFilePersons();
+wxArrayString imageObject::getFilePersons()
 {
   return filePersons;
 }
-wxArrayString imageObject::getFileObjects();
+wxArrayString imageObject::getFileObjects()
 {
   return fileObjects;
 }
-wxArrayString imageObject::getFileLocations();
+wxArrayString imageObject::getFileLocations()
 {
   return fileLocations;
 }
-wxArrayString imageObject::getFilePositions();
+wxArrayString imageObject::getFilePositions()
 {
   return filePositions;
 }
 
 
-wxArrayString imageObject::addFileLabels(wxString nfileLabel);
+wxArrayString imageObject::addFileLabels(wxString nfileLabel)
 {
-  fileLabel.Append( nfileLabel.wc_str() );
+  fileLabels.Add( nfileLabel.wc_str() );
 }
-wxArrayString imageObject::addFilePersons(wxString nfilePerson);
+wxArrayString imageObject::addFilePersons(wxString nfilePerson)
 {
-  filePersons.Append( nfilePerson.wc_str() );
+  filePersons.Add( nfilePerson.wc_str() );
 }
-wxArrayString imageObject::addFileObjects(wxString nfileObject);
+wxArrayString imageObject::addFileObjects(wxString nfileObject)
 {
-  fileObjects.Append( nfileObject.wc_str() );
+  fileObjects.Add( nfileObject.wc_str() );
 }
-wxArrayString imageObject::addFileLocations(wxString nfileLocation);
+wxArrayString imageObject::addFileLocations(wxString nfileLocation)
 {
-  fileLocations.Append( nfileLocation.wc_str() );
+  fileLocations.Add( nfileLocation.wc_str() );
 }
-wxArrayString imageObject::addFilePositions(wxString nfilePosition);
+wxArrayString imageObject::addFilePositions(wxString nfilePosition)
 {
-  filePositions.Append( nfilePosition.wc_str() );
+  filePositions.Add( nfilePosition.wc_str() );
 }
 
 
-wxArrayString imageObject::delFileLabels(wxString nfileLabel);
+wxArrayString imageObject::delFileLabels(wxString nfileLabel)
 {
   fileLabels.Remove( nfileLabel.wc_str() );
 }
-wxArrayString imageObject::delFilePersons(wxString nfilePerson);
+wxArrayString imageObject::delFilePersons(wxString nfilePerson)
 {
   filePersons.Remove( nfilePerson.wc_str() );
 }
-wxArrayString imageObject::delFileObjects(wxString nfileObject);
+wxArrayString imageObject::delFileObjects(wxString nfileObject)
 {
   fileObjects.Remove( nfileObject.wc_str() );
 }
-wxArrayString imageObject::delFileLocations(wxString nfileLocation);
+wxArrayString imageObject::delFileLocations(wxString nfileLocation)
 {
   fileLocations.Remove( nfileLocation.wc_str() );
 }
-wxArrayString imageObject::delFilePositions(wxString nfilePosition);
+wxArrayString imageObject::delFilePositions(wxString nfilePosition)
 {
   filePositions.Remove( nfilePosition.wc_str() );
 }

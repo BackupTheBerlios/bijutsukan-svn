@@ -1,2 +1,2 @@
 AUTOMAKE_OPTIONS = gnu
-SUBDIRS=panels src
+SUBDIRS=panels src wxarchive

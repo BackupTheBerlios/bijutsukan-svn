@@ -1,0 +1,2 @@
+noinst_LIBRARIES=libbackend.a
+libbackend_a_SOURCES=wxArchive.cpp fileIndex.cpp

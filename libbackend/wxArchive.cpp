@@ -1,20 +1,19 @@
 //---------------------------------------------------------------------------
-// $RCSfile: wxArchive.cpp $
-// $Source: contrib/src/common/wxArchive.cpp $
-// $Revision: 1.18 $
-// $Date: Sep 18, 2005 2:18:40 PM $
+// $RCSfile$
+// $Source$
+// $Revision$
+// $Date$
 //---------------------------------------------------------------------------
 // Author:      Jorgen Bodde
 // Copyright:   (c) Jorgen Bodde
 // License:     wxWidgets License
 //---------------------------------------------------------------------------
 
-#include "wx/wxprec.h"
-
 #ifdef __BORLANDC__
     #pragma hdrstop
 #endif
 
+#include <wx/log.h>
 #include "wxArchive.h"
 
 wxArchive::wxArchive(wxInputStream &stream, size_t version, const wxString &header, bool partialMode)
@@ -30,14 +29,14 @@ wxArchive::wxArchive(wxInputStream &stream, size_t version, const wxString &head
     // all ok, use this stream
     if(stream.IsOk())
     {
-	    // now we need to reset the code for 
+	    // now we need to reset the code for
 	    // reading to work
 	    m_errorCode = wxARCHIVE_ERR_OK;
-		m_opened = true;    
-	    
-	    // load header	    
+		m_opened = true;
+
+	    // load header
 	    wxString hdr = LoadString();
-	    
+
 	    if(IsOk())
 	    {
 	        // when we have a header to check else ignore and store
@@ -45,39 +44,39 @@ wxArchive::wxArchive(wxInputStream &stream, size_t version, const wxString &head
 	        if(header.IsEmpty() || header.IsSameAs(hdr))
 	        {
 	            // store header for consulting later
-	            m_headerStr = header;  
-	            
+	            m_headerStr = header;
+
                 // check the version number
                 size_t ver = LoadUint32();
-                
+
                 if(IsOk())
                 {
-                    // if version is 0, we accept any version if higher, we 
+                    // if version is 0, we accept any version if higher, we
                     // need to see if this stream does not exceed the expected version
                     if(!version || ver <=version)
-                    {                        
-                        // this is the point where all is 
+                    {
+                        // this is the point where all is
                         // approved. We can start reading
-                        m_version = ver;      
-						m_status = wxArchiveStatus(m_version, m_headerStr); 
+                        m_version = ver;
+						m_status = wxArchiveStatus(m_version, m_headerStr);
                     }
                     else
                     {
                         wxString v1, v2;
                         v1 << version;
                         v2 << ver;
-                        
-                        LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_WRONGVERSION_s1_s2, v1.c_str(), v2.c_str());                 
+
+                        LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_WRONGVERSION_s1_s2, v1, v2);
                     }
                 }
                 else
-                    LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_NOVERSION);	            	             
+                    LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_NOVERSION);
 	        }
 	        else
-	            LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_HEADER_s1_s2, header.c_str(), hdr.c_str());
+	            LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_HEADER_s1_s2, header, hdr);
 	    }
 	    else
-	        LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_NOHEADER_s1, header.c_str());
+	        LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_NOHEADER_s1, header);
 	}
 	else
 	    LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_BADISTREAM);
@@ -94,19 +93,19 @@ wxArchive::wxArchive(wxOutputStream &stream, size_t version, const wxString &hea
 	, m_headerStr(header)
 {
     InitAll();
-	
+
     // all ok, use this stream
     if(stream.IsOk())
     {
     	m_opened = true;
 		m_errorCode = wxARCHIVE_ERR_OK;
-		
+
 		// write information
 	    SaveString(header);
 	    SaveUint32(version);
 
 		m_status = wxArchiveStatus(version, header);
-	    
+
 	    // when we are ok, start saving
 	    if(!IsOk())
     	    LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_NOVERHDR);
@@ -130,11 +129,11 @@ wxArchive::~wxArchive()
 
 bool wxArchive::Eof()
 {
-    // only when we are input (reading) we have 
+    // only when we are input (reading) we have
     // something to tell about EOF
     if(!m_writeMode)
         return m_idstr.Eof();
-        
+
     return false;
 }
 
@@ -151,7 +150,7 @@ bool wxArchive::CanStore()
 
     return false;
 }
-    
+
 bool wxArchive::CanLoad()
 {
     // are we in an ok state?
@@ -159,7 +158,7 @@ bool wxArchive::CanLoad()
     {
         if(IsOpen())
         {
-            if(!Eof())        
+            if(!Eof())
                 return (m_errorCode == wxARCHIVE_ERR_OK);
             else
                 LogError(wxARCHIVE_ERR_EOF, wxARCHIVE_ERR_STR_EOF);
@@ -174,16 +173,16 @@ bool wxArchive::CanLoad()
 bool wxArchive::EnterObject()
 {
 	// increments the level. This will also mean
-	// that with reading we expect to read this level. We skip all 
-	// headers until we get this level. 
+	// that with reading we expect to read this level. We skip all
+	// headers until we get this level.
 
 	if(IsOk())
 	{
 		if(!m_writeMode)
 		{
-			if(CanLoad())		
+			if(CanLoad())
 			{
-				m_objectLevel ++;				
+				m_objectLevel ++;
 				FindCurrentEnterLevel();
 			}
 			else
@@ -207,14 +206,14 @@ bool wxArchive::EnterObject()
 bool wxArchive::LeaveObject()
 {
 	// increments the level. This will also mean
-	// that with reading we expect to read this level. We skip all 
-	// headers until we get this level. 
-	
+	// that with reading we expect to read this level. We skip all
+	// headers until we get this level.
+
 	if(IsOk())
 	{
 		if(!m_writeMode)
 		{
-			if(CanLoad())		
+			if(CanLoad())
 			{
 				m_objectLevel --;
 				if(m_objectLevel < 0)
@@ -245,13 +244,13 @@ bool wxArchive::LeaveObject()
 
 void wxArchive::FindCurrentEnterLevel()
 {
-	// the next read should be the begin marker. If not, we search for the 
+	// the next read should be the begin marker. If not, we search for the
 	// begin marker
 
 	if(m_haveBoundary && m_lastBoundary == wxARCHIVE_HDR_ENTER)
 	{
 		m_haveBoundary = false;
-		return;				
+		return;
 	}
 
 	wxUint8 hdr = LoadChar();	// we do not care about the header
@@ -263,7 +262,7 @@ void wxArchive::FindCurrentEnterLevel()
 		// we should find the enter level, not leave
 		if(hdr == wxARCHIVE_HDR_LEAVE)
 			LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_ILL_LEAVE);
-			
+
 		SkipData(hdr);
 		hdr = LoadChar();
 	}
@@ -273,7 +272,7 @@ void wxArchive::FindCurrentLeaveLevel()
 {
 	bool firstHdr = true;
 	unsigned char hdr = 0;
-	// the next read should be the leave marker. If not, we search for the 
+	// the next read should be the leave marker. If not, we search for the
 	// leave marker that belongs to our current state (this means skipping
 	// data that we cannot read, and potential enter and leave markers
 	// that we do not read anyway
@@ -283,7 +282,7 @@ void wxArchive::FindCurrentLeaveLevel()
 	{
 		// reset the boundary scan
 		m_haveBoundary = false;
-		
+
 		// determine what to do
 		if(m_lastBoundary == wxARCHIVE_HDR_ENTER)
 			foundLevel++;
@@ -292,7 +291,7 @@ void wxArchive::FindCurrentLeaveLevel()
 	}
 
 	while(IsOk() && foundLevel > 0)
-	{		
+	{
 		if(hdr == wxARCHIVE_HDR_ENTER)
 			foundLevel++;
 		else if(hdr == wxARCHIVE_HDR_LEAVE)
@@ -304,7 +303,7 @@ void wxArchive::FindCurrentLeaveLevel()
 				return;
 			}
 		}
-		
+
 		if(foundLevel > 0)
 		{
 			hdr = LoadChar();
@@ -312,7 +311,7 @@ void wxArchive::FindCurrentLeaveLevel()
 			// here we have data loss, as we need to look for our marker
 			// the first header should have been the proper marker (if in sync)
 			if(!firstHdr)
-				m_status.SetNewDataLoss();			
+				m_status.SetNewDataLoss();
 
 			SkipData(hdr);
 		}
@@ -341,15 +340,15 @@ void wxArchive::SkipData(wxUint8 hdr)
 	case wxARCHIVE_HDR_INT32:
 		LoadUint32();
 		break;
-	
+
 	case wxARCHIVE_HDR_INT64:
 		LoadUint64();
 		break;
-	
+
 	case wxARCHIVE_HDR_DOUBLE:
 		LoadDouble();
 		break;
-	
+
 	case wxARCHIVE_HDR_STRING:
 		LoadString();
 		break;
@@ -364,29 +363,29 @@ void wxArchive::SkipData(wxUint8 hdr)
 			Load(buf);
 		}
 		break;
-	
+
 	case wxARCHIVE_HDR_INT:
 		LoadInt();
 		break;
-	
+
 	case wxARCHIVE_HDR_ENTER:
 		break;
-	
+
 	case wxARCHIVE_HDR_LEAVE:
 		break;
 	default:
-		LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_ILL_UNKNOWN_HDR_s1, GetHeaderName(hdr).c_str());
+		LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_ILL_UNKNOWN_HDR_s1, GetHeaderName(hdr));
 		break;
 	}
 }
 
 bool wxArchive::ReadBool(bool& value)
-{    
+{
     // load boolean value
     if(LoadChunkHeader(wxARCHIVE_HDR_BOOL))
     {
         bool tmpvalue = LoadBool();
-		
+
 		if(IsOk())
 		{
             value = tmpvalue;
@@ -398,12 +397,12 @@ bool wxArchive::ReadBool(bool& value)
 }
 
 bool wxArchive::ReadUint8(wxUint8& value)
-{    
+{
     // load integer value
     if(LoadChunkHeader(wxARCHIVE_HDR_INT8))
     {
         wxUint8 tmpvalue = LoadChar();
-		
+
 		if(IsOk())
 		{
             value = tmpvalue;
@@ -420,7 +419,7 @@ bool wxArchive::ReadUint16(wxUint16& value)
     if(LoadChunkHeader(wxARCHIVE_HDR_INT16))
     {
         wxUint16 tmpvalue = LoadUint16();
-		
+
 		if(IsOk())
 		{
             value = tmpvalue;
@@ -437,7 +436,7 @@ bool wxArchive::ReadUint32(wxUint32& value)
     if(LoadChunkHeader(wxARCHIVE_HDR_INT32))
     {
         wxUint32 tmpvalue = LoadUint32();
-		
+
 		if(IsOk())
 		{
             value = tmpvalue;
@@ -454,7 +453,7 @@ bool wxArchive::ReadUint64(wxUint64& value)
     if(LoadChunkHeader(wxARCHIVE_HDR_INT64))
     {
         wxUint64 tmpvalue = LoadUint64();
-		
+
 		if(IsOk())
 		{
             value = tmpvalue;
@@ -477,7 +476,7 @@ bool wxArchive::ReadInt(int& value)
 			value = tmpval;
 			return true;
 		}
-	}	
+	}
 
 	return false;
 }
@@ -489,7 +488,7 @@ bool wxArchive::ReadDouble(double& value)
     if(LoadChunkHeader(wxARCHIVE_HDR_DOUBLE))
     {
         double tmpvalue = LoadDouble();
-		
+
 		// when all is ok, assign
 		if(IsOk())
 		{
@@ -506,7 +505,7 @@ bool wxArchive::ReadString(wxString& value)
     if(LoadChunkHeader(wxARCHIVE_HDR_STRING))
     {
         wxString tmpvalue = LoadString();
-		
+
 		if(IsOk())
 		{
             value = tmpvalue;
@@ -522,7 +521,7 @@ bool wxArchive::ReadArrayString(wxArrayString& value)
     if(LoadChunkHeader(wxARCHIVE_HDR_ARRSTRING))
     {
         wxArrayString tmpvalue = LoadArrayString();
-		
+
 		if(IsOk())
 		{
             value = tmpvalue;
@@ -535,10 +534,10 @@ bool wxArchive::ReadArrayString(wxArrayString& value)
 
 
 bool wxArchive::Read(wxCharBuffer &buf)
-{       
+{
     // load record value
     if(LoadChunkHeader(wxARCHIVE_HDR_RECORD))
-    {        
+    {
 		wxCharBuffer tmpbuf;
 		Load(tmpbuf);
 
@@ -583,12 +582,12 @@ int wxArchive::LoadChunkHeader(int expheader)
         // when header is not ok
         if(hdr != expheader)
         {
-        	LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_WRONGCHUNK_s1_s2, 
-        	         GetHeaderName(expheader).c_str(), GetHeaderName(hdr).c_str());
+        	LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_WRONGCHUNK_s1_s2,
+        	         GetHeaderName(expheader), GetHeaderName(hdr));
         	return -1;
         }
     }
-  
+
     return hdr;
 }
 
@@ -599,11 +598,11 @@ wxUint8 wxArchive::LoadChar()
 	// reads a character from the stream
 	if(CanLoad())
 	{
-		// load unsigned char through ptr to 
+		// load unsigned char through ptr to
 		// make sure we have no signed / unsigned crap
 	    m_idstr.Read((void *)&value, sizeof(wxUint8));
 	}
-	
+
 	return value;
 }
 
@@ -619,17 +618,17 @@ int wxArchive::LoadInt()
 		switch(intsize)
 		{
 		case 1:	// 8 bits
-			tmpval = (int)LoadChar();				
-			break;	
+			tmpval = (int)LoadChar();
+			break;
 		case 2:	// 16 bits
-			tmpval = (int)LoadUint16();				
-			break;	
+			tmpval = (int)LoadUint16();
+			break;
 		case 4:	// 32 bits
-			tmpval = (int)LoadUint32();				
-			break;	
+			tmpval = (int)LoadUint32();
+			break;
 		case 8:	// 64 bits
-			tmpval = (int)LoadUint64();				
-			break;	
+			tmpval = (int)LoadUint64();
+			break;
 
 		default:
 			LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_RINTSIZE);
@@ -641,35 +640,42 @@ int wxArchive::LoadInt()
 }
 
 wxString wxArchive::LoadString()
-{	
-	wxString str;
-	
+{
+    wxString str;
+
 	if(CanLoad())
 	{
 		size_t len = LoadUint32();
 
+        //wxLogDebug(wxString::Format(wxT("LoadString len %i"), len));
+
 		if (len > 0)
 		{
-#if wxUSE_UNICODE
-			wxCharBuffer tmp(len + 1);
-			m_input->Read(tmp.data(), len);
-			tmp.data()[len] = '\0';
-			wxString ret(m_conv.cMB2WX(tmp.data()));
-#else
-		    wxString ret;
-			m_idstr.Read( wxStringBuffer(ret, len), len);
-#endif
-			str = ret;
-		}	
+            // embarassing how I am doing this, but I cannot be certain which
+            // unicode method reads a multibyte array and converts it so I will
+            // do it per wxInt16 converted to wxChar. When bytes get lost in the
+            // conversion then it's tough luck as this build is not unicode then
+            str.Alloc(len+1);
+            wxInt16 *buf = new wxInt16[len+1];
+            for(int i = 0; i < len; i++)
+            {
+                // we need to load per 16 bits because they
+                // need to optionally be swapped to convert
+                buf[i] = LoadUint16();
+                str.Append((wxChar)buf[i]);
+            }
+
+            delete[] buf;
+		}
 	}
-	
+
 	return str;
 }
 
 wxArrayString wxArchive::LoadArrayString()
-{	
+{
 	wxArrayString str;
-	
+
 	if(CanLoad())
 	{
 		wxUint32 count = LoadUint32();
@@ -677,7 +683,7 @@ wxArrayString wxArchive::LoadArrayString()
 		for(wxUint32 i = 0; i < count; i++)
 			str.Add(LoadString());
 	}
-	
+
 	return str;
 }
 
@@ -717,7 +723,7 @@ wxUint64 wxArchive::LoadUint64()
 	if(CanLoad())
 	{
 		m_idstr.Read((void *)&value, sizeof(wxUint64));
-		return wxUINT64_SWAP_ON_LE(value);	
+		return wxUINT64_SWAP_ON_LE(value);
 	}
 
 	return value;
@@ -728,10 +734,10 @@ bool wxArchive::WriteInt(int value)
 	if(CanStore())
 	{
 		SaveChar(wxARCHIVE_HDR_INT);
-        
+
 		// save the size of the int
 		SaveChar(sizeof(int));
-		
+
 		// save int itself by proper casting
 		switch(sizeof(int))
 		{
@@ -747,11 +753,11 @@ bool wxArchive::WriteInt(int value)
 		case 8:
 			SaveUint64(value);
 			break;
-		
+
 		default:
 			LogError(wxARCHIVE_ERR_ILL, wxARCHIVE_ERR_STR_SINTSIZE);
 			break;
-		
+
 		}
 	}
 
@@ -809,7 +815,7 @@ bool wxArchive::WriteBool(bool value)
     if(CanStore())
 	{
         // set to boolean
-        if(value) 
+        if(value)
             nval = 1;
 
 		SaveChar(wxARCHIVE_HDR_BOOL);
@@ -841,7 +847,7 @@ bool wxArchive::WriteDouble(double value)
 #endif
 		m_odstr.Write(buf, 10);
     }
-        
+
     return IsOk();
 }
 
@@ -876,21 +882,21 @@ void wxArchive::SaveString(const wxString &value)
 {
 	if(CanStore())
 	{
-#if wxUSE_UNICODE
-		const wxWX2MBbuf buf = value.mb_str(m_conv);
-#else
-		const wxWX2MBbuf buf = value.mb_str();
-#endif
-
-		size_t len = strlen(buf);
+		size_t len = value.Len();
 		SaveUint32(len);
 		if(len > 0)
-			m_odstr.Write(buf, len);
-	}	
+		{
+		    // we write in unicode even when we are not compiled
+		    // in unicode. This means writing pairs of wxInt16
+		    // bytes. We need optional conversion in wxUint16
+            for(int i = 0; i < len; i++)
+                SaveUint16((wxUint16)value.GetChar(i));
+		}
+	}
 }
 
 bool wxArchive::WriteUint8(wxUint8 value)
-{  
+{
     if(CanStore())
     {
 		SaveChar(wxARCHIVE_HDR_INT8);
@@ -901,7 +907,7 @@ bool wxArchive::WriteUint8(wxUint8 value)
 }
 
 bool wxArchive::WriteUint16(wxUint16 value)
-{  
+{
     if(CanStore())
     {
 		SaveChar(wxARCHIVE_HDR_INT16);
@@ -912,7 +918,7 @@ bool wxArchive::WriteUint16(wxUint16 value)
 }
 
 bool wxArchive::WriteUint32(wxUint32 value)
-{  
+{
     if(CanStore())
     {
 		SaveChar(wxARCHIVE_HDR_INT32);
@@ -923,7 +929,7 @@ bool wxArchive::WriteUint32(wxUint32 value)
 }
 
 bool wxArchive::WriteUint64(wxUint64 value)
-{  
+{
     if(CanStore())
     {
 		SaveChar(wxARCHIVE_HDR_INT64);
@@ -961,58 +967,55 @@ wxString wxArchive::GetHeaderName(int headername)
 	wxString desc;
 
     switch(headername)
-    {		
+    {
 		case wxARCHIVE_HDR_STRING:
-        	desc = "string";
+        	desc = wxT("string");
         	break;
 
         case wxARCHIVE_HDR_INT8:
-        	desc = "8bits uint";
+        	desc = wxT("8bits uint");
         	break;
 
         case wxARCHIVE_HDR_INT16:
-        	desc = "16bits uint";
+        	desc = wxT("16bits uint");
         	break;
 
         case wxARCHIVE_HDR_INT32:
-        	desc = "32bits uint";
+        	desc = wxT("32bits uint");
         	break;
 
         case wxARCHIVE_HDR_INT64:
-        	desc = "64bits uint";
+        	desc = wxT("64bits uint");
         	break;
 
         case wxARCHIVE_HDR_DOUBLE:
-        	desc = "double";
+        	desc = wxT("double");
         	break;
 
         case wxARCHIVE_HDR_BOOL:
-        	desc = "bool";
+        	desc = wxT("bool");
         	break;
 
         case wxARCHIVE_HDR_RECORD:
-        	desc = "data record";
+        	desc = wxT("data record");
         	break;
 
         default:
 			if(headername < 0x30 || headername > 0x7f)
-				desc.Printf("0x%02X", headername);
+				desc = wxString::Format(wxT("0x%02X"), headername);
 			else
-				desc.Printf("%c", headername);
+				desc = wxString::Format(wxT("%c"), headername);
             break;
     }
 
     return desc;
 }
 
-int wxArchive::LogError(int err, int msgcode, const char *s1, const char *s2)
+int wxArchive::LogError(int err, int msgcode, const wxString &s1, const wxString &s2)
 {
 	wxString error;
 
-	char *ts1 = 0, *ts2 = 0;
-	char pUnknown[] = "unknown";
-
-	// make sure we only report one error. When we already have errors 
+	// make sure we only report one error. When we already have errors
 	// we ignore this one
 	if(m_errorCode == wxARCHIVE_ERR_OK && err != wxARCHIVE_ERR_OK)
 	{
@@ -1022,90 +1025,87 @@ int wxArchive::LogError(int err, int msgcode, const char *s1, const char *s2)
 		// assign our new error
 		m_errorCode = err;
 
-		// when params are 0, we map an unknown argument,
-		// so we do not have 0 ptrs in printf
-		if(s1) ts1 = (char *)s1;
-		else ts1 = pUnknown;
-
-		if(s2) ts2 = (char *)s2;
-		else ts2 = pUnknown;
-
 		switch(msgcode)
 		{
 			case wxARCHIVE_ERR_STR_HEADER_s1_s2:
-				error.Printf("Wrong header in start of stream, expected header '%s' and got '%s'", ts1, ts2);
+				error << wxT("Wrong header in start of stream, expected header '") << s1 <<
+				         wxT(" and got '") << s2 << wxT("'");
 				break;
-			
+
 			case wxARCHIVE_ERR_STR_WRONGVERSION_s1_s2:
-				error.Printf("Invalid version in stream, got v%s but expected v%s or higher", ts1, ts2);
+				error << wxT("Invalid version in stream, got v") << s1 << wxT(" but expected v")
+				      << s2 << wxT(" or higher");
 				break;
-				
+
             case wxARCHIVE_ERR_STR_BADISTREAM:
-				error.Printf("Bad input stream");
+				error << wxT("Bad input stream");
 				break;
-                
+
             case wxARCHIVE_ERR_STR_BADOSTREAM:
-				error.Printf("Bad output stream");
+				error << wxT("Bad output stream");
 				break;
 
             case wxARCHIVE_ERR_STR_NOHEADER_s1:
-				error.Printf("No valid header found in stream but expected header '%s'", ts1);
+				error << wxT("No valid header found in stream but expected header '") << s1
+				      << wxT("'");
 				break;
-                
+
             case wxARCHIVE_ERR_STR_NOVERSION:
-				error.Printf("No version information found in stream");
+				error << wxT("No version information found in stream");
 				break;
-                
+
             case wxARCHIVE_ERR_STR_NOVERHDR:
-				error.Printf("Cannot write version and/or header information to stream");
+				error << wxT("Cannot write version and/or header information to stream");
 				break;
-                         
+
             case wxARCHIVE_ERR_STR_NOWRITE:
-				error.Printf("Cannot write while in read mode!");
+				error << wxT("Cannot write while in read mode!");
 				break;
-                                               
+
             case wxARCHIVE_ERR_STR_NOREAD:
-				error.Printf("Cannot read while in write mode!");
+				error << wxT("Cannot read while in write mode!");
 				break;
 
             case wxARCHIVE_ERR_STR_EOF:
-                error.Printf("End of stream error while reading!");
+                error << wxT("End of stream error while reading!");
                 break;
 
             case wxARCHIVE_ERR_STR_WRONGCHUNK_s1_s2:
-				error.Printf("Expected chunk item of type '%s' but got type '%s'", ts1, ts2);
+				error << wxT("Expected chunk item of type '") << s1
+				      << wxT("' but got type '") << s2 << wxT("'");
 				break;
-                
+
             case wxARCHIVE_ERR_STR_MEMORY_s1:
-				error.Printf("Memory allocation error. Cannot allocate %s bytes", ts1);
+				error << wxT("Memory allocation error. Cannot allocate ") << s1
+				      << wxT(" bytes");
 				break;
-                
-            case wxARCHIVE_ERR_STR_READSIZE:                 
-				error.Printf("Record to read is 0 bytes or larger then expected (does not fit maxcount)", ts1);
+
+            case wxARCHIVE_ERR_STR_READSIZE:
+				error << wxT("Record to read is 0 bytes or larger then expected (does not fit maxcount)");
 				break;
-               
+
 			case wxARCHIVE_ERR_STR_RINTSIZE:
-				error.Printf("Cannot read back 'int' value because it's of unknown size (need 1, 2, 4 or 8)");
+				error << wxT("Cannot read back 'int' value because it's of unknown size (need 1, 2, 4 or 8)");
 				break;
 
 			case wxARCHIVE_ERR_STR_SINTSIZE:
-				error.Printf("Cannot save 'int' value because it's of unknown size (need 1, 2, 4 or 8)");
+				error << wxT("Cannot save 'int' value because it's of unknown size (need 1, 2, 4 or 8)");
 				break;
 
 			case wxARCHIVE_ERR_STR_ILL_LEAVE:
-				error.Printf("Sync Error: Illegal LeaveObject() header encountered, expected EnterObject()");
+				error << wxT("Sync Error: Illegal LeaveObject() header encountered, expected EnterObject()");
 				break;
-				
+
 			case wxARCHIVE_ERR_STR_ILL_UNKNOWN_HDR_s1:
-				error.Printf("Unknown '%s' header in stream", ts1);
+				error << wxT("Unknown '") << s1 << wxT("' header in stream");
 				break;
 
 			case wxARCHIVE_ERR_STR_ILL_LEVEL:
-				error.Printf("Sync Error: Level dropped below 0, too much LeaveObject() calls ?");
+				error << wxT("Sync Error: Level dropped below 0, too much LeaveObject() calls ?");
 				break;
 
 			default:
-				error.Printf("Unknown error error (aint that something ...)", ts1, ts2);
+				error << wxT("Unknown error error (aint that something ...)");
 				break;
 		}
 

@@ -13,7 +13,7 @@ using namespace std;
 void fileIndex_test()
 {
 	cout << "Testing fileIndex functions" << endl;
-	cout << "============================";
+	cout << "============================" << endl;
 	cout << "- Initializing Constructor" << endl;
 	fileIndex my_fileIndex;
 	cout << "- Adding Files: TEST, test1, Test2, TEST3"<<endl;
@@ -51,17 +51,29 @@ void fileIndex_test()
 		if (cmp_value == 0) 
 			cout << "-- Item 3 == \"TEST3\" [OK]" << endl;
 		else
-			cout << "-- Item 2 != \"TEST3\" [!!]" << endl;
-
-		
-	
-		
+			cout << "-- Item 3 != \"TEST3\" [!!]" << endl;
 	}
 	else
 		cout << "-- Path Index Count =! 3 [!!]" << endl;
+
+	cout << "- findValue (non case sensitive)" << endl;
+	int match = my_fileIndex.findValue(_("test"), false);
+	if (match == 0)
+		cout << "test: 0 [OK]" << endl;
+	else if (match == wxNOT_FOUND)
+		cout << "test: not found [!!]" << endl; 
+	else
+		cout << "test: " << match << " [!!]" << endl;
 	
+	match = my_fileIndex.findValue(_("Test"), false);
+	if (match == 0)
+		cout << "Test: 0 [OK]" << endl;
+	else if (match == wxNOT_FOUND)
+		cout << "Test: not found [!!]" << endl;
+	else
+		cout << "Test: " << match << " [!!]" << endl;
 	
-	cout << "============================";
+	cout << "============================" << endl;
 	cout << "Finished." << endl;
 }
 

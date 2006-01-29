@@ -12,11 +12,12 @@ using namespace std;
 
 void fileIndex_test()
 {
-	cout << "Testing fileIndex functions" << endl;
-	cout << "============================" << endl;
+	cout << "=============================" << endl;
+	cout << " Testing fileIndex functions " << endl;
+	cout << "=============================" << endl;
 	cout << "- Initializing Constructor" << endl;
 	fileIndex my_fileIndex;
-	cout << "- Adding Files: TEST, test1, Test2, TEST3"<<endl;
+	cout << "- Adding Files: test1, Test2, TEST3"<<endl;
 	my_fileIndex.addFile(_("test1"));
 	my_fileIndex.addFile(_("Test2"));
 	my_fileIndex.addFile(_("TEST3"));
@@ -59,33 +60,35 @@ void fileIndex_test()
 	cout << "- findValue (non case sensitive)" << endl;
 	int match = my_fileIndex.findValue(_("test"), false);
 	if (match == 0)
-		cout << "test: 0 [OK]" << endl;
+		cout << "-- test: 0 [OK]" << endl;
 	else if (match == wxNOT_FOUND)
-		cout << "test: not found [!!]" << endl; 
+		cout << "-- test: not found [!!]" << endl; 
 	else
-		cout << "test: " << match << " [!!]" << endl;
+		cout << "-- test: " << match << " [!!]" << endl;
 	
 	match = my_fileIndex.findValue(_("Test"), false);
 	if (match == 0)
-		cout << "Test: 0 [OK]" << endl;
+		cout << "-- Test: 0 [OK]" << endl;
 	else if (match == wxNOT_FOUND)
-		cout << "Test: not found [!!]" << endl;
+		cout << "-- Test: not found [!!]" << endl;
 	else
-		cout << "Test: " << match << " [!!]" << endl;
-	
-	cout << "============================" << endl;
+		cout << "-- Test: " << match << " [!!]" << endl;
 	cout << "Finished." << endl;
 }
 
 void imageObject_test()
 {
-	cout << "Testing imageObject functions" << endl;
+	cout << "===============================" << endl;
+	cout << " Testing imageObject functions " << endl;
+	cout << "===============================" << endl;
 	cout << "Finished." << endl;
 }
 
 void wxArchive_test()
 {
-	cout << "Testing wxArchive functions" << endl;
+	cout << "=============================" << endl;
+	cout << " Testing wxArchive functions " << endl;
+	cout << "=============================" << endl;
 	cout << "Finished." << endl;
 }
 

@@ -1,6 +1,9 @@
 #include "fileIndex.h"
 
-
+fileIndex::fileIndex()
+{
+	//TODO: do something useful here :)
+}
 
 wxArrayString fileIndex::returnPathIndex()
 {
@@ -29,7 +32,7 @@ void fileIndex::delFile(wxString filePath)
   pathIndex.Remove( filePath.wc_str() );
 }
 
-imageObject makeImageObject(wxString filePaht)
+imageObject makeImageObject(wxString filePath)
 {
 
 }

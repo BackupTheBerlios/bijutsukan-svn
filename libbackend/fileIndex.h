@@ -6,7 +6,7 @@
 #include <wx/string.h>
 #include <wx/dynarray.h>
 #include "imageObject.h"
-// #include "wxArchive.h" // doesnt compile cleanly
+#include "wxArchive.h" 
 
 
 class fileIndex

@@ -14,13 +14,13 @@ class fileIndex
 
  public:
   fileIndex();
-  wxArrayString returnPathIndex();
+  wxArrayString* returnPathIndex();
   int findValue(wxString value, bool caseSensitive);
   int findValue(wxString value);
 
   void addFile(wxString filePath);
   void delFile(wxString filePath);
-  imageObject makeImageObject(wxString filePath);
+  imageObject* makeImageObject(wxString filePath);
 
  private:
   wxArrayString pathIndex;

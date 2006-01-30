@@ -23,13 +23,13 @@ void fileIndex_test()
 	my_fileIndex.addFile(_("TEST3"));
 
 	cout << "- Getting Path Index" << endl;
-	wxArrayString my_PathIndex;
+	wxArrayString* my_PathIndex;
 	my_PathIndex = my_fileIndex.returnPathIndex();
-	if ( my_PathIndex.GetCount() == 3 )
+	if ( my_PathIndex->GetCount() == 3 )
 	{
 		wxString current_item;
 		cout << "-- Path Index Count == 3 [OK]" << endl;
-		current_item = my_PathIndex.Item(0);
+		current_item = my_PathIndex->Item(0);
 		int cmp_value = current_item.Cmp(_("test1"));
 		
 		if (cmp_value == 0) 
@@ -37,7 +37,7 @@ void fileIndex_test()
 		else
 			cout << "-- Item 0 != \"test1\" [!!]" << endl;
 
-		current_item = my_PathIndex.Item(1);
+		current_item = my_PathIndex->Item(1);
 		cmp_value = current_item.Cmp(_("Test2"));
 
 		if (cmp_value == 0) 
@@ -45,7 +45,7 @@ void fileIndex_test()
 		else
 			cout << "-- Item 1 != \"Test2\" [!!]" << endl;
 		
-		current_item = my_PathIndex.Item(2);
+		current_item = my_PathIndex->Item(2);
 		cmp_value = current_item.Cmp(_("TEST3"));
 
 				
@@ -261,6 +261,12 @@ if (match == wxNOT_FOUND)
 		cout << "-- TEST3: deleted [OK]" << endl;
 	else
 		cout << "-- TEST3 : still found: " << match << "[!!]" << endl;
+
+	cout << "- final test: all files deleted?" << endl;
+	if (my_PathIndex->GetCount() == 0)
+		cout << "-- all files deleted [OK]" << endl;
+	else
+		cout << "-- still files found [!!]" << endl;
 	
 	cout << "Finished." << endl;
 }

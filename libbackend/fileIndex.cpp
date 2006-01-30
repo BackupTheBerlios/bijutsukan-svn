@@ -5,9 +5,9 @@ fileIndex::fileIndex()
 	//TODO: do something useful here :)
 }
 
-wxArrayString fileIndex::returnPathIndex()
+wxArrayString* fileIndex::returnPathIndex()
 {
-  return pathIndex;
+  return &pathIndex;
 }
 
 int fileIndex::findValue(wxString value, bool caseSensitive)
@@ -32,7 +32,7 @@ void fileIndex::delFile(wxString filePath)
   pathIndex.Remove( filePath.wc_str() );
 }
 
-imageObject makeImageObject(wxString filePath)
+imageObject* fileIndex::makeImageObject(wxString filePath)
 {
 
 }

@@ -276,6 +276,47 @@ void imageObject_test()
 	cout << "===============================" << endl;
 	cout << " Testing imageObject functions " << endl;
 	cout << "===============================" << endl;
+	cout << "- Initializing empty imageObject" << endl;
+	imageObject my_imageObject;
+	cout << "- Filling in values" << endl;
+	cout << "Setting FilePath" << endl;
+	my_imageObject.setFilePath(_("testpath.ext.bdf"));
+	cout << "Getting FilePath" << endl;
+	wxString testbuffer = my_imageObject.getFilePath();
+	cout << "Comparing FilePath I/O: "; 
+	if (testbuffer == _("testpath.ext.bdf")) 
+		cout << "[OK]" << endl;
+	else
+		cout << "[!!]" << endl;
+	cout << "Setting FileName" << endl;
+	my_imageObject.setFileName(_("testpath.ext"));
+	cout << "Getting FileName" << endl;
+	testbuffer = my_imageObject.getFileName();
+	cout << "Comparing FileName I/O: "; 
+	if (testbuffer == _("testpath.ext")) 
+		cout << "[OK]" << endl;
+	else
+		cout << "[!!]" << endl;
+	cout << "Setting FileDescription" << endl;
+	my_imageObject.setFileDescription(_("my testpath description"));
+	cout << "Getting FileDescription" << endl;
+	testbuffer = my_imageObject.getFileDescription();
+	cout << "Comparing FileDescription I/O: "; 
+	if (testbuffer == _("my testpath description")) 
+		cout << "[OK]" << endl;
+	else
+		cout << "[!!]" << endl;
+	cout << "Setting FileCategory" << endl;
+	my_imageObject.setFileCategory(_("Other"));
+	cout << "Getting FileCategory" << endl;
+	cout << "Comparing FileName I/O: ";
+	testbuffer = my_imageObject.getFileCategory();
+	if (testbuffer == _("Other")) 
+		cout << "[OK]" << endl;
+	else
+		cout << "[!!]" << endl;
+	
+		
 	cout << "Finished." << endl;
 }
 

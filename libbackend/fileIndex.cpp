@@ -17,7 +17,7 @@ wxArrayString* fileIndex::returnPathIndex()
 /**
  * Looks for <wxString value> inside pathIndex.
  * <bool caseSensitive> enables/disables case sensitive search.
- * TODO: what happens if filepath is empty?
+ * TODO: what happens if value is empty?
 **/
 int fileIndex::findValue(wxString value, bool caseSensitive)
 {
@@ -37,8 +37,8 @@ int fileIndex::findValue(wxString value)
 */
 
 /**
- * Adds filename specified by <wxString filepath> to pathIndex.
- * TODO: what happens if filepath is empty?
+ * Adds filename specified by <wxString filePath> to pathIndex.
+ * TODO: what happens if filePath is empty?
 **/
 void fileIndex::addFile(wxString filePath)
 {
@@ -46,15 +46,20 @@ void fileIndex::addFile(wxString filePath)
 }
 
 /**
- * Deletes filename specified by <wxString filepath> from pathIndex.
- * TODO: what happens if filepath is empty?
+ * Deletes filename specified by <wxString filePath> from pathIndex.
+ * TODO: what happens if filePath is empty?
 **/
 void fileIndex::delFile(wxString filePath)
 {
   pathIndex.Remove( filePath.wc_str() );
 }
 
+/**
+ * Creates a imageObject for file specified by <wxString filePath>
+ * Returns: pointee to imageObject
+ * TODO: what happens if filePath is empty?
+**/
 imageObject* fileIndex::makeImageObject(wxString filePath)
 {
-
+	return new imageObject(filePath);
 }

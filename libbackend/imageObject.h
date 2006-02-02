@@ -16,7 +16,7 @@ class imageObject{
   wxString getFilePath();
   	// Initializes and returns new <wxString> object with value of class member <wxString filePath>
 
-  wxString getFileName();
+  wxString getFileTitle();
   	// Initializes and returns new <wxString> object with value of class member <wxString fileName>
   	
   wxString getFileDescription();
@@ -27,7 +27,7 @@ class imageObject{
   void setFilePath(wxString nfilePath);
   	// Sets value of class member <wxString filePath> to <wxString nfilePath>
   
-  void setFileName(wxString nfileName);
+  void setFileTitle(wxString nfileTitle);
   	// Sets value of class member <wxString fileName> to <wxString nfileName>
 
   void setFileDescription(wxString nfileDescription);
@@ -80,10 +80,10 @@ class imageObject{
   	// Removes <wxString nfilePosition> from class member <wxArrayString filePositions>
 
  private:
-  wxString filePath;
-  wxString fileName;
-  wxString fileDescription;
-  wxString fileCategory;
+  wxString filePath; //path to file
+  wxString fileTitle; //title for file content
+  wxString fileDescription; //description for file content
+  wxString fileCategory; //category for file content
 
   wxArrayString fileLabels;
   wxArrayString filePersons;

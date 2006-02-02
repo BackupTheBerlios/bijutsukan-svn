@@ -288,12 +288,12 @@ void imageObject_test()
 		cout << "[OK]" << endl;
 	else
 		cout << "[!!]" << endl;
-	cout << "Setting FileName" << endl;
-	my_imageObject.setFileName(_("testpath.ext"));
-	cout << "Getting FileName" << endl;
-	testbuffer = my_imageObject.getFileName();
-	cout << "Comparing FileName I/O: "; 
-	if (testbuffer == _("testpath.ext")) 
+	cout << "Setting FileTitle" << endl;
+	my_imageObject.setFileTitle(_("Test Path Picture"));
+	cout << "Getting FileTitle" << endl;
+	testbuffer = my_imageObject.getFileTitle();
+	cout << "Comparing FileTitle I/O: "; 
+	if (testbuffer == _("Test Path Picture")) 
 		cout << "[OK]" << endl;
 	else
 		cout << "[!!]" << endl;
@@ -309,7 +309,7 @@ void imageObject_test()
 	cout << "Setting FileCategory" << endl;
 	my_imageObject.setFileCategory(_("Other"));
 	cout << "Getting FileCategory" << endl;
-	cout << "Comparing FileName I/O: ";
+	cout << "Comparing FileCategory I/O: ";
 	testbuffer = my_imageObject.getFileCategory();
 	if (testbuffer == _("Other")) 
 		cout << "[OK]" << endl;

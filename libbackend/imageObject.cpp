@@ -10,6 +10,7 @@ imageObject::imageObject()
 
 /**
  * Constructor: sets class member <wxString filePath> to <wxString path>
+ * Appends extension ".bdf" to <wxString path>
 **/
 imageObject::imageObject(wxString path)
 {
@@ -26,11 +27,11 @@ wxString imageObject::getFilePath()
 }
 
 /**
- * Initializes and returns new <wxString> object with value of class member <wxString fileName>
+ * Initializes and returns new <wxString> object with value of class member <wxString fileTitle>
 **/
-wxString imageObject::getFileName()
+wxString imageObject::getFileTitle()
 {
-  return fileName;
+  return fileTitle;
 }
 
 /**
@@ -58,11 +59,11 @@ void imageObject::setFilePath(wxString nfilePath)
 }
 
 /**
- * Sets value of class member <wxString fileName> to <wxString nfileName>
+ * Sets value of class member <wxString fileTitle> to <wxString nfileTitle>
 **/
-void imageObject::setFileName(wxString nfileName)
+void imageObject::setFileTitle(wxString nfileTitle)
 {
-  fileName = nfileName;
+  fileTitle = nfileTitle;
 }
 
 /**

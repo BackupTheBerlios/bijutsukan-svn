@@ -1,0 +1,48 @@
+generisch:
+	bijutsukan ist eine bildverwaltungssoftware, die datem von nutzer einliest und diese speichert. die daten koennen dann volltext nach feldern geordnet oder komplett frei durchsucht werden. die bilder werden nicht verschoben, sondern bleiben an ihrem urspruenglichen lagerplatz. die daten werden im gleichen verzeichniss wie das originalbild gespeichert - der dateiname ist hierbei <name des bildes>.<extension des bildes>.bdf.
+
+
+begrifflichkeit:
+	panel: ein benutzerinterface von vielen dass im hauptfenster (dem einzigen dass nie geschlossen wird) angezeigt wird.
+	dialog: ein dialog ist eine art "popup" fenster, dass nur recht klein ist. dialoge sind auf die eingabe beschraenkt, und dienen nie der ausgabe
+	wizard: ein wizard ist eine folge von gut ausgearbeiteten dialogen mit kleinen erklaerungen.
+
+
+zu speichernde daten:
+	pfad: der pfad zu der datei
+	titel: der titel der datei (vom nutzer vergeben)
+	beschreibung: vom user eingegebene beschreibung des bildes.
+	labels: labels sind kurz merkmale des bildes sie werden einfach eingegeben, ohne extra erstellt werden zu muessen. beim naechsten hinzufuegen eines labels stehen alle bisher verwendeten labels zur auswahl
+	category: eine (wie pfade) geschachtelte kategorie. kategorien muessen extra angelegt werden, und enthalten eine beschreibung.
+	objects: vom user eingegebene liste von objekten die auf dem bild gezeigt sind.
+	persons: vom user eingegebene liste von personen die auf dem bild gezeigt sind.
+	positions: vom user eingegebene liste von posititionen, aus denen das bild aufgenommen wurde.
+	
+
+user interface:
+	der nutzer hat folgende panels, dialoge und wizards zur verfuegung:
+		mainPanel:
+			im mainpanel werden die schluesselfunktionen kurz aufgezeigt und erlaeuter. der nutzer kann dann per knopfdruck vom mainPanel direkt in andere panels oder dialoge gelangen.
+		aboutPanel:
+			im aboutpanel stehen informationen ueber versionsnummer, updates, autoren o.ae.
+		fileListPanel:
+			im filelistpanel kann der nutzer aus einer liste aller indizierten datein auswaehlen. die geschieht tabellenmaessig. in der tabelle werden pfad, titel, category, objects, persons, positions angezeigt.
+		labelListPanel:
+			im labellistpanel kann der nutzer mittels eines dropdown felds labels (mehrzahl!) auswaehlen. es werden dann in einer tabelle alle bilder die dieses label besitzen angezeigt. attribute siehe oben.
+		personListPanel:
+			im personlistpanel kann der nutzer mittels eines dropdown felds eine person auswaehlen. es werden dann in einer tabelle alle bilder, auf denen diese person eingetragen ist angezeigt. attribute siehe oben
+		objectListPanel:
+			siehe personListPanel
+		positionListPanel:
+			siehe labelListPanel
+		findByPanel:
+			im findByPanel kann in einem dialog ausgewaehlt werden nach welchen attributen von bildern gesucht werden soll. es sind auch mehrfache suchen moeglich. im Panel selbst wird dann das ergebniss in einer tabelle angezeigt (siehe *ListPanel). die attributsfelder der bilder werden volltext durchsucht.
+		genericResultPanel:
+			tabellarisch wie die oberen panels, nur dass keine eingabemoeglichkeiten vorhanden sind. es wird nur ueber eine tabelle ausgegeben.
+		findAllDialog:
+			der findAllDialog wird vom findbypanel aufegrufen, und dient der eingabe von suchmasken, die alle attribute des bildes beinhalten.
+		findTitleDialog:
+			im findtiteldialog wird ein wert eingegeben, der dann in den titeln aller bilder volltext durchsucht wird.
+		findPathDialog:
+			siehe findTitleDialog
+		find

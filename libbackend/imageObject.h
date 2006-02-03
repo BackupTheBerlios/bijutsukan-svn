@@ -3,6 +3,11 @@
 
 #include <wx/wx.h>
 #include <wx/string.h>
+#include <wx/wfstream.h>
+
+#include "wxArchive.h"
+
+#define BDF_DATA_VERSION 1
 
 class imageObject{
 
@@ -78,6 +83,10 @@ class imageObject{
   	// Removes <wxString nfileLocation> from class member <wxArrayString fileLocations>
   void delFilePositions(wxString nfilePosition);
   	// Removes <wxString nfilePosition> from class member <wxArrayString filePositions>
+
+  void loadBdfData();
+ 
+  void saveBdfData();
 
  private:
   wxString filePath; //path to file

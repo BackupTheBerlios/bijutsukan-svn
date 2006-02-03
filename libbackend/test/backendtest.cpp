@@ -316,6 +316,26 @@ void imageObject_test()
 	else
 		cout << "[!!]" << endl;
 	
+	
+	cout << "-- Writing BDF data" << endl;
+	my_imageObject.saveBdfData();
+	cout << "-- Reading BDF data" << endl;
+	imageObject new_imageObject(_("testpath.ext"));
+	cout << "-- Comparing BDF I/O data" << endl;
+	if (my_imageObject.getFilePath() ==  new_imageObject.getFilePath())
+		cout << "FilePath: [OK]" << endl;
+	else
+		cout << "FilePath: [!!]" << endl;
+	
+	if (my_imageObject.getFileTitle() ==  new_imageObject.getFileTitle())
+		cout << "FileTitle: [OK]" << endl;
+	else
+		cout << "FileTitle: [!!]" << endl;
+	
+	if (my_imageObject.getFileDescription() ==  new_imageObject.getFileDescription())
+		cout << "FileDescription: [OK]" << endl;
+	else
+		cout << "FileDescription: [!!]" << endl;
 		
 	cout << "Finished." << endl;
 }

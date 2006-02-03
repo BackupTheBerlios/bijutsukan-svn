@@ -10,12 +10,12 @@ imageObject::imageObject()
 
 /**
  * Constructor: sets class member <wxString filePath> to <wxString path>
- * Appends extension ".bdf" to <wxString path>
+ * Appends extension ".bdf" to <wxString path> and loads BDF data.
 **/
 imageObject::imageObject(wxString path)
 {
   filePath = path.Append( _(".bdf") );
-  // readInfo() // or something
+  loadBdfData();
 }
 
 /**
@@ -200,4 +200,44 @@ void imageObject::delFileLocations(wxString nfileLocation)
 void imageObject::delFilePositions(wxString nfilePosition)
 {
   filePositions.Remove( nfilePosition.wc_str() );
+}
+
+void imageObject::loadBdfData()
+{
+	if (filePath.IsEmpty()) return;
+	
+	wxFileInputStream bdf_input(filePath);
+	if (bdf_input.Ok() == false) return;
+	
+	wxArchive bdf_archive(bdf_input, BDF_DATA_VERSION, _T("BDF DATA"));
+	if ((bdf_archive.IsOk() == false) or (bdf_archive.Eof())) return;
+	
+	bdf_archive >> fileTitle;
+	bdf_archive >> fileDescription;
+	bdf_archive >> fileCategory;
+	bdf_archive >> fileLabels;
+	bdf_archive >> filePersons;
+	bdf_archive >> fileObjects;
+	bdf_archive >> fileLocations;
+	bdf_archive >> filePositions;
+}
+  
+void imageObject::saveBdfData()
+{
+	if (filePath.IsEmpty()) return;
+	
+	wxFileOutputStream bdf_output(filePath);
+	if (bdf_output.Ok() == false) return;
+
+	wxArchive bdf_archive(bdf_output, BDF_DATA_VERSION, _T("BDF DATA"));
+	if ((bdf_archive.IsOk() == false) or (bdf_archive.Eof() == true)) return;
+	
+	bdf_archive << fileTitle;
+	bdf_archive << fileDescription;
+	bdf_archive << fileCategory;
+	bdf_archive << fileLabels;
+	bdf_archive << filePersons;
+	bdf_archive << fileObjects;
+	bdf_archive << fileLocations;
+	bdf_archive << filePositions;
 }

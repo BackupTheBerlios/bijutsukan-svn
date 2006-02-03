@@ -1,7 +1,7 @@
 #ifndef FILEINDEX_H
 #define FILEINDEX_H 1
 
-#include <wx/wx.h>
+//#include <wx/wx.h>
 #include <wx/arrstr.h>
 #include <wx/string.h>
 #include <wx/dynarray.h>

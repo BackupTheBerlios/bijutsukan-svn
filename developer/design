@@ -45,4 +45,41 @@ user interface:
 			im findtiteldialog wird ein wert eingegeben, der dann in den titeln aller bilder volltext durchsucht wird.
 		findPathDialog:
 			siehe findTitleDialog
-		find
+		findLabelDialog:
+			siehe findTitleDialog
+		findCategoryDialog:
+			siehe findTitleDialog
+		findPersonDialog:
+			siehe findTitleDialog
+		findObjectDialog:
+			guess what ... Oo
+		findLocationDialog:
+			
+		findPositionDialog:
+			
+		findDescriptionDialog:
+			
+		findCommentDialog:
+			
+		genericFilePanel:
+			das genericfilepanel dient als parent fuer das multiFilePanel und das singleFilePanel. es bietet die eingabemaske fuer die oben aufgelisteten attribute eines bildes.
+		inputFilesPanel:
+			im inputfilespanel kann der nutzer ein oder mehrere datein indizieren. er wird danach aufgefordet attribute zu setzen, die bei allen bildern gleich sind. danach wird er in ein multiFilePanel mit diesen bildern weitergeleitet
+		inputFilePanel:
+			der benutzer kann mehrere(!) einzelne bilder (z.b. in verschiedenen ordnern) selektieren, die dann - wenn es mehrere sind - im multiFilesPanel, oder wenn es nur eins ist im singleFilePanel abgehandelt werden.
+		singleFilePanel:
+			erbt von genericFilePanel, und implementiert kein bilder hopping
+		multiFilePanel:
+			erbt von genericFilePanel. anders als das singlefilepanel implementiert das multifilepanel eine art des bilder hopping ("next image","previous image" buttons), die es erlauben zwischen bildern hin und herzusprungen, und seine eingaben zu taeatigen. auch hat das multifilepanel eine funktion, die es erlaubt aus einer tabelle einzelne eintraege (bilder) auszuwaehlen, und ihnen bestimmte attribute gleich zuzuweisen.
+		genericShowPanel:
+			parent fuer multiShowPanel und singleShowPanel. es erlaubt die anzeige von den daten und einem thumbnail des gewaehlten bildes.
+		singleShowPanel:
+			zeigt jeweils ein bild. fast identisch mit genericShowPanel
+		multiShowPanel:
+			TODO: sich ueberlegen wie das am nutzerfreundlichsten zu realisieren waere.
+		categoryEditPanel:
+			panel dass alle categories mit ihren beschreibungen zeigt. es erlaubt kategorien zu loeschen, zu editieren und hinzuzufuegen.
+		categoryAddDialog:
+			dialog, der es erlaubt eine kategorie hinzuzufuegen. name und beschreibung werden erfasst
+		categoryEditDialog:
+			dialog, der es erlaubt eine kategorie zu editieren. (TODO: erbt von categoryAddDialog)

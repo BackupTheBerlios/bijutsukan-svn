@@ -26,23 +26,23 @@ user interface:
 		aboutPanel:
 			im aboutpanel stehen informationen ueber versionsnummer, updates, autoren o.ae.
 		fileListPanel:
-			im filelistpanel kann der nutzer aus einer liste aller indizierten datein auswaehlen. die geschieht tabellenmaessig. in der tabelle werden pfad, titel, category, objects, persons, positions angezeigt.
+			im filelistpanel kann der nutzer aus einer liste aller indizierten datein auswaehlen. die geschieht tabellenmaessig. in der tabelle werden pfad, titel, category, objects, persons, positions angezeigt. beim klicken in der tabelle wird die jeweilige zeile komplett ausgewaehlt, und ein thumbnail des entsprechenden bildes angezeigt
 		labelListPanel:
-			im labellistpanel kann der nutzer mittels eines dropdown felds labels (mehrzahl!) auswaehlen. es werden dann in einer tabelle alle bilder die dieses label besitzen angezeigt. attribute siehe oben.
+			im labellistpanel kann der nutzer mittels eines dropdown felds labels (mehrzahl!) auswaehlen. es werden dann in einer tabelle alle bilder die dieses label besitzen angezeigt. attribute siehe oben. beim klicken in der tabelle wird die jeweilige zeile komplett ausgewaehlt, und ein thumbnail des entsprechenden bildes angezeigt
 		personListPanel:
-			im personlistpanel kann der nutzer mittels eines dropdown felds eine person auswaehlen. es werden dann in einer tabelle alle bilder, auf denen diese person eingetragen ist angezeigt. attribute siehe oben
+			im personlistpanel kann der nutzer mittels eines dropdown felds eine person auswaehlen. es werden dann in einer tabelle alle bilder, auf denen diese person eingetragen ist angezeigt. attribute siehe oben. beim klicken in der tabelle wird die jeweilige zeile komplett ausgewaehlt, und ein thumbnail des entsprechenden bildes angezeigt
 		objectListPanel:
 			siehe personListPanel
 		positionListPanel:
 			siehe labelListPanel
 		findByPanel:
-			im findByPanel kann in einem dialog ausgewaehlt werden nach welchen attributen von bildern gesucht werden soll. es sind auch mehrfache suchen moeglich. im Panel selbst wird dann das ergebniss in einer tabelle angezeigt (siehe *ListPanel). die attributsfelder der bilder werden volltext durchsucht.
+			im findByPanel kann in einem dialog ausgewaehlt werden nach welchen attributen von bildern gesucht werden soll. es sind auch mehrfache suchen moeglich. im Panel selbst wird dann das ergebniss in einer tabelle angezeigt (siehe *ListPanel). die attributsfelder der bilder werden volltext durchsucht. beim klicken in der tabelle wird die jeweilige zeile komplett ausgewaehlt, und ein thumbnail des entsprechenden bildes angezeigt
 		genericResultPanel:
-			tabellarisch wie die oberen panels, nur dass keine eingabemoeglichkeiten vorhanden sind. es wird nur ueber eine tabelle ausgegeben.
+			tabellarisch wie die oberen panels, nur dass keine eingabemoeglichkeiten vorhanden sind. es wird nur ueber eine tabelle ausgegeben. beim klicken in der tabelle wird die jeweilige zeile komplett ausgewaehlt, und ein thumbnail des entsprechenden bildes angezeigt
 		findAllDialog:
-			der findAllDialog wird vom findbypanel aufegrufen, und dient der eingabe von suchmasken, die alle attribute des bildes beinhalten.
+			der findAllDialog wird vom findbypanel aufegrufen, und dient der eingabe von suchmasken, die alle attribute des bildes beinhalten. beim klicken in der tabelle wird die jeweilige zeile komplett ausgewaehlt, und ein thumbnail des entsprechenden bildes angezeigt
 		findTitleDialog:
-			im findtiteldialog wird ein wert eingegeben, der dann in den titeln aller bilder volltext durchsucht wird.
+			im findtiteldialog wird ein wert eingegeben, der dann in den titeln aller bilder volltext durchsucht wird. beim klicken in der tabelle wird die jeweilige zeile komplett ausgewaehlt, und ein thumbnail des entsprechenden bildes angezeigt
 		findPathDialog:
 			siehe findTitleDialog
 		findLabelDialog:

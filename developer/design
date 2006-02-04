@@ -83,3 +83,5 @@ user interface:
 			dialog, der es erlaubt eine kategorie hinzuzufuegen. name und beschreibung werden erfasst
 		categoryEditDialog:
 			dialog, der es erlaubt eine kategorie zu editieren. (TODO: erbt von categoryAddDialog)
+		setMultipleAttributeDialog:
+			dialog, der es erlaubt ein attribut auf mehrere bilder anzuwenden. in einem grid werden mehrere bilder selektiert, auf die dann das attribut angewendet wird.

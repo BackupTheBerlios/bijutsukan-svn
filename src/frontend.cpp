@@ -73,7 +73,6 @@ void mainFrame::makeMenu()
   findMenu->AppendSeparator();
   findMenu->Append(ID_findBy, _("Find By"), findBySubMenu);
 
-
   inputMenu->Append(ID_inputWizard, _("Input Wizard"));
   inputMenu->Append(ID_inputInputPath, _("Input New File"));
   inputMenu->Append(ID_inputDirectory, _("Input New Directory"));

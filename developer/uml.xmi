@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI xmlns:UML="http://schema.omg.org/spec/UML/1.3" verified="false" timestamp="2006-02-10T23:03:09" xmi.version="1.2" >
+<XMI xmlns:UML="http://schema.omg.org/spec/UML/1.3" verified="false" timestamp="2006-02-10T23:53:03" xmi.version="1.2" >
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://uml.sf.net</XMI.exporter>
@@ -30,7 +30,7 @@ main class controlling and creating (the) frontend(s)" isSpecification="false" i
      <UML:Classifier.feature>
       <UML:Operation stereotype="13" isSpecification="false" isLeaf="false" visibility="public" xmi.id="20" isRoot="false" isAbstract="false" name="OnInit" >
        <UML:BehavioralFeature.parameter>
-        <UML:Parameter kind="return" xmi.id="9673" type="5" />
+        <UML:Parameter kind="return" xmi.id="10838" type="5" />
        </UML:BehavioralFeature.parameter>
       </UML:Operation>
      </UML:Classifier.feature>
@@ -80,7 +80,7 @@ this is the main frame in which almost everything is done. it creates and destro
       <UML:Operation comment="the constructor" isSpecification="false" isLeaf="false" visibility="public" xmi.id="141" isRoot="false" isAbstract="false" name="fileIndex" />
       <UML:Operation comment="Returns a wxArrayString pointee to pathIndex of our fileIndex class." isSpecification="false" isLeaf="false" visibility="public" xmi.id="143" isRoot="false" isAbstract="false" name="getPathIndex" >
        <UML:BehavioralFeature.parameter>
-        <UML:Parameter kind="return" xmi.id="9674" type="137" />
+        <UML:Parameter kind="return" xmi.id="10839" type="137" />
         <UML:Parameter isSpecification="false" visibility="private" xmi.id="144" value="" type="50" name="value" />
         <UML:Parameter isSpecification="false" visibility="private" xmi.id="146" value="" type="5" name="caseSensitive" />
        </UML:BehavioralFeature.parameter>
@@ -105,14 +105,14 @@ this is the main frame in which almost everything is done. it creates and destro
 
 this function returns the index of the element in a wxArrayString where the found element is." isSpecification="false" isLeaf="false" visibility="public" xmi.id="1177" isRoot="false" isAbstract="false" name="findValue" >
        <UML:BehavioralFeature.parameter>
-        <UML:Parameter kind="return" xmi.id="9675" type="2" />
+        <UML:Parameter kind="return" xmi.id="10840" type="2" />
         <UML:Parameter isSpecification="false" visibility="private" xmi.id="1178" value="" type="50" name="value" />
         <UML:Parameter isSpecification="false" visibility="private" xmi.id="1190" value="" type="5" name="caseSensitive" />
        </UML:BehavioralFeature.parameter>
       </UML:Operation>
       <UML:Operation isSpecification="false" isLeaf="false" visibility="public" xmi.id="6697" isRoot="false" isAbstract="false" name="getImageObjects" >
        <UML:BehavioralFeature.parameter>
-        <UML:Parameter kind="return" xmi.id="9676" type="4386" />
+        <UML:Parameter kind="return" xmi.id="10841" type="4386" />
        </UML:BehavioralFeature.parameter>
       </UML:Operation>
      </UML:Classifier.feature>
@@ -137,22 +137,22 @@ the constructor can either take no argument or the specified argument. if the ar
       </UML:Operation>
       <UML:Operation comment="Initializes and returns new &lt;wxString> object with value of class member &lt;wxString filePath>" isSpecification="false" isLeaf="false" visibility="public" xmi.id="255" isRoot="false" isAbstract="false" name="getFilePath" >
        <UML:BehavioralFeature.parameter>
-        <UML:Parameter kind="return" xmi.id="9677" type="50" />
+        <UML:Parameter kind="return" xmi.id="10842" type="50" />
        </UML:BehavioralFeature.parameter>
       </UML:Operation>
       <UML:Operation comment="Initializes and returns new &lt;wxString> object with value of class member &lt;wxString fileName>" isSpecification="false" isLeaf="false" visibility="public" xmi.id="261" isRoot="false" isAbstract="false" name="getFileTitle" >
        <UML:BehavioralFeature.parameter>
-        <UML:Parameter kind="return" xmi.id="9678" type="50" />
+        <UML:Parameter kind="return" xmi.id="10843" type="50" />
        </UML:BehavioralFeature.parameter>
       </UML:Operation>
       <UML:Operation comment="Initializes and returns new &lt;wxString> object with value of class member&lt;wxString fileDescription>" isSpecification="false" isLeaf="false" visibility="public" xmi.id="266" isRoot="false" isAbstract="false" name="getFileDescription" >
        <UML:BehavioralFeature.parameter>
-        <UML:Parameter kind="return" xmi.id="9679" type="50" />
+        <UML:Parameter kind="return" xmi.id="10844" type="50" />
        </UML:BehavioralFeature.parameter>
       </UML:Operation>
       <UML:Operation comment="Initializes and returns new &lt;wxString> object with value of class member &lt;wxString fileCategory>" isSpecification="false" isLeaf="false" visibility="public" xmi.id="272" isRoot="false" isAbstract="false" name="getCategory" >
        <UML:BehavioralFeature.parameter>
-        <UML:Parameter kind="return" xmi.id="9680" type="50" />
+        <UML:Parameter kind="return" xmi.id="10845" type="50" />
        </UML:BehavioralFeature.parameter>
       </UML:Operation>
       <UML:Operation comment="Sets value of class member &lt;wxString filePath> to &lt;wxString nfilePath>" isSpecification="false" isLeaf="false" visibility="public" xmi.id="279" isRoot="false" isAbstract="false" name="setFilePath" >
@@ -177,28 +177,28 @@ the constructor can either take no argument or the specified argument. if the ar
       </UML:Operation>
       <UML:Operation comment="Initializes and returns new &lt;wxArrayString> Object  with values of class member &lt;wxArrayString fileLabels>" isSpecification="false" isLeaf="false" visibility="public" xmi.id="353" isRoot="false" isAbstract="false" name="getFileLabels" >
        <UML:BehavioralFeature.parameter>
-        <UML:Parameter kind="return" xmi.id="9681" type="137" />
+        <UML:Parameter kind="return" xmi.id="10846" type="137" />
        </UML:BehavioralFeature.parameter>
       </UML:Operation>
       <UML:Operation comment="Initializes and returns new &lt;wxArrayString> Object  with values of class member &lt;wxArrayString filePersons>" isSpecification="false" isLeaf="false" visibility="public" xmi.id="361" isRoot="false" isAbstract="false" name="getFilePersons" >
        <UML:BehavioralFeature.parameter>
-        <UML:Parameter kind="return" xmi.id="9682" type="137" />
+        <UML:Parameter kind="return" xmi.id="10847" type="137" />
        </UML:BehavioralFeature.parameter>
       </UML:Operation>
       <UML:Operation comment="Initializes and returns new &lt;wxArrayString> Object  with values of class member &lt;wxArrayString fileObjects>
 " isSpecification="false" isLeaf="false" visibility="public" xmi.id="370" isRoot="false" isAbstract="false" name="getFileObjects" >
        <UML:BehavioralFeature.parameter>
-        <UML:Parameter kind="return" xmi.id="9683" type="137" />
+        <UML:Parameter kind="return" xmi.id="10848" type="137" />
        </UML:BehavioralFeature.parameter>
       </UML:Operation>
       <UML:Operation comment="Initializes and returns new &lt;wxArrayString> Object  with values of class member &lt;wxArrayString fileLocations>" isSpecification="false" isLeaf="false" visibility="public" xmi.id="380" isRoot="false" isAbstract="false" name="getFileLocations" >
        <UML:BehavioralFeature.parameter>
-        <UML:Parameter kind="return" xmi.id="9684" type="137" />
+        <UML:Parameter kind="return" xmi.id="10849" type="137" />
        </UML:BehavioralFeature.parameter>
       </UML:Operation>
       <UML:Operation comment="Initializes and returns new &lt;wxArrayString> Object  with values of class member &lt;wxArrayString filePositions>" isSpecification="false" isLeaf="false" visibility="public" xmi.id="392" isRoot="false" isAbstract="false" name="getFilePositions" >
        <UML:BehavioralFeature.parameter>
-        <UML:Parameter kind="return" xmi.id="9685" type="137" />
+        <UML:Parameter kind="return" xmi.id="10850" type="137" />
        </UML:BehavioralFeature.parameter>
       </UML:Operation>
       <UML:Operation comment="Adds &lt;wxString nfileLabel> to class member &lt;wxArrayString fileLabels>" isSpecification="false" isLeaf="false" visibility="public" xmi.id="426" isRoot="false" isAbstract="false" name="addFileLables" >
@@ -303,13 +303,14 @@ the main panel provides a overview of bijutsukans functionality. it may lead to 
     </UML:GeneralizableElement.generalization>
     <UML:Class comment="the fileListPanel shows a list of all files in the index." isSpecification="false" isLeaf="false" visibility="public" xmi.id="4243" isRoot="false" isAbstract="false" name="fileListPanel" >
      <UML:Classifier.feature>
-      <UML:Attribute comment="for reading the pathindex and " isSpecification="false" visibility="private" xmi.id="4372" initialValue="" type="134" name="myFileIdex" />
+      <UML:Attribute comment="for reading the pathindex and " isSpecification="false" visibility="private" xmi.id="4372" initialValue="" type="134" name="myFileList" />
+      <UML:Attribute isSpecification="false" visibility="private" xmi.id="10010" initialValue="" type="9180" name="fileSelector" />
       <UML:Operation comment="constructor" isSpecification="false" isLeaf="false" visibility="public" xmi.id="6886" isRoot="false" isAbstract="false" name="fileListPanel" />
      </UML:Classifier.feature>
     </UML:Class>
     <UML:Class isSpecification="false" isLeaf="false" visibility="public" xmi.id="4386" isRoot="false" isAbstract="false" name="wxArray" />
     <UML:Class isSpecification="false" isLeaf="false" visibility="public" xmi.id="4334" isRoot="false" isAbstract="false" name="wxGrid" />
-    <UML:Class comment="drawingPanelParent is a parent class for every class which needs to draw images (especially for thumbnail previews) on the screen. since this is a rather complex task we have to source it out." isSpecification="false" isLeaf="false" visibility="public" xmi.id="6249" isRoot="false" isAbstract="false" name="drawingPanel" />
+    <UML:Class comment="drawingPanelParent is a parent class for every class which needs to draw  (especially for thumbnail previews) on the screen. since this is a rather complex task we have to source it out." isSpecification="false" isLeaf="false" visibility="public" xmi.id="6249" isRoot="false" isAbstract="false" name="drawingPanel" />
     <UML:GeneralizableElement.generalization>
      <UML:Generalization xmi.idref="6763" />
      <UML:Generalization xmi.idref="7247" />
@@ -323,7 +324,9 @@ the main panel provides a overview of bijutsukans functionality. it may lead to 
      </UML:Classifier.feature>
     </UML:Class>
     <UML:Class isSpecification="false" isLeaf="false" visibility="public" xmi.id="6942" isRoot="false" isAbstract="false" name="wxGridEvent" />
-    <UML:Class comment="existent since the whole grid handling is getting more complex." isSpecification="false" isLeaf="false" visibility="public" xmi.id="7191" isRoot="false" isAbstract="false" name="gridPanel" />
+    <UML:Class comment="existent since the whole grid handling is getting more complex.
+
+this is the panel parent for panels which do their listings in grids with specific field information (such as persons, labels, objects). so mainly for use in *ListPanels" isSpecification="false" isLeaf="false" visibility="public" xmi.id="7191" isRoot="false" isAbstract="false" name="specificGridPanel" />
     <UML:Class isSpecification="false" isLeaf="false" visibility="public" xmi.id="7413" isRoot="false" isAbstract="false" name="wxComboBox" />
     <UML:Class isSpecification="false" isLeaf="false" visibility="public" xmi.id="7453" isRoot="false" isAbstract="false" name="wxListCtrl" />
     <UML:GeneralizableElement.generalization>
@@ -378,6 +381,7 @@ the main panel provides a overview of bijutsukans functionality. it may lead to 
       <UML:Attribute isSpecification="false" visibility="private" xmi.id="9472" initialValue="" type="9180" name="positionSelector" />
      </UML:Classifier.feature>
     </UML:Class>
+    <UML:Class comment="this is the parent for panels which display information about the results of specific fields in a grid. so mainly *ListPanels" isSpecification="false" isLeaf="false" visibility="public" xmi.id="10725" isRoot="false" isAbstract="false" name="imageGridPanel" />
     <UML:Association comment="the mainapp (wxApp) creates its only frame" isSpecification="false" visibility="public" xmi.id="2007" name="creates" >
      <UML:Association.connection>
       <UML:AssociationEnd isSpecification="false" visibility="public" changeability="changeable" isNavigable="false" xmi.id="2008" aggregation="none" type="18" name="" />
@@ -498,27 +502,34 @@ the main panel provides a overview of bijutsukans functionality. it may lead to 
       <UML:AssociationEnd isSpecification="false" visibility="public" changeability="changeable" isNavigable="true" xmi.id="9646" aggregation="none" type="134" name="" />
      </UML:Association.connection>
     </UML:Association>
+    <UML:Association isSpecification="false" visibility="public" xmi.id="10796" name="" >
+     <UML:Association.connection>
+      <UML:AssociationEnd isSpecification="false" visibility="public" changeability="changeable" isNavigable="false" xmi.id="10797" aggregation="none" type="7777" name="" />
+      <UML:AssociationEnd isSpecification="false" visibility="public" changeability="changeable" isNavigable="true" xmi.id="10798" aggregation="none" type="10725" name="" />
+     </UML:Association.connection>
+    </UML:Association>
    </UML:Namespace.ownedElement>
   </UML:Model>
  </XMI.content>
  <XMI.extensions xmi.extender="umbrello" >
-  <docsettings viewid="1" documentation="" uniqueid="9685" />
+  <docsettings viewid="1" documentation="" uniqueid="10850" />
   <diagrams>
-   <diagram snapgrid="1" showattsig="1" fillcolor="#ffffc0" linewidth="0" zoom="64" showgrid="1" showopsig="1" usefillcolor="1" snapx="10" canvaswidth="1378" snapy="10" showatts="1" xmi.id="1" documentation="" type="402" showops="1" showpackage="0" name="class diagram" localid="900000" showstereotype="0" showscope="1" snapcsgrid="0" font="Sans Serif,10,-1,0,50,0,0,0,0,0" linecolor="#ff0000" canvasheight="1030" >
+   <diagram snapgrid="1" showattsig="1" fillcolor="#ffffc0" linewidth="0" zoom="100" showgrid="1" showopsig="1" usefillcolor="1" snapx="10" canvaswidth="1326" snapy="10" showatts="1" xmi.id="1" documentation="" type="402" showops="1" showpackage="0" name="class diagram" localid="900000" showstereotype="0" showscope="1" snapcsgrid="0" font="Sans Serif,10,-1,0,50,0,0,0,0,0" linecolor="#ff0000" canvasheight="844" >
     <widgets>
      <classwidget usesdiagramfillcolour="0" width="148" showattsigs="601" usesdiagramusefillcolour="0" x="136" y="31" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="58" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="18" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
      <classwidget usesdiagramfillcolour="0" width="338" showattsigs="601" usesdiagramusefillcolour="0" x="41" y="145" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="270" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="43" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
      <classwidget usesdiagramfillcolour="0" width="355" showattsigs="601" usesdiagramusefillcolour="0" x="893" y="130" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="140" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="134" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
-     <classwidget usesdiagramfillcolour="0" width="242" showattsigs="601" usesdiagramusefillcolour="0" x="999" y="341" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="479" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="213" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
+     <classwidget usesdiagramfillcolour="0" width="242" showattsigs="601" usesdiagramusefillcolour="0" x="1079" y="361" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="479" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="213" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
      <classwidget usesdiagramfillcolour="0" width="229" showattsigs="601" usesdiagramusefillcolour="0" x="566" y="185" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="210" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="2113" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
-     <classwidget usesdiagramfillcolour="0" width="265" showattsigs="601" usesdiagramusefillcolour="0" x="558" y="475" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="70" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="4243" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
-     <classwidget usesdiagramfillcolour="0" width="125" showattsigs="601" usesdiagramusefillcolour="0" x="28" y="446" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="28" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="6249" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
-     <classwidget usesdiagramfillcolour="0" width="167" showattsigs="601" usesdiagramusefillcolour="0" x="577" y="582" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="56" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="6548" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
-     <classwidget usesdiagramfillcolour="0" width="64" showattsigs="601" usesdiagramusefillcolour="0" x="28" y="556" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="28" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="7191" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
+     <classwidget usesdiagramfillcolour="0" width="135" showattsigs="601" usesdiagramusefillcolour="0" x="583" y="472" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="56" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="4243" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
+     <classwidget usesdiagramfillcolour="0" width="87" showattsigs="601" usesdiagramusefillcolour="0" x="28" y="446" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="28" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="6249" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
+     <classwidget usesdiagramfillcolour="0" width="167" showattsigs="601" usesdiagramusefillcolour="0" x="577" y="552" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="56" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="6548" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
+     <classwidget usesdiagramfillcolour="0" width="107" showattsigs="601" usesdiagramusefillcolour="0" x="27" y="526" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="28" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="7191" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
      <classwidget usesdiagramfillcolour="0" width="265" showattsigs="601" usesdiagramusefillcolour="0" x="178" y="481" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="98" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="7777" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
-     <classwidget usesdiagramfillcolour="0" width="165" showattsigs="601" usesdiagramusefillcolour="0" x="578" y="672" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="56" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="8407" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
-     <classwidget usesdiagramfillcolour="0" width="162" showattsigs="601" usesdiagramusefillcolour="0" x="579" y="762" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="56" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="9085" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
-     <classwidget usesdiagramfillcolour="0" width="169" showattsigs="601" usesdiagramusefillcolour="0" x="576" y="846" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="49" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="9418" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
+     <classwidget usesdiagramfillcolour="0" width="165" showattsigs="601" usesdiagramusefillcolour="0" x="578" y="632" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="56" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="8407" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
+     <classwidget usesdiagramfillcolour="0" width="162" showattsigs="601" usesdiagramusefillcolour="0" x="579" y="702" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="56" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="9085" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
+     <classwidget usesdiagramfillcolour="0" width="169" showattsigs="601" usesdiagramusefillcolour="0" x="576" y="776" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="49" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="9418" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
+     <classwidget usesdiagramfillcolour="0" width="100" showattsigs="601" usesdiagramusefillcolour="0" x="30" y="586" linecolour="#ff0000" showopsigs="601" linewidth="none" fillcolour="#ffffc0" height="28" usefillcolor="1" showpubliconly="0" showattributes="1" isinstance="0" xmi.id="10725" showoperations="1" showpackage="0" showscope="1" font="Sans Serif,10,-1,5,75,0,0,0,0,0" />
     </widgets>
     <messages/>
     <associations>
@@ -531,7 +542,7 @@ the main panel provides a overview of bijutsukans functionality. it may lead to 
      <assocwidget totalcounta="3" indexa="2" totalcountb="3" indexb="1" linecolour="none" linewidth="none" widgetbid="4243" widgetaid="43" xmi.id="5395" >
       <linepath>
        <startpoint startx="379" starty="330" />
-       <endpoint endx="650" endy="475" />
+       <endpoint endx="630" endy="472" />
       </linepath>
      </assocwidget>
      <assocwidget totalcounta="2" indexa="1" totalcountb="2" indexb="1" linecolour="none" linewidth="none" widgetbid="43" widgetaid="18" xmi.id="5572" >
@@ -543,81 +554,87 @@ the main panel provides a overview of bijutsukans functionality. it may lead to 
      <assocwidget totalcounta="7" indexa="6" totalcountb="2" indexb="1" linecolour="none" linewidth="none" widgetbid="213" widgetaid="134" xmi.id="5780" >
       <linepath>
        <startpoint startx="1200" starty="270" />
-       <endpoint endx="1120" endy="341" />
+       <endpoint endx="1200" endy="361" />
       </linepath>
-      <floatingtext usesdiagramfillcolour="1" width="124" usesdiagramusefillcolour="1" x="1163" y="301" linecolour="none" linewidth="none" posttext="" role="703" fillcolour="none" height="18" usefillcolor="1" pretext="" isinstance="0" xmi.id="9557" text="Collecting imageObjects" font="Sans Serif,10,-1,5,50,0,0,0,0,0" />
+      <floatingtext usesdiagramfillcolour="1" width="124" usesdiagramusefillcolour="1" x="1198" y="311" linecolour="none" linewidth="none" posttext="" role="703" fillcolour="none" height="18" usefillcolor="1" pretext="" isinstance="0" xmi.id="9557" text="Collecting imageObjects" font="Sans Serif,10,-1,5,50,0,0,0,0,0" />
      </assocwidget>
      <assocwidget totalcounta="2" indexa="1" totalcountb="7" indexb="2" linecolour="none" linewidth="none" widgetbid="134" widgetaid="6548" xmi.id="6792" >
       <linepath>
-       <startpoint startx="660" starty="582" />
+       <startpoint startx="660" starty="552" />
        <endpoint endx="990" endy="270" />
       </linepath>
      </assocwidget>
-     <assocwidget totalcounta="3" indexa="1" totalcountb="2" indexb="1" linecolour="none" linewidth="none" widgetbid="6249" widgetaid="7777" xmi.id="7830" >
+     <assocwidget totalcounta="4" indexa="1" totalcountb="2" indexb="1" linecolour="none" linewidth="none" widgetbid="6249" widgetaid="7777" xmi.id="7830" >
       <linepath>
        <startpoint startx="178" starty="510" />
-       <endpoint endx="90" endy="474" />
+       <endpoint endx="115" endy="460" />
       </linepath>
      </assocwidget>
-     <assocwidget totalcounta="3" indexa="2" totalcountb="2" indexb="1" linecolour="none" linewidth="none" widgetbid="7191" widgetaid="7777" xmi.id="7859" >
+     <assocwidget totalcounta="4" indexa="2" totalcountb="2" indexb="1" linecolour="none" linewidth="none" widgetbid="7191" widgetaid="7777" xmi.id="7859" >
       <linepath>
-       <startpoint startx="178" starty="550" />
-       <endpoint endx="92" endy="570" />
+       <startpoint startx="178" starty="530" />
+       <endpoint endx="134" endy="540" />
       </linepath>
      </assocwidget>
      <assocwidget totalcounta="2" indexa="1" totalcountb="3" indexb="1" linecolour="none" linewidth="none" widgetbid="7777" widgetaid="4243" xmi.id="7888" >
       <linepath>
-       <startpoint startx="558" starty="510" />
+       <startpoint startx="583" starty="500" />
        <endpoint endx="443" endy="510" />
       </linepath>
      </assocwidget>
      <assocwidget totalcounta="2" indexa="1" totalcountb="3" indexb="2" linecolour="none" linewidth="none" widgetbid="7777" widgetaid="6548" xmi.id="7917" >
       <linepath>
-       <startpoint startx="577" starty="610" />
+       <startpoint startx="577" starty="580" />
        <endpoint endx="443" endy="550" />
       </linepath>
      </assocwidget>
      <assocwidget totalcounta="3" indexa="2" visibilityB="200" totalcountb="7" indexb="1" linecolour="none" linewidth="none" widgetbid="134" widgetaid="4243" xmi.id="4372" type="510" changeabilityA="900" changeabilityB="900" visibilityA="200" >
       <linepath>
-       <startpoint startx="730" starty="475" />
+       <startpoint startx="670" starty="472" />
        <endpoint endx="940" endy="270" />
       </linepath>
       <floatingtext usesdiagramfillcolour="1" width="69" usesdiagramusefillcolour="1" x="866" y="271" linecolour="none" linewidth="none" posttext="" role="710" fillcolour="none" height="18" usefillcolor="1" pretext="+" isinstance="0" xmi.id="9558" showstereotype="1" text="myFileIdex" font="Sans Serif,10,-1,0,50,0,0,0,0,0" />
      </assocwidget>
      <assocwidget totalcounta="3" indexa="1" totalcountb="4" indexb="3" linecolour="none" linewidth="none" widgetbid="7777" widgetaid="8407" xmi.id="8500" >
       <linepath>
-       <startpoint startx="630" starty="672" />
+       <startpoint startx="630" starty="632" />
        <endpoint endx="380" endy="579" />
       </linepath>
      </assocwidget>
      <assocwidget totalcounta="3" indexa="1" totalcountb="4" indexb="2" linecolour="none" linewidth="none" widgetbid="7777" widgetaid="9085" xmi.id="9112" >
       <linepath>
-       <startpoint startx="630" starty="762" />
+       <startpoint startx="630" starty="702" />
        <endpoint endx="310" endy="579" />
       </linepath>
      </assocwidget>
      <assocwidget totalcounta="3" indexa="1" totalcountb="4" indexb="1" linecolour="none" linewidth="none" widgetbid="7777" widgetaid="9418" xmi.id="9499" >
       <linepath>
-       <startpoint startx="630" starty="846" />
+       <startpoint startx="630" starty="776" />
        <endpoint endx="240" endy="579" />
       </linepath>
      </assocwidget>
      <assocwidget totalcounta="3" indexa="2" totalcountb="7" indexb="3" linecolour="none" linewidth="none" widgetbid="134" widgetaid="8407" xmi.id="9573" >
       <linepath>
-       <startpoint startx="690" starty="672" />
+       <startpoint startx="690" starty="632" />
        <endpoint endx="1050" endy="270" />
       </linepath>
      </assocwidget>
      <assocwidget totalcounta="3" indexa="2" totalcountb="7" indexb="4" linecolour="none" linewidth="none" widgetbid="134" widgetaid="9085" xmi.id="9602" >
       <linepath>
-       <startpoint startx="690" starty="762" />
+       <startpoint startx="690" starty="702" />
        <endpoint endx="1100" endy="270" />
       </linepath>
      </assocwidget>
      <assocwidget totalcounta="3" indexa="2" totalcountb="7" indexb="5" linecolour="none" linewidth="none" widgetbid="134" widgetaid="9418" xmi.id="9644" >
       <linepath>
-       <startpoint startx="690" starty="846" />
+       <startpoint startx="690" starty="776" />
        <endpoint endx="1150" endy="270" />
+      </linepath>
+     </assocwidget>
+     <assocwidget totalcounta="4" indexa="3" totalcountb="2" indexb="1" linecolour="none" linewidth="none" widgetbid="10725" widgetaid="7777" xmi.id="10796" >
+      <linepath>
+       <startpoint startx="178" starty="550" />
+       <endpoint endx="80" endy="586" />
       </linepath>
      </assocwidget>
     </associations>
@@ -644,6 +661,7 @@ the main panel provides a overview of bijutsukans functionality. it may lead to 
      </listitem>
      <listitem open="0" type="813" id="4243" >
       <listitem open="0" type="814" id="4372" />
+      <listitem open="0" type="814" id="10010" />
       <listitem open="0" type="815" id="6886" />
      </listitem>
      <listitem open="0" type="813" id="7777" >
@@ -654,7 +672,7 @@ the main panel provides a overview of bijutsukans functionality. it may lead to 
       <listitem open="0" type="815" id="8701" />
       <listitem open="0" type="815" id="8742" />
      </listitem>
-     <listitem open="1" type="813" id="7191" />
+     <listitem open="1" type="813" id="10725" />
      <listitem open="0" type="813" id="213" >
       <listitem open="0" type="814" id="221" />
       <listitem open="0" type="814" id="224" />
@@ -730,7 +748,7 @@ the main panel provides a overview of bijutsukans functionality. it may lead to 
       <listitem open="0" type="815" id="2555" />
       <listitem open="0" type="815" id="2594" />
      </listitem>
-     <listitem open="1" type="813" id="9085" >
+     <listitem open="0" type="813" id="9085" >
       <listitem open="0" type="814" id="9246" />
       <listitem open="0" type="814" id="9325" />
       <listitem open="0" type="815" id="9352" />
@@ -740,10 +758,11 @@ the main panel provides a overview of bijutsukans functionality. it may lead to 
       <listitem open="0" type="814" id="8568" />
       <listitem open="0" type="815" id="8582" />
      </listitem>
-     <listitem open="1" type="813" id="9418" >
+     <listitem open="0" type="813" id="9418" >
       <listitem open="0" type="814" id="9445" />
       <listitem open="0" type="814" id="9472" />
      </listitem>
+     <listitem open="1" type="813" id="7191" />
      <listitem open="1" type="813" id="7413" />
      <listitem open="1" type="813" id="6942" />
      <listitem open="1" type="813" id="7453" />

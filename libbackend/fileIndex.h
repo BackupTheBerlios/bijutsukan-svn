@@ -3,10 +3,13 @@
 
 //#include <wx/wx.h>
 #include <wx/arrstr.h>
+#include <wx/dynarray.h>
 #include <wx/string.h>
 #include <wx/dynarray.h>
 #include "imageObject.h"
 #include "wxArchive.h" 
+
+WX_DECLARE_OBJARRAY(imageObject, ArrayOfImageObjects);
 
 
 class fileIndex
@@ -18,6 +21,12 @@ class fileIndex
   	/**
 	 * fileIndex class constructor
 	**/
+  
+  ~fileIndex();
+  	/**
+	 * fileIndex class destructor
+	**/
+  
   wxArrayString* returnPathIndex();
   	/**
 	 * Returns a wxArrayString pointee to pathIndex of our fileIndex class.
@@ -39,12 +48,19 @@ class fileIndex
   	 * Deletes filename specified by <wxString filepath> from pathIndex.
   	**/
   imageObject* makeImageObject(wxString filePath);
+ 	 /**
+	  *
+	 **/
 
+  ArrayOfImageObjects* getImageObjects();
+  
  private:
   wxArrayString pathIndex;
-
+  ArrayOfImageObjects imageObjectArray;
 
 };
 
+#include <wx/arrimpl.cpp>
+WX_DEFINE_OBJARRAY(ArrayOfImageObjects);
 
 #endif

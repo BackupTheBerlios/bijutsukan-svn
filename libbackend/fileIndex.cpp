@@ -6,6 +6,12 @@ fileIndex::fileIndex()
 {
 	//TODO: do something useful here :)
 }
+
+fileIndex::~fileIndex()
+{
+	//TODO: do something useful here
+}
+
 /**
  * Returns a wxArrayString pointee to pathIndex of our fileIndex class.
 **/
@@ -62,4 +68,9 @@ void fileIndex::delFile(wxString filePath)
 imageObject* fileIndex::makeImageObject(wxString filePath)
 {
 	return new imageObject(filePath);
+}
+
+ArrayOfImageObjects* fileIndex::getImageObjects()
+{
+	return &imageObjectArray;	
 }

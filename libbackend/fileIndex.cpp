@@ -1,4 +1,6 @@
 #include "fileIndex.h"
+#include "wxArchive.h"
+
 /**
  * fileIndex class constructor
 **/
@@ -48,7 +50,8 @@ int fileIndex::findValue(wxString value)
 **/
 void fileIndex::addFile(wxString filePath)
 {
-  pathIndex.Add( filePath.wc_str() ); // maybe mb_str instead of wc_str
+  pathIndex.Add( filePath ); 
+  imageObjectArray.Add(makeImageObject(filePath));
 }
 
 /**
@@ -57,7 +60,7 @@ void fileIndex::addFile(wxString filePath)
 **/
 void fileIndex::delFile(wxString filePath)
 {
-  pathIndex.Remove( filePath.wc_str() );
+  pathIndex.Remove( filePath );
 }
 
 /**
@@ -73,4 +76,36 @@ imageObject* fileIndex::makeImageObject(wxString filePath)
 ArrayOfImageObjects* fileIndex::getImageObjects()
 {
 	return &imageObjectArray;	
+}
+
+void fileIndex::saveIndex(wxString path)
+{
+	wxFileOutputStream bdf_output(path);
+	if (bdf_output.Ok() == false) return;
+
+	wxArchive bdf_archive(bdf_output, BDF_INDEX_VERSION, _T("BDF INDEX"));
+	if ((bdf_archive.IsOk() == false) or (bdf_archive.Eof() == true)) return;
+	
+	bdf_archive << pathIndex;
+}
+
+void fileIndex::loadIndex(wxString path)
+{
+	wxFileInputStream bdf_input(path);
+	if (bdf_input.Ok() == false) return;
+	
+	wxArchive bdf_archive(bdf_input, BDF_INDEX_VERSION, _T("BDF INDEX"));
+	if ((bdf_archive.IsOk() == false) or (bdf_archive.Eof())) return;
+	
+	bdf_archive >> pathIndex;
+}
+
+void fileIndex::loadImageObjects()
+{
+	for (int item = 0; item<pathIndex.GetCount(); item++)
+	{
+		imageObject* temp_imageobject;
+		temp_imageobject = makeImageObject(pathIndex[item]);
+		imageObjectArray.Add(temp_imageobject);	
+	}
 }

@@ -9,6 +9,8 @@
 #include "imageObject.h"
 #include "wxArchive.h" 
 
+#define BDF_INDEX_VERSION 1
+
 WX_DECLARE_OBJARRAY(imageObject, ArrayOfImageObjects);
 
 
@@ -53,6 +55,10 @@ class fileIndex
 	 **/
 
   ArrayOfImageObjects* getImageObjects();
+  
+  void saveIndex(wxString path);
+  void loadIndex(wxString path);
+  void loadImageObjects();
   
  private:
   wxArrayString pathIndex;

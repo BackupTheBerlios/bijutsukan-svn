@@ -1,6 +1,8 @@
 #include "fileIndex.h"
 #include "wxArchive.h"
 
+WX_DEFINE_OBJARRAY(ArrayOfImageObjects);
+
 /**
  * fileIndex class constructor
 **/

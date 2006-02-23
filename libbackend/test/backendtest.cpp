@@ -3,10 +3,7 @@
  *******************************/
 
 #include <iostream>
-#include <wx/wx.h>
-
 #include "../fileIndex.h"
-#include "../wxArchive.h"
 
 using namespace std;
 

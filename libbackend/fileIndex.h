@@ -6,6 +6,7 @@
 #include <wx/dynarray.h>
 #include <wx/string.h>
 #include <wx/dynarray.h>
+#include <wx/arrimpl.cpp>
 #include "imageObject.h"
 #include "wxArchive.h" 
 
@@ -65,8 +66,5 @@ class fileIndex
   ArrayOfImageObjects imageObjectArray;
 
 };
-
-#include <wx/arrimpl.cpp>
-WX_DEFINE_OBJARRAY(ArrayOfImageObjects);
 
 #endif

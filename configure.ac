@@ -8,7 +8,6 @@ AC_CONFIG_HEADER(config.h)
 
 # Checks for programs.
 AC_PROG_CXX
-AC_PROG_CC
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
 AC_PROG_RANLIB
@@ -18,8 +17,7 @@ AC_PROG_RANLIB
 # Checks for header files.
 
 # Checks for typedefs, structures, and compiler characteristics.
-AC_HEADER_STDBOOL
-AC_C_CONST
+#AC_HEADER_STDBOOL
 
 AM_OPTIONS_WXCONFIG
 

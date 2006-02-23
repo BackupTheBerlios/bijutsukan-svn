@@ -1,6 +1,5 @@
 #include <iostream>
 #include "fileIndex-test.h"
-#include "../fileIndex.h"
 
 using namespace std;
 
@@ -11,10 +10,7 @@ void fileIndex_test()
 	cout << "=============================" << endl;
 	cout << "- Initializing Constructor" << endl;
 	fileIndex my_fileIndex;
-	cout << "- Adding Files: test1, Test2, TEST3"<<endl;
-	my_fileIndex.addFile(_("test1"));
-	my_fileIndex.addFile(_("Test2"));
-	my_fileIndex.addFile(_("TEST3"));
+	fileIndex_addingfiles(&my_fileIndex);
 
 	cout << "- Getting Path Index" << endl;
 	wxArrayString* my_PathIndex;
@@ -23,30 +19,15 @@ void fileIndex_test()
 	{
 		wxString current_item;
 		cout << "-- Path Index Count == 3 [OK]" << endl;
-		current_item = my_PathIndex->Item(0);
-		int cmp_value = current_item.Cmp(_("test1"));
 		
-		if (cmp_value == 0) 
-			cout << "-- Item 0 == \"test1\" [OK]" << endl;
-		else
-			cout << "-- Item 0 != \"test1\" [!!]" << endl;
-
+		current_item = my_PathIndex->Item(0);
+		compare_items(0, current_item, _("test1") );
+		
 		current_item = my_PathIndex->Item(1);
-		cmp_value = current_item.Cmp(_("Test2"));
-
-		if (cmp_value == 0) 
-			cout << "-- Item 1 == \"Test2\" [OK]" << endl;
-		else
-			cout << "-- Item 1 != \"Test2\" [!!]" << endl;
+		compare_items(1, current_item, _("Test2") );
 		
 		current_item = my_PathIndex->Item(2);
-		cmp_value = current_item.Cmp(_("TEST3"));
-
-				
-		if (cmp_value == 0) 
-			cout << "-- Item 2 == \"TEST3\" [OK]" << endl;
-		else
-			cout << "-- Item 2 != \"TEST3\" [!!]" << endl;
+		compare_items(2, current_item, _("TEST3") );
 	}
 	else
 		cout << "-- Path Index Count =! 3 [!!]" << endl;
@@ -263,4 +244,22 @@ if (match == wxNOT_FOUND)
 		cout << "-- still files found [!!]" << endl;
 	
 	cout << "Finished." << endl;
+}
+
+void fileIndex_addingfiles(fileIndex *new_fileIndex)
+{
+	cout << "- Adding Files: test1, Test2, TEST3"<<endl;
+	new_fileIndex->addFile(_("test1"));
+	new_fileIndex->addFile(_("Test2"));
+	new_fileIndex->addFile(_("TEST3"));
+}
+
+void compare_items(int item, wxString pre_string, wxString after_string)
+{
+	int cmp_value = after_string.Cmp(pre_string);
+		
+	if (cmp_value == 0) 
+		cout << "-- Item " << item << " == [OK]" << endl;
+	else
+		cout << "-- Item " << item << " == [!!]" << endl;
 }

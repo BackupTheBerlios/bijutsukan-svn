@@ -131,7 +131,7 @@ void genericFilePanel::initPrimitives()
   //  pathText = new wxStaticText(this, -1, _(""));
   //  titleText = new wxStaticText(this, -1, _(""));
   
-  descriptionInput = new wxTextCtrl(this, -1, _(""));
+  descriptionInput = new wxTextCtrl(this, -1, _(""), wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE);
   categoryInput = new wxTextCtrl(this, -1, _(""));
   labelInput = new wxTextCtrl(this, -1, _(""));
   personInput = new wxTextCtrl(this, -1, _(""));

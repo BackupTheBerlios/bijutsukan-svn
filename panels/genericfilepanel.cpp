@@ -44,6 +44,21 @@ genericFilePanel::genericFilePanel(wxWindow* parent)
   : wxPanel(parent, -1, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _("genericFilePanel"))
 {
   initSizers();
+  initPrimitives();
+}
+
+
+void genericFilePanel::initPrimitives()
+{
+  pathText = new wxStaticText(this, -1, _(""));
+  titleText = new wxStaticText(this, -1, _(""));
+  
+  descriptionInput = new wxTextCtrl(this, -1, _(""));
+  categoryInput = new wxTextCtrl(this, -1, _(""));
+  labelInput = new wxTextCtrl(this, -1, _(""));
+  personInput = new wxTextCtrl(this, -1, _(""));
+  locationInput = new wxTextCtrl(this, -1, _(""));
+  positionInput = new wxTextCtrl(this, -1, _(""));
 }
 
 void genericFilePanel::initSizers()

@@ -17,6 +17,7 @@ class genericFilePanel: public wxPanel
  private:
 
   void initSizers();
+  void initPrimitives();
 
   wxBoxSizer
     *mainVSizer,
@@ -52,46 +53,46 @@ class genericFilePanel: public wxPanel
     *positionBox;
 
   wxStaticText
-    pathText,
-    titleText;
+    *pathText,
+    *titleText;
 
 
   wxTextCtrl
-    descriptionInput,
-    categoryInput,
-    labelInput,
-    personInput,
-    locationInput,
-    positionInput;
+    *descriptionInput,
+    *categoryInput,
+    *labelInput,
+    *personInput,
+    *locationInput,
+    *positionInput;
 
   wxListCtrl
-    categoryOldList,
-    labelOldList,
-    personOldList,
-    objectOldList,
-    locationOldList;
+    *categoryOldList,
+    *labelOldList,
+    *personOldList,
+    *objectOldList,
+    *locationOldList;
 
-  wxStaticText categorySelected;
+  wxStaticText *categorySelected;
   
   wxListCtrl
-    labelSelected,
-    personSelected,
-    objectSelected,
-    locationSelected,
-    positionSelected;
+    *labelSelected,
+    *personSelected,
+    *objectSelected,
+    *locationSelected,
+    *positionSelected;
 
   wxButton
-    categoryAdd,
-    labelAdd,
-    personAdd,
-    objectAdd,
-    locationAdd,
-    positionAdd,
-    labelSelect,
-    personSelect,
-    objectSelect,
-    locationSelect,
-    positionSelect;
+    *categoryAdd,
+    *labelAdd,
+    *personAdd,
+    *objectAdd,
+    *locationAdd,
+    *positionAdd,
+    *labelSelect,
+    *personSelect,
+    *objectSelect,
+    *locationSelect,
+    *positionSelect;
 
   DECLARE_EVENT_TABLE();
 };

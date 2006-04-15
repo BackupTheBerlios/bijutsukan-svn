@@ -86,6 +86,7 @@ class genericFilePanel: public wxPanel
 
 
   wxTextCtrl
+    *objectInput,
     *descriptionInput,
     *categoryInput,
     *labelInput,
@@ -98,7 +99,8 @@ class genericFilePanel: public wxPanel
     *labelOldList,
     *personOldList,
     *objectOldList,
-    *locationOldList;
+    *locationOldList,
+    *positionOldList;
   
   wxListCtrl
     *labelSelected,

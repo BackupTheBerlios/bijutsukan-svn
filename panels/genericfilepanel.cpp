@@ -44,7 +44,8 @@ void genericFilePanel::fillSizers()
   labelButtonSizer->Add(labelAdd);
   labelHSizerL->Add(labelButtonSizer);
   labelHSizerL->Add(selectedText);
-  labelHSizerR->Add(labelSelected);
+  labelHSizerL->Add(labelSelected);
+  labelHSizerR->Add(oldLabelText);
   labelHSizerR->Add(labelOldList);
 
   personHSizerL->Add(newPersonText);
@@ -52,32 +53,40 @@ void genericFilePanel::fillSizers()
   personButtonSizer->Add(personAdd);
   personHSizerL->Add(personButtonSizer);
   personHSizerL->Add(selectedText);
-  personHSizerR->Add(personSelected);
+  personHSizerL->Add(personSelected);
+  personHSizerR->Add(oldPersonText);
   personHSizerR->Add(personOldList);
+  personHSizerR->Add(personSelect);
 
   objectHSizerL->Add(newObjectText);
   objectButtonSizer->Add(objectInput);
   objectButtonSizer->Add(objectAdd);
   objectHSizerL->Add(objectButtonSizer);
   objectHSizerL->Add(selectedText);
-  objectHSizerR->Add(objectSelected);
+  objectHSizerL->Add(objectSelected);
+  objectHSizerR->Add(oldObjectText);
   objectHSizerR->Add(objectOldList);
+  objectHSizerR->Add(objectSelect);
 
   locationHSizerL->Add(newLocationText);
   locationButtonSizer->Add(locationInput);
   locationButtonSizer->Add(locationAdd);
   locationHSizerL->Add(locationButtonSizer);
   locationHSizerL->Add(selectedText);
-  locationHSizerR->Add(locationSelected);
+  locationHSizerL->Add(locationSelected);
+  locationHSizerR->Add(oldLocationText);
   locationHSizerR->Add(locationOldList);
+  locationHSizerR->Add(locationSelect);
 
   positionHSizerL->Add(newPositionText);
   positionButtonSizer->Add(positionInput);
   positionButtonSizer->Add(positionAdd);
   positionHSizerL->Add(positionButtonSizer);
   positionHSizerL->Add(selectedText);
-  positionHSizerR->Add(positionSelected);
+  positionHSizerL->Add(positionSelected);
+  positionHSizerR->Add(oldPositionText);
   positionHSizerR->Add(positionOldList);
+  positionHSizerR->Add(positionSelect);
 
   
 }
@@ -167,11 +176,11 @@ void genericFilePanel::initPrimitives()
   oldLocationText = new wxStaticText(this, -1, _("Old Locations"));
   oldPositionText = new wxStaticText(this, -1, _("Old Positions"));
   oldObjectText = new wxStaticText(this, -1, _("Old Objects"));
-  categorySelectedText = new wxStaticText(this, -1, _(""));
-  personSelectedText = new wxStaticText(this, -1, _(""));
-  objectSelectedText = new wxStaticText(this, -1, _(""));
-  locationSelectedText = new wxStaticText(this, -1, _(""));
-  positionSelectedText = new wxStaticText(this, -1, _(""));
+  //  categorySelectedText = new wxStaticText(this, -1, _(""));
+  //  personSelectedText = new wxStaticText(this, -1, _(""));
+  //  objectSelectedText = new wxStaticText(this, -1, _(""));
+  //  locationSelectedText = new wxStaticText(this, -1, _(""));
+  //  positionSelectedText = new wxStaticText(this, -1, _(""));
 
 }
 

@@ -99,7 +99,7 @@ class genericFilePanel: public wxPanel
 
 enum
   {
-    ID_categoryAdd,
+    ID_categoryAdd=0,
     ID_labelAdd,
     ID_personAdd,
     ID_objectAdd,

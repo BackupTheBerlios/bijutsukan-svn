@@ -45,6 +45,7 @@ genericFilePanel::genericFilePanel(wxWindow* parent)
 {
   initSizers();
   initPrimitives();
+  
 }
 
 
@@ -59,6 +60,26 @@ void genericFilePanel::initPrimitives()
   personInput = new wxTextCtrl(this, -1, _(""));
   locationInput = new wxTextCtrl(this, -1, _(""));
   positionInput = new wxTextCtrl(this, -1, _(""));
+
+  categoryOldList = new wxListCtrl(this, -1);
+  labelOldList = new wxListCtrl(this, -1);
+  personOldList = new wxListCtrl(this, -1);
+  objectOldList = new wxListCtrl(this, -1);
+  locationOldList = new wxListCtrl(this, -1);
+
+  categoryAdd = new wxButton(this, ID_categoryAdd);
+  labelAdd = new wxButton(this, ID_labelAdd);
+  personAdd = new wxButton(this, ID_personAdd);
+  objectAdd = new wxButton(this, ID_objectAdd);
+  locationAdd = new wxButton(this, ID_locationAdd);
+  positionAdd = new wxButton(this, ID_positionAdd);
+
+  labelSelect = new wxButton(this, ID_labelSelect);
+  personSelect = new wxButton(this, ID_personSelect);
+  objectSelect = new wxButton(this, ID_objectSelect);
+  locationSelect = new wxButton(this, ID_locationSelect);
+  positionSelect = new wxButton(this, ID_positionSelect);
+
 }
 
 void genericFilePanel::initSizers()

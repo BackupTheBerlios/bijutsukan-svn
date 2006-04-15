@@ -18,7 +18,8 @@ class genericFilePanel: public wxPanel
 
   void initSizers();
   void initPrimitives();
-  void placeElements();
+  void placeSizers();
+  void fillSizers();
 
   wxBoxSizer
     *mainVSizer,
@@ -41,7 +42,15 @@ class genericFilePanel: public wxPanel
     *personHSizerR,
     
     *positionHSizerL,
-    *positionHSizerR;
+    *positionHSizerR,
+
+    *categoryButtonSizer,
+    *labelButtonSizer,
+    *personButtonSizer,
+    *objectButtonSizer,
+    *locationButtonSizer,
+    *positionButtonSizer;
+
 
     
   wxStaticBoxSizer
@@ -55,7 +64,25 @@ class genericFilePanel: public wxPanel
 
   wxStaticText
     *pathText,
-    *titleText;
+    *titleText,
+    *newCategoryText,
+    *newLabelText,
+    *newPersonText,
+    *newLocationText,
+    *newPositionText,
+    *newObjectText,
+    *categorySelectedText,
+    *personSelectedText,
+    *objectSelectedText,
+    *locationSelectedText,
+    *positionSelectedText,
+    *oldCategoryText,
+    *oldLabelText,
+    *oldPersonText,
+    *oldLocationText,
+    *oldPositionText,
+    *oldObjectText,
+    *selectedText;
 
 
   wxTextCtrl
@@ -72,8 +99,6 @@ class genericFilePanel: public wxPanel
     *personOldList,
     *objectOldList,
     *locationOldList;
-
-  wxStaticText *categorySelected;
   
   wxListCtrl
     *labelSelected,

@@ -1,29 +1,5 @@
 #include "genericfilepanel.h"
 
-/**
- *aboutPanel::aboutPanel(wxWindow* parent)
- *  : wxPanel(parent, -1, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _("AboutPanel"))
- *{
- *
- * logoText = new wxStaticText(this, -1, _("Bijutsukan"));
- * aboutText = new wxStaticText(this, -1, _("Bijutsukan lets you categorize, describe, and find your pictures"));
- * descText = new wxStaticText(this, -1, _("Gallery Categorizer"));
- * contactText = new wxStaticText(this, -1, _("Contact via web: http://developer.berlios.de/projects/bijutsukan/\nContact via E-Mail: bijutsukan@kanojo.de"));
- *
- *logoText->SetFont(wxFont(20, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
- *
- *mainSizer = new wxBoxSizer(wxVERTICAL);
- *
- *mainSizer->Add(logoText, 3, wxALIGN_CENTER, 0);
- *mainSizer->Add(descText, 2, wxALIGN_CENTER, 0);
- *mainSizer->Add(aboutText, 2, wxALIGN_CENTER, 0);
- *mainSizer->Add(contactText, 1, wxALIGN_CENTER, 0);
- *
- *SetSizer(mainSizer);
- *mainSizer->SetSizeHints(this);
- *}
-**/
-
 using namespace std;
 
 BEGIN_EVENT_TABLE(genericFilePanel, wxPanel)
@@ -45,10 +21,26 @@ genericFilePanel::genericFilePanel(wxWindow* parent)
 {
   initSizers();
   initPrimitives();
-  placeElements();
+  placeSizers();
+  fillSizers();
+  SetSizer(mainVSizer);
+  mainVSizer->SetSizeHints(this);
 }
 
-void genericFilePanel::placeElements()
+void genericFilePanel::fillSizers()
+{
+  descriptionBox->Add(descriptionInput);
+
+  categoryHSizerL->Add(newCategoryText);
+  categoryButtonSizer->Add(categoryInput);
+  categoryButtonSizer->Add(categoryAdd);
+  categoryHSizerL->Add(categoryButtonSizer);
+  categoryHSizerL->Add(selectedText);
+  categoryHSizerR->Add(oldCategoryText);
+  categoryHSizerR->Add(categoryOldList);
+}
+
+void genericFilePanel::placeSizers()
 {
   mainVSizer->Add(mainHSizerL);
   mainVSizer->Add(mainHSizerR);
@@ -61,6 +53,25 @@ void genericFilePanel::placeElements()
   mainHSizerL->Add(categoryBox);
   mainHSizerL->Add(objectBox);
   mainHSizerL->Add(locationBox);
+  
+  categoryBox->Add(categoryHSizerL);
+  categoryBox->Add(categoryHSizerR);
+  
+  labelBox->Add(labelHSizerL);
+  labelBox->Add(labelHSizerR);
+  
+  objectBox->Add(objectHSizerR);
+  objectBox->Add(objectHSizerL);
+
+  personBox->Add(personHSizerR);
+  personBox->Add(personHSizerL);
+  
+  locationBox->Add(locationHSizerR);
+  locationBox->Add(locationHSizerL);
+
+  positionBox->Add(positionHSizerR);
+  positionBox->Add(positionHSizerL);
+
 }
 
 void genericFilePanel::initPrimitives()
@@ -75,6 +86,7 @@ void genericFilePanel::initPrimitives()
   locationInput = new wxTextCtrl(this, -1, _(""));
   positionInput = new wxTextCtrl(this, -1, _(""));
 
+  labelSelected = new wxListCtrl(this, -1);
   categoryOldList = new wxListCtrl(this, -1);
   labelOldList = new wxListCtrl(this, -1);
   personOldList = new wxListCtrl(this, -1);
@@ -93,6 +105,25 @@ void genericFilePanel::initPrimitives()
   objectSelect = new wxButton(this, ID_objectSelect);
   locationSelect = new wxButton(this, ID_locationSelect);
   positionSelect = new wxButton(this, ID_positionSelect);
+
+  newCategoryText = new wxStaticText(this, -1, _("New Category"));
+  newLabelText = new wxStaticText(this, -1, _("New Label"));
+  newPersonText = new wxStaticText(this, -1, _("New Person"));
+  newLocationText = new wxStaticText(this, -1, _("New Location"));
+  newPositionText = new wxStaticText(this, -1, _("New Position"));
+  newObjectText = new wxStaticText(this, -1, _("New Object"));
+  selectedText = new wxStaticText(this, -1, _("Selected"));
+  oldCategoryText = new wxStaticText(this, -1, _("Old Categories"));
+  oldLabelText = new wxStaticText(this, -1, _("Old Labels"));
+  oldPersonText = new wxStaticText(this, -1, _("Old Persons"));
+  oldLocationText = new wxStaticText(this, -1, _("Old Locations"));
+  oldPositionText = new wxStaticText(this, -1, _("Old Positions"));
+  oldObjectText = new wxStaticText(this, -1, _("Old Objects"));
+  categorySelectedText = new wxStaticText(this, -1, _(""));
+  personSelectedText = new wxStaticText(this, -1, _(""));
+  objectSelectedText = new wxStaticText(this, -1, _(""));
+  locationSelectedText = new wxStaticText(this, -1, _(""));
+  positionSelectedText = new wxStaticText(this, -1, _(""));
 
 }
 
@@ -119,6 +150,13 @@ void genericFilePanel::initSizers()
   
   positionHSizerR = new wxBoxSizer(wxHORIZONTAL);
   positionHSizerL = new wxBoxSizer(wxHORIZONTAL);
+
+  labelButtonSizer = new wxBoxSizer(wxVERTICAL);
+  personButtonSizer = new wxBoxSizer(wxVERTICAL);
+  objectButtonSizer = new wxBoxSizer(wxVERTICAL);
+  locationButtonSizer = new wxBoxSizer(wxVERTICAL);
+  positionButtonSizer = new wxBoxSizer(wxVERTICAL);
+  categoryButtonSizer = new wxBoxSizer(wxVERTICAL);
 
   descriptionBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Description"));
   categoryBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Category"));

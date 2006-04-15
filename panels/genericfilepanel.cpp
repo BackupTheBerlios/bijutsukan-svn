@@ -47,6 +47,7 @@ void genericFilePanel::fillSizers()
   labelHSizerL->Add(labelSelected);
   labelHSizerR->Add(oldLabelText);
   labelHSizerR->Add(labelOldList);
+  labelHSizerR->Add(labelSelect);
 
   personHSizerL->Add(newPersonText);
   personButtonSizer->Add(personInput);
@@ -111,17 +112,17 @@ void genericFilePanel::placeSizers()
   labelBox->Add(labelHSizerL);
   labelBox->Add(labelHSizerR);
   
-  objectBox->Add(objectHSizerR);
   objectBox->Add(objectHSizerL);
+  objectBox->Add(objectHSizerR);
 
-  personBox->Add(personHSizerR);
   personBox->Add(personHSizerL);
+  personBox->Add(personHSizerR);
   
-  locationBox->Add(locationHSizerR);
   locationBox->Add(locationHSizerL);
+  locationBox->Add(locationHSizerR);
 
-  positionBox->Add(positionHSizerR);
   positionBox->Add(positionHSizerL);
+  positionBox->Add(positionHSizerR);
 
 }
 
@@ -150,18 +151,18 @@ void genericFilePanel::initPrimitives()
   locationOldList = new wxListCtrl(this, -1);
   positionOldList = new wxListCtrl(this, -1);
 
-  categoryAdd = new wxButton(this, ID_categoryAdd);
-  labelAdd = new wxButton(this, ID_labelAdd);
-  personAdd = new wxButton(this, ID_personAdd);
-  objectAdd = new wxButton(this, ID_objectAdd);
-  locationAdd = new wxButton(this, ID_locationAdd);
+  categoryAdd = new wxButton(this, ID_categoryAdd, _("Add Category"));
+  labelAdd = new wxButton(this, ID_labelAdd, _("Add Label"));
+  personAdd = new wxButton(this, ID_personAdd, _("Add Person"));
+  objectAdd = new wxButton(this, ID_objectAdd, _("Add Object"));
+  locationAdd = new wxButton(this, ID_locationAdd, _("Add Location"));
   positionAdd = new wxButton(this, ID_positionAdd);
 
-  labelSelect = new wxButton(this, ID_labelSelect);
-  personSelect = new wxButton(this, ID_personSelect);
-  objectSelect = new wxButton(this, ID_objectSelect);
-  locationSelect = new wxButton(this, ID_locationSelect);
-  positionSelect = new wxButton(this, ID_positionSelect);
+  labelSelect = new wxButton(this, ID_labelSelect, _("Select Label"));
+  personSelect = new wxButton(this, ID_personSelect, _("Select Person"));
+  objectSelect = new wxButton(this, ID_objectSelect, _("Select Object"));
+  locationSelect = new wxButton(this, ID_locationSelect, _("Select Location"));
+  positionSelect = new wxButton(this, ID_positionSelect, _("Select Position"));
 
   newCategoryText = new wxStaticText(this, -1, _("New Category"));
   newLabelText = new wxStaticText(this, -1, _("New Label"));

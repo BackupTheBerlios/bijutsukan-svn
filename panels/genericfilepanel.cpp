@@ -31,13 +31,14 @@ void genericFilePanel::fillSizers()
 {
   descriptionBox->Add(descriptionInput);
 
-  categoryHSizerL->Add(newCategoryText);
-  categoryButtonSizer->Add(categoryInput);
-  categoryButtonSizer->Add(categoryAdd);
-  categoryHSizerL->Add(categoryButtonSizer);
-  categoryHSizerL->Add(selectedText);
-  categoryHSizerR->Add(oldCategoryText);
-  categoryHSizerR->Add(categoryOldList);
+  categoryHSizerL->Add(newCategoryText, 1, wxALIGN_CENTER, 0);
+  categoryButtonSizer->Add(categoryInput, 1, wxALIGN_CENTER, 0);
+  categoryButtonSizer->Add(categoryAdd, 1, wxALIGN_CENTER, 0);
+  categoryHSizerL->Add(categoryButtonSizer, 1, wxALIGN_CENTER, 0);
+  categoryHSizerL->Add(selectedText, 1, wxALIGN_CENTER, 0);
+  categoryHSizerR->Add(oldCategoryText, 1, wxALIGN_CENTER, 0);
+  categoryHSizerR->Add(categoryOldList, 1, wxALIGN_CENTER, 0);
+
 }
 
 void genericFilePanel::placeSizers()
@@ -76,54 +77,54 @@ void genericFilePanel::placeSizers()
 
 void genericFilePanel::initPrimitives()
 {
-  pathText = new wxStaticText(this, -1, _(""));
-  titleText = new wxStaticText(this, -1, _(""));
+  //  pathText = new wxStaticText(this, -1, _(""));
+  //  titleText = new wxStaticText(this, -1, _(""));
   
-  descriptionInput = new wxTextCtrl(this, -1, _(""));
-  categoryInput = new wxTextCtrl(this, -1, _(""));
-  labelInput = new wxTextCtrl(this, -1, _(""));
-  personInput = new wxTextCtrl(this, -1, _(""));
-  locationInput = new wxTextCtrl(this, -1, _(""));
-  positionInput = new wxTextCtrl(this, -1, _(""));
+  descriptionInput = new wxTextCtrl(&descriptionBox, -1, _(""));
+  categoryInput = new wxTextCtrl(&categoryButtonSizer, -1, _(""));
+  labelInput = new wxTextCtrl(&labelButtonSizer, -1, _(""));
+  personInput = new wxTextCtrl(&personButtonSizer, -1, _(""));
+  locationInput = new wxTextCtrl(&locationButtonSizer, -1, _(""));
+  positionInput = new wxTextCtrl(&positionButtonSizer, -1, _(""));
 
-  labelSelected = new wxListCtrl(this, -1);
-  categoryOldList = new wxListCtrl(this, -1);
-  labelOldList = new wxListCtrl(this, -1);
-  personOldList = new wxListCtrl(this, -1);
-  objectOldList = new wxListCtrl(this, -1);
-  locationOldList = new wxListCtrl(this, -1);
+  labelSelected = new wxListCtrl(&labelHSizerL, -1);
+  categoryOldList = new wxListCtrl(&categoryHSizerR, -1);
+  labelOldList = new wxListCtrl(&labelHSizerR, -1);
+  personOldList = new wxListCtrl(&personHSizerR, -1);
+  objectOldList = new wxListCtrl(&objectHSizerR, -1);
+  locationOldList = new wxListCtrl(&locationHSizerR, -1);
 
-  categoryAdd = new wxButton(this, ID_categoryAdd);
-  labelAdd = new wxButton(this, ID_labelAdd);
-  personAdd = new wxButton(this, ID_personAdd);
-  objectAdd = new wxButton(this, ID_objectAdd);
-  locationAdd = new wxButton(this, ID_locationAdd);
-  positionAdd = new wxButton(this, ID_positionAdd);
+  categoryAdd = new wxButton(&categoryButtonSizer, ID_categoryAdd);
+  labelAdd = new wxButton(&labelButtonSizer, ID_labelAdd);
+  personAdd = new wxButton(&personButtonSizer, ID_personAdd);
+  objectAdd = new wxButton(&objectButtonSizer, ID_objectAdd);
+  locationAdd = new wxButton(&locationButtonSizer, ID_locationAdd);
+  positionAdd = new wxButton(&positionButtonSizer, ID_positionAdd);
 
-  labelSelect = new wxButton(this, ID_labelSelect);
-  personSelect = new wxButton(this, ID_personSelect);
-  objectSelect = new wxButton(this, ID_objectSelect);
-  locationSelect = new wxButton(this, ID_locationSelect);
-  positionSelect = new wxButton(this, ID_positionSelect);
+  labelSelect = new wxButton(&labelHSizerR, ID_labelSelect);
+  personSelect = new wxButton(&personHSizerR, ID_personSelect);
+  objectSelect = new wxButton(&objectHSizerR, ID_objectSelect);
+  locationSelect = new wxButton(&locationHSizerR, ID_locationSelect);
+  positionSelect = new wxButton(&positionHSizerR, ID_positionSelect);
 
-  newCategoryText = new wxStaticText(this, -1, _("New Category"));
-  newLabelText = new wxStaticText(this, -1, _("New Label"));
-  newPersonText = new wxStaticText(this, -1, _("New Person"));
-  newLocationText = new wxStaticText(this, -1, _("New Location"));
-  newPositionText = new wxStaticText(this, -1, _("New Position"));
-  newObjectText = new wxStaticText(this, -1, _("New Object"));
-  selectedText = new wxStaticText(this, -1, _("Selected"));
-  oldCategoryText = new wxStaticText(this, -1, _("Old Categories"));
-  oldLabelText = new wxStaticText(this, -1, _("Old Labels"));
-  oldPersonText = new wxStaticText(this, -1, _("Old Persons"));
-  oldLocationText = new wxStaticText(this, -1, _("Old Locations"));
-  oldPositionText = new wxStaticText(this, -1, _("Old Positions"));
-  oldObjectText = new wxStaticText(this, -1, _("Old Objects"));
-  categorySelectedText = new wxStaticText(this, -1, _(""));
-  personSelectedText = new wxStaticText(this, -1, _(""));
-  objectSelectedText = new wxStaticText(this, -1, _(""));
-  locationSelectedText = new wxStaticText(this, -1, _(""));
-  positionSelectedText = new wxStaticText(this, -1, _(""));
+  newCategoryText = new wxStaticText(&categoryHSizerL, -1, _("New Category"));
+  newLabelText = new wxStaticText(&labelHSizerL, -1, _("New Label"));
+  newPersonText = new wxStaticText(&personHSizerL, -1, _("New Person"));
+  newLocationText = new wxStaticText(&locationHSizerL, -1, _("New Location"));
+  newPositionText = new wxStaticText(&positionHSizerL, -1, _("New Position"));
+  newObjectText = new wxStaticText(&objectHSizerL, -1, _("New Object"));
+  selectedText = new wxStaticText(&-1, -1, _("Selected"));
+  oldCategoryText = new wxStaticText(&categoryHSizerR, -1, _("Old Categories"));
+  oldLabelText = new wxStaticText(&labelHSizerR, -1, _("Old Labels"));
+  oldPersonText = new wxStaticText(&personHSizerR, -1, _("Old Persons"));
+  oldLocationText = new wxStaticText(&locationHSizerR, -1, _("Old Locations"));
+  oldPositionText = new wxStaticText(&positionHSizerR, -1, _("Old Positions"));
+  oldObjectText = new wxStaticText(&objectHSizerR, -1, _("Old Objects"));
+  categorySelectedText = new wxStaticText(&categoryHSizerL, -1, _(""));
+  personSelectedText = new wxStaticText(&personHSizerL, -1, _(""));
+  objectSelectedText = new wxStaticText(&objectHSizerL, -1, _(""));
+  locationSelectedText = new wxStaticText(&locationHSizerL, -1, _(""));
+  positionSelectedText = new wxStaticText(&positionHSizerL, -1, _(""));
 
 }
 

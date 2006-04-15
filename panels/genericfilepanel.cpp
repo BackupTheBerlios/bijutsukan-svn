@@ -53,7 +53,14 @@ void genericFilePanel::placeElements()
   mainVSizer->Add(mainHSizerL);
   mainVSizer->Add(mainHSizerR);
   
-
+  mainHSizerR->Add(descriptionBox);
+  mainHSizerR->Add(labelBox);
+  mainHSizerR->Add(personBox);
+  mainHSizerR->Add(positionBox);
+  
+  mainHSizerL->Add(categoryBox);
+  mainHSizerL->Add(objectBox);
+  mainHSizerL->Add(locationBox);
 }
 
 void genericFilePanel::initPrimitives()

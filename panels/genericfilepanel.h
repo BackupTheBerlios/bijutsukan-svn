@@ -18,6 +18,7 @@ class genericFilePanel: public wxPanel
 
   void initSizers();
   void initPrimitives();
+  void placeElements();
 
   wxBoxSizer
     *mainVSizer,

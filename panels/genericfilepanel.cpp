@@ -45,9 +45,16 @@ genericFilePanel::genericFilePanel(wxWindow* parent)
 {
   initSizers();
   initPrimitives();
-  
+  placeElements();
 }
 
+void placeElements()
+{
+  mainVSizer->Add(mainHSizerL);
+  mainVSizer->Add(mainHSizerR);
+  
+
+}
 
 void genericFilePanel::initPrimitives()
 {

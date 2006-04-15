@@ -48,9 +48,36 @@ genericFilePanel::genericFilePanel(wxWindow* parent)
 
 void genericFilePanel::initSizers()
 {
-  //  mainSizer = new wxBoxSizer;
-  //  descriptionHSizer = new wxBoxSizer;
-  //  categoryHSizer = new wxBoxSizer;
+  mainVSizer = new wxBoxSizer(wxVERTICAL);
+  mainHSizerL = new wxBoxSizer(wxHORIZONTAL);
+  mainHSizerR = new wxBoxSizer(wxHORIZONTAL);
+
+  categoryHSizerL = new wxBoxSizer(wxHORIZONTAL);
+  categoryHSizerR = new wxBoxSizer(wxHORIZONTAL);
+
+  labelHSizerL = new wxBoxSizer(wxHORIZONTAL);
+  labelHSizerR = new wxBoxSizer(wxHORIZONTAL);
+
+  objectHSizerL = new wxBoxSizer(wxHORIZONTAL);
+  objectHSizerR = new wxBoxSizer(wxHORIZONTAL);
+
+  locationHSizerL = new wxBoxSizer(wxHORIZONTAL);
+  locationHSizerR = new wxBoxSizer(wxHORIZONTAL);
+
+  personHSizerL = new wxBoxSizer(wxHORIZONTAL);
+  personHSizerR = new wxBoxSizer(wxHORIZONTAL);
+  
+  positionHSizerR = new wxBoxSizer(wxHORIZONTAL);
+  positionHSizerL = new wxBoxSizer(wxHORIZONTAL);
+
+  descriptionBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Description"));
+  categoryBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Category"));
+  labelBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Label"));
+  objectBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Objects"));
+  personBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Persons"));
+  locationBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Locations"));
+  positionBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Positions"));
+  
 
 }
 

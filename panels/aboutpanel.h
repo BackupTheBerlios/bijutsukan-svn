@@ -1,5 +1,5 @@
-#ifndef MAINPANEL_H
-#define MAINPANEL_H 1
+#ifndef ABOUTPANEL_H
+#define ABOUTPANEL_H 1
 
 #include <wx/wx.h>
 #include <wx/panel.h>

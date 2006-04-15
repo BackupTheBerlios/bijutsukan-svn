@@ -1,286 +1,392 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN" "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" width="1727" x="0" y="0" height="809" id="/store/sources/bijutsukan/bijutsukan/developer/class diagram" >
- <rect width="1727" x="25" y="101" height="809" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="310" y2="310" x1="809" x2="956" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="400" y2="542" x1="809" x2="1060" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="159" y2="215" x1="640" x2="640" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="340" y2="431" x1="1630" x2="1630" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="542" y2="340" x1="1100" x2="1370" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="609" y2="716" x1="620" x2="630" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="570" y2="540" x1="1013" x2="813" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="650" y2="580" x1="1007" x2="813" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="609" y2="716" x1="590" x2="520" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="622" y2="340" x1="1090" x2="1420" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="702" y2="609" x1="1060" x2="780" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="772" y2="609" x1="1060" x2="740" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="846" y2="609" x1="1060" x2="700" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="702" y2="340" x1="1120" x2="1480" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="772" y2="340" x1="1120" x2="1530" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="846" y2="340" x1="1120" x2="1580" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="609" y2="716" x1="660" x2="760" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="794" y2="744" x1="680" x2="760" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="794" y2="744" x1="600" x2="500" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="716" y2="596" x1="490" x2="230" />
- <polygon points="809 310 819 314 831 310 819 306" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
- <polygon points="809 400 816 409 828 411 820 401" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
- <polygon points="640 159 636 169 640 181 644 169" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
- <polygon points="1630 340 1626 350 1630 362 1634 350" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
- <polygon points="1090 622 1100 619 1107 608 1095 612" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
- <polygon points="1100 542 1111 539 1118 529 1106 533" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
- <polygon points="630 716 635 704 622 705 630 716" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
- <polygon points="813 540 823 548 825 535 813 540" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
- <polygon points="813 580 821 590 826 578 813 580" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
- <polygon points="520 716 532 710 521 703 520 716" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
- <polygon points="780 609 789 619 793 606 780 609" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
- <polygon points="740 609 747 620 753 608 740 609" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
- <polygon points="700 609 706 621 713 610 700 609" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
- <polygon points="1120 702 1130 698 1136 686 1124 692" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
- <polygon points="1120 772 1130 768 1135 756 1124 762" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
- <polygon points="1120 846 1130 841 1135 830 1124 836" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
- <polygon points="760 744 747 744 754 755 760 744" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
- <polygon points="500 744 507 755 513 743 500 744" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
- <polygon points="490 716 483 708 470 707 479 716" transform="translate(-25,-101)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="310" y2="314" x1="809" x2="819" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="310" y2="306" x1="831" x2="819" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="314" y2="310" x1="819" x2="831" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="306" y2="310" x1="819" x2="809" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="400" y2="409" x1="809" x2="816" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="411" y2="401" x1="828" x2="820" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="409" y2="411" x1="816" x2="828" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="401" y2="400" x1="820" x2="809" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="159" y2="169" x1="640" x2="636" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="181" y2="169" x1="640" x2="644" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="169" y2="181" x1="636" x2="640" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="169" y2="159" x1="644" x2="640" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="340" y2="350" x1="1630" x2="1626" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="362" y2="350" x1="1630" x2="1634" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="350" y2="362" x1="1626" x2="1630" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="350" y2="340" x1="1634" x2="1630" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="622" y2="619" x1="1090" x2="1100" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="608" y2="612" x1="1107" x2="1095" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="619" y2="608" x1="1100" x2="1107" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="542" y2="539" x1="1100" x2="1111" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="529" y2="533" x1="1118" x2="1106" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="539" y2="529" x1="1111" x2="1118" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="533" y2="542" x1="1106" x2="1100" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="716" y2="704" x1="630" x2="635" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="704" y2="705" x1="635" x2="622" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="716" y2="705" x1="630" x2="622" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="540" y2="548" x1="813" x2="823" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="548" y2="535" x1="823" x2="825" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="540" y2="535" x1="813" x2="825" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="612" y2="622" x1="1095" x2="1090" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="580" y2="590" x1="813" x2="821" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="590" y2="578" x1="821" x2="826" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="580" y2="578" x1="813" x2="826" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="710" y2="703" x1="532" x2="521" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="716" y2="703" x1="520" x2="521" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="716" y2="710" x1="520" x2="532" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="609" y2="619" x1="780" x2="789" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="619" y2="606" x1="789" x2="793" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="609" y2="606" x1="780" x2="793" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="609" y2="620" x1="740" x2="747" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="620" y2="608" x1="747" x2="753" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="609" y2="608" x1="740" x2="753" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="609" y2="621" x1="700" x2="706" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="621" y2="610" x1="706" x2="713" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="609" y2="610" x1="700" x2="713" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="702" y2="698" x1="1120" x2="1130" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="686" y2="692" x1="1136" x2="1124" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="698" y2="686" x1="1130" x2="1136" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="692" y2="702" x1="1124" x2="1120" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="772" y2="768" x1="1120" x2="1130" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="756" y2="762" x1="1135" x2="1124" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="768" y2="756" x1="1130" x2="1135" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="762" y2="772" x1="1124" x2="1120" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="846" y2="841" x1="1120" x2="1130" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="830" y2="836" x1="1135" x2="1124" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="841" y2="830" x1="1130" x2="1135" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="836" y2="846" x1="1124" x2="1120" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="716" y2="703" x1="760" x2="757" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="716" y2="712" x1="760" x2="748" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="744" y2="744" x1="760" x2="747" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="744" y2="755" x1="747" x2="754" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="744" y2="755" x1="760" x2="754" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="744" y2="755" x1="500" x2="507" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="755" y2="743" x1="507" x2="513" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="744" y2="743" x1="500" x2="513" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="708" y2="707" x1="483" x2="470" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="716" y2="716" x1="479" x2="490" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="716" y2="708" x1="490" x2="483" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="707" y2="716" x1="470" x2="479" />
- <rect width="411" x="25" y="498" height="98" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="230" y="510" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:italic;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >imageDrawingClass</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="512" y2="512" x1="25" x2="435" />
- <text x="30" y="524" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myDC : wxPaintDC</text>
- <text x="30" y="538" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myBitMap : wxBitmap</text>
- <text x="30" y="552" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myImage : wxImage</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="554" y2="554" x1="25" x2="435" />
- <text x="30" y="566" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ imageDrawingClass(parent : wxWindow, id : wxWindowID, myImage : wxImage)</text>
- <text x="30" y="580" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ convertImage()</text>
- <text x="30" y="594" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ onPaint(ev : wxPaintEvent)</text>
- <rect width="148" x="566" y="101" height="58" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="640" y="113" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >bijutsukan</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="115" y2="115" x1="566" x2="713" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="122" y2="122" x1="566" x2="713" />
- <text x="571" y="134" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ OnInit() : bool</text>
- <rect width="87" x="457" y="716" height="28" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="500" y="728" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >drawingPanel</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="730" y2="730" x1="457" x2="543" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="737" y2="737" x1="457" x2="543" />
- <rect width="107" x="577" y="716" height="28" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="630" y="728" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >specificGridPanel</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="730" y2="730" x1="577" x2="683" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="737" y2="737" x1="577" x2="683" />
- <rect width="169" x="1006" y="846" height="49" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="1090" y="858" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >positionListPanel</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="860" y2="860" x1="1006" x2="1174" />
- <text x="1011" y="872" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myPositionList : wxArrayString</text>
- <text x="1011" y="886" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- positionSelector : wxTextCtrl</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="888" y2="888" x1="1006" x2="1174" />
- <rect width="265" x="508" y="794" height="112" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="640" y="806" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >genericResultPanel</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="808" y2="808" x1="508" x2="772" />
- <text x="513" y="820" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- description : wxStaticText</text>
- <text x="513" y="834" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- editButton : wxButton</text>
- <text x="513" y="848" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- viewButton : wxButton</text>
- <text x="513" y="862" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- deleteButton : wxButton</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="864" y2="864" x1="508" x2="772" />
- <text x="513" y="876" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ genericResultPanel()</text>
- <text x="513" y="890" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ gridEventHandler(event : wxGridEvent)</text>
- <text x="513" y="904" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ genericEventHandler(event : wxCommandEvent)</text>
- <rect width="162" x="1009" y="772" height="56" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="1090" y="784" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >objectListPanel</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="786" y2="786" x1="1009" x2="1170" />
- <text x="1014" y="798" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myObjectList : wxArrayString</text>
- <text x="1014" y="812" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- objectSelector : wxTextCtrl</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="814" y2="814" x1="1009" x2="1170" />
- <text x="1014" y="826" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ objectListPanel()</text>
- <rect width="265" x="548" y="511" height="98" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="680" y="523" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >genericListPanel</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="525" y2="525" x1="548" x2="812" />
- <text x="553" y="537" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- editButton : wxButton</text>
- <text x="553" y="551" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- deleteButton : wxButton</text>
- <text x="553" y="565" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- viewButton : wxButton</text>
- <text x="553" y="579" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- setMultipleAttributeButton : wxButton</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="581" y2="581" x1="548" x2="812" />
- <text x="553" y="593" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ gridEventHandler(event : wxGridEvent)</text>
- <text x="553" y="607" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ genericEventHandler(event : wxCommandEvent)</text>
- <rect width="165" x="1008" y="702" height="56" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="1090" y="714" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >personListPanel</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="716" y2="716" x1="1008" x2="1172" />
- <text x="1013" y="728" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myPersonList : wxArrayString</text>
- <text x="1013" y="742" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- personSelector : wxTextCtrl</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="744" y2="744" x1="1008" x2="1172" />
- <text x="1013" y="756" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ personListPanel()</text>
- <rect width="100" x="710" y="716" height="28" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="760" y="728" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >imageGridPanel</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="730" y2="730" x1="710" x2="809" />
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="737" y2="737" x1="710" x2="809" />
- <rect width="338" x="471" y="215" height="270" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="640" y="227" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >mainFrame</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="229" y2="229" x1="471" x2="808" />
- <text x="476" y="241" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- currentEvent : int</text>
- <text x="476" y="255" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- dbIsOpen : bool</text>
- <text x="476" y="269" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- dbFileString : wxString</text>
- <text x="476" y="283" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- dbFileName : wxFileName</text>
- <text x="476" y="297" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myAboutPanel : aboutPanel</text>
- <text x="476" y="311" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- menuBar : wxMenuBar</text>
- <text x="476" y="325" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileMenu : wxMenu</text>
- <text x="476" y="339" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- findMenu : wxMenu</text>
- <text x="476" y="353" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- findBySubMenu : wxMenu</text>
- <text x="476" y="367" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- inputMenu : wxMenu</text>
- <text x="476" y="381" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- categoryMenu : wxMenu</text>
- <text x="476" y="395" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- optionsMenu : wxMenu</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="397" y2="397" x1="471" x2="808" />
- <text x="476" y="409" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ mainFrame(title : wxString, pos : wxPoint, size : wxSize)</text>
- <text x="476" y="423" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ onQuit(event : wxCommandEvent)</text>
- <text x="476" y="437" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ eventHandler(event : wxCommandEvent)</text>
- <text x="476" y="451" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- makeMenu()</text>
- <text x="476" y="465" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- deletePanel()</text>
- <rect width="167" x="1007" y="622" height="56" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="1090" y="634" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >labeListPanel</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="636" y2="636" x1="1007" x2="1173" />
- <text x="1012" y="648" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myLabelList : wxArrayString</text>
- <text x="1012" y="662" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- labelSelector : wxListCtrl</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="664" y2="664" x1="1007" x2="1173" />
- <text x="1012" y="676" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ labeListPanel()</text>
- <rect width="229" x="956" y="205" height="210" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="1070" y="217" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >mainPanel</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="219" y2="219" x1="956" x2="1184" />
- <text x="961" y="231" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- mainCaption : wxStaticText</text>
- <text x="961" y="245" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- findDescription : wxStaticText</text>
- <text x="961" y="259" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- listDescription : wxStaticText</text>
- <text x="961" y="273" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- inputDescription : wxStaticText</text>
- <text x="961" y="287" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- inputWizard : wxButton</text>
- <text x="961" y="301" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- inputPath : wxButton</text>
- <text x="961" y="315" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- inputDir : wxButton</text>
- <text x="961" y="329" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileList : wxButton</text>
- <text x="961" y="343" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- labelList : wxButton</text>
- <text x="961" y="357" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- personList : wxButton</text>
- <text x="961" y="371" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- positionList : wxButton</text>
- <text x="961" y="385" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- findBy : wxButton</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="387" y2="387" x1="956" x2="1184" />
- <text x="961" y="399" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ mainPanel(parent : wxWindow)</text>
- <text x="961" y="413" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ eventHandler(event : wxCommandEvent)</text>
- <rect width="242" x="1509" y="431" height="479" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="1630" y="443" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >imageObject</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="445" y2="445" x1="1509" x2="1750" />
- <text x="1514" y="457" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- filePath : wxString</text>
- <text x="1514" y="471" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileTitle : wxString</text>
- <text x="1514" y="485" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileDescription : wxString</text>
- <text x="1514" y="499" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileCategory : wxString</text>
- <text x="1514" y="513" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileLabels : wxArrayString</text>
- <text x="1514" y="527" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- filePersons : wxArrayString</text>
- <text x="1514" y="541" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileObjects : wxArrayString</text>
- <text x="1514" y="555" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileLocations : wxArrayString</text>
- <text x="1514" y="569" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- filePositions : wxArrayString</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="571" y2="571" x1="1509" x2="1750" />
- <text x="1514" y="583" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ imageObject(path : wxString)</text>
- <text x="1514" y="597" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFilePath() : wxString</text>
- <text x="1514" y="611" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFileTitle() : wxString</text>
- <text x="1514" y="625" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFileDescription() : wxString</text>
- <text x="1514" y="639" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getCategory() : wxString</text>
- <text x="1514" y="653" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ setFilePath(nfilePath : wxString)</text>
- <text x="1514" y="667" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ setFileTitle(nfileTitle : wxString)</text>
- <text x="1514" y="681" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ setFileDescription(nfileDescription : wxString)</text>
- <text x="1514" y="695" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ setFileCategory(nfileCategory : wxString)</text>
- <text x="1514" y="709" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFileLabels() : wxArrayString</text>
- <text x="1514" y="723" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFilePersons() : wxArrayString</text>
- <text x="1514" y="737" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFileObjects() : wxArrayString</text>
- <text x="1514" y="751" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFileLocations() : wxArrayString</text>
- <text x="1514" y="765" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFilePositions() : wxArrayString</text>
- <text x="1514" y="779" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ addFileLables(nfileLabel : wxString)</text>
- <text x="1514" y="793" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ addFilePersons(nfilePerson : wxString)</text>
- <text x="1514" y="807" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ addFileObjects(nfileObject : wxString)</text>
- <text x="1514" y="821" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ addFileLocations(nfileLocation : wxString)</text>
- <text x="1514" y="835" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ addFilePositions(nfilePosition : wxString)</text>
- <text x="1514" y="849" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ delFileLabels(nfileLabel : wxString)</text>
- <text x="1514" y="863" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ delFilePersons(nfilePerson : wxString)</text>
- <text x="1514" y="877" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ delFileObjects(nfileObject : wxString)</text>
- <text x="1514" y="891" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ delFileLocations(nfileLocation : wxString)</text>
- <text x="1514" y="905" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ delFilePositions(nfilePosition : wxString)</text>
- <rect width="135" x="1013" y="542" height="56" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="1080" y="554" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >fileListPanel</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="556" y2="556" x1="1013" x2="1147" />
- <text x="1018" y="568" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myFileList : fileIndex</text>
- <text x="1018" y="582" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileSelector : wxTextCtrl</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="584" y2="584" x1="1013" x2="1147" />
- <text x="1018" y="596" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ fileListPanel()</text>
- <rect width="355" x="1323" y="200" height="140" transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
- <text x="1500" y="212" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >fileIndex</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="214" y2="214" x1="1323" x2="1677" />
- <text x="1328" y="226" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- pathIndex : wxArrayString</text>
- <text x="1328" y="240" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- imageObjectArray : wxArray</text>
- <line transform="translate(-25,-101)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="242" y2="242" x1="1323" x2="1677" />
- <text x="1328" y="254" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ fileIndex()</text>
- <text x="1328" y="268" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getPathIndex(value : wxString, caseSensitive : bool) : wxArrayString</text>
- <text x="1328" y="282" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ addFile(filePath : wxString)</text>
- <text x="1328" y="296" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ delFile(filePath : wxString)</text>
- <text x="1328" y="310" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ makeImageObject(filePath : wxString)</text>
- <text x="1328" y="324" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ findValue(value : wxString, caseSensitive : bool) : int</text>
- <text x="1328" y="338" transform="translate(-25,-101)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getImageObjects() : wxArray</text>
- <text x="1690" y="395" transform="translate(-25,-101)" style="fill:rgb(50,50,50);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" text-anchor="middle" >Collecting imageObjects</text>
- <text x="1330" y="355" transform="translate(-25,-101)" style="fill:rgb(50,50,50);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" text-anchor="middle" >+myFileIdex</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1777" x="0" y="0" height="1706" id="/store/sources/bijutsukan/bijutsukan/developer/class diagram" >
+ <rect width="1777" x="15" y="75" height="1706" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="270" y2="180" x1="819" x2="886" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="340" y2="542" x1="819" x2="1070" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="159" y2="205" x1="640" x2="650" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="340" y2="431" x1="1630" x2="1630" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="829" y2="953" x1="520" x2="490" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="650" y2="750" x1="1007" x2="723" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="542" y2="340" x1="1110" x2="1370" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="730" y2="770" x1="1008" x2="723" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="622" y2="340" x1="1120" x2="1410" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="829" y2="956" x1="590" x2="600" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="598" y2="731" x1="1090" x2="590" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="800" y2="790" x1="1009" x2="723" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="870" y2="810" x1="1006" x2="723" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="702" y2="340" x1="1120" x2="1460" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="772" y2="340" x1="1120" x2="1500" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="846" y2="340" x1="1120" x2="1540" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1054" y2="984" x1="630" x2="730" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1054" y2="988" x1="550" x2="440" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="953" y2="849" x1="390" x2="150" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="953" y2="849" x1="440" x2="290" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="622" y2="410" x1="1060" x2="819" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="702" y2="475" x1="1060" x2="730" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="772" y2="475" x1="1060" x2="650" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="846" y2="475" x1="1060" x2="570" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="829" y2="956" x1="660" x2="730" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1265" y2="1480" x1="990" x2="725" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1195" y2="670" x1="1020" x2="1509" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1195" y2="340" x1="960" x2="1590" />
+ <polygon points="819 270 828 264 832 252 822 259" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <polygon points="819 340 824 350 836 354 830 343" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <polygon points="640 159 638 170 645 180 646 168" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="1630 340 1626 350 1630 362 1634 350" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="600 956 606 944 593 945 600 956" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <polygon points="723 750 736 752 731 740 723 750" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <polygon points="1110 542 1121 539 1127 529 1115 532" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="490 953 499 944 486 941 490 953" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <polygon points="1120 622 1130 618 1136 607 1124 612" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="590 731 603 734 599 722 590 731" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <polygon points="723 770 735 775 733 762 723 770" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <polygon points="723 790 734 797 734 784 723 790" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <polygon points="723 810 733 819 735 806 723 810" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <polygon points="1120 702 1130 697 1135 686 1124 692" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="1120 772 1130 767 1135 755 1124 762" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="1120 846 1130 841 1134 829 1123 835" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="730 984 717 985 725 996 730 984" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <polygon points="440 988 446 999 453 988 440 988" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <polygon points="390 953 382 945 370 944 379 953" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="440 953 434 944 422 940 429 951" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="1060 622 1055 612 1043 607 1050 618" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="1060 702 1054 693 1042 690 1049 700" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="1060 772 1054 763 1042 759 1049 769" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="1060 846 1054 837 1042 833 1049 843" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="730 956 730 943 719 949 730 956" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <polygon points="725 1480 738 1478 730 1468 725 1480" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,255,255);" />
+ <polygon points="1020 1195 1030 1190 1035 1179 1024 1185" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <polygon points="960 1195 969 1189 973 1177 963 1184" transform="translate(-15,-75)" style="stroke:rgb(0,0,0);stroke-width:0;fill:rgb(255,0,0);" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="270" y2="264" x1="819" x2="828" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="252" y2="259" x1="832" x2="822" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="264" y2="252" x1="828" x2="832" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="259" y2="270" x1="822" x2="819" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="340" y2="350" x1="819" x2="824" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="354" y2="343" x1="836" x2="830" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="350" y2="354" x1="824" x2="836" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="343" y2="340" x1="830" x2="819" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="159" y2="170" x1="640" x2="638" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="180" y2="168" x1="645" x2="646" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="170" y2="180" x1="638" x2="645" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="168" y2="159" x1="646" x2="640" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="340" y2="350" x1="1630" x2="1626" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="362" y2="350" x1="1630" x2="1634" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="350" y2="362" x1="1626" x2="1630" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="350" y2="340" x1="1634" x2="1630" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="622" y2="618" x1="1120" x2="1130" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="607" y2="612" x1="1136" x2="1124" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="618" y2="607" x1="1130" x2="1136" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="956" y2="944" x1="600" x2="606" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="944" y2="945" x1="606" x2="593" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="956" y2="945" x1="600" x2="593" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="750" y2="752" x1="723" x2="736" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="752" y2="740" x1="736" x2="731" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="750" y2="740" x1="723" x2="731" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="542" y2="539" x1="1110" x2="1121" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="529" y2="532" x1="1127" x2="1115" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="539" y2="529" x1="1121" x2="1127" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="532" y2="542" x1="1115" x2="1110" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="770" y2="775" x1="723" x2="735" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="953" y2="944" x1="490" x2="499" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="944" y2="941" x1="499" x2="486" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="953" y2="941" x1="490" x2="486" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="612" y2="622" x1="1124" x2="1120" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="731" y2="734" x1="590" x2="603" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="734" y2="722" x1="603" x2="599" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="731" y2="722" x1="590" x2="599" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="775" y2="762" x1="735" x2="733" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="770" y2="762" x1="723" x2="733" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="790" y2="797" x1="723" x2="734" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="797" y2="784" x1="734" x2="734" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="790" y2="784" x1="723" x2="734" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="810" y2="819" x1="723" x2="733" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="819" y2="806" x1="733" x2="735" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="810" y2="806" x1="723" x2="735" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="702" y2="697" x1="1120" x2="1130" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="686" y2="692" x1="1135" x2="1124" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="697" y2="686" x1="1130" x2="1135" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="692" y2="702" x1="1124" x2="1120" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="772" y2="767" x1="1120" x2="1130" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="755" y2="762" x1="1135" x2="1124" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="767" y2="755" x1="1130" x2="1135" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="762" y2="772" x1="1124" x2="1120" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="846" y2="841" x1="1120" x2="1130" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="829" y2="835" x1="1134" x2="1123" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="841" y2="829" x1="1130" x2="1134" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="835" y2="846" x1="1123" x2="1120" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="984" y2="985" x1="730" x2="717" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="985" y2="996" x1="717" x2="725" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="984" y2="996" x1="730" x2="725" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="988" y2="999" x1="440" x2="446" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="999" y2="988" x1="446" x2="453" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="988" y2="988" x1="440" x2="453" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="953" y2="945" x1="390" x2="382" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="944" y2="953" x1="370" x2="379" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="945" y2="944" x1="382" x2="370" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="953" y2="953" x1="379" x2="390" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="953" y2="944" x1="440" x2="434" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="940" y2="951" x1="422" x2="429" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="944" y2="940" x1="434" x2="422" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="951" y2="953" x1="429" x2="440" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="622" y2="612" x1="1060" x2="1055" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="607" y2="618" x1="1043" x2="1050" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="612" y2="607" x1="1055" x2="1043" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="618" y2="622" x1="1050" x2="1060" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="702" y2="693" x1="1060" x2="1054" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="690" y2="700" x1="1042" x2="1049" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="693" y2="690" x1="1054" x2="1042" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="700" y2="702" x1="1049" x2="1060" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="772" y2="763" x1="1060" x2="1054" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="759" y2="769" x1="1042" x2="1049" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="763" y2="759" x1="1054" x2="1042" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="769" y2="772" x1="1049" x2="1060" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="846" y2="837" x1="1060" x2="1054" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="833" y2="843" x1="1042" x2="1049" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="837" y2="833" x1="1054" x2="1042" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="843" y2="846" x1="1049" x2="1060" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="956" y2="943" x1="730" x2="730" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="943" y2="949" x1="730" x2="719" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="956" y2="949" x1="730" x2="719" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1480" y2="1478" x1="725" x2="738" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1478" y2="1468" x1="738" x2="730" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1480" y2="1468" x1="725" x2="730" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1195" y2="1190" x1="1020" x2="1030" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1179" y2="1185" x1="1035" x2="1024" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1190" y2="1179" x1="1030" x2="1035" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1185" y2="1195" x1="1024" x2="1020" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1195" y2="1189" x1="960" x2="969" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1177" y2="1184" x1="973" x2="963" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1189" y2="1177" x1="969" x2="973" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:none;" y1="1184" y2="1195" x1="963" x2="960" />
+ <rect width="148" x="566" y="101" height="58" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="640" y="113" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >bijutsukan</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="115" y2="115" x1="566" x2="713" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="122" y2="122" x1="566" x2="713" />
+ <text x="571" y="134" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ OnInit() : bool</text>
+ <rect width="338" x="481" y="205" height="270" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="650" y="217" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >mainFrame</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="219" y2="219" x1="481" x2="818" />
+ <text x="486" y="231" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- currentEvent : int</text>
+ <text x="486" y="245" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- dbIsOpen : bool</text>
+ <text x="486" y="259" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- dbFileString : wxString</text>
+ <text x="486" y="273" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- dbFileName : wxFileName</text>
+ <text x="486" y="287" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myAboutPanel : aboutPanel</text>
+ <text x="486" y="301" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- menuBar : wxMenuBar</text>
+ <text x="486" y="315" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileMenu : wxMenu</text>
+ <text x="486" y="329" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- findMenu : wxMenu</text>
+ <text x="486" y="343" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- findBySubMenu : wxMenu</text>
+ <text x="486" y="357" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- inputMenu : wxMenu</text>
+ <text x="486" y="371" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- categoryMenu : wxMenu</text>
+ <text x="486" y="385" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- optionsMenu : wxMenu</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="387" y2="387" x1="481" x2="818" />
+ <text x="486" y="399" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ mainFrame(title : wxString, pos : wxPoint, size : wxSize)</text>
+ <text x="486" y="413" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ onQuit(event : wxCommandEvent)</text>
+ <text x="486" y="427" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ eventHandler(event : wxCommandEvent)</text>
+ <text x="486" y="441" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- makeMenu()</text>
+ <text x="486" y="455" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- deletePanel()</text>
+ <rect width="355" x="1323" y="200" height="140" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="1500" y="212" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >fileIndex</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="214" y2="214" x1="1323" x2="1677" />
+ <text x="1328" y="226" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- pathIndex : wxArrayString</text>
+ <text x="1328" y="240" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- imageObjectArray : wxArray</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="242" y2="242" x1="1323" x2="1677" />
+ <text x="1328" y="254" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ fileIndex()</text>
+ <text x="1328" y="268" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getPathIndex(value : wxString, caseSensitive : bool) : wxArrayString</text>
+ <text x="1328" y="282" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ addFile(filePath : wxString)</text>
+ <text x="1328" y="296" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ delFile(filePath : wxString)</text>
+ <text x="1328" y="310" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ makeImageObject(filePath : wxString)</text>
+ <text x="1328" y="324" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ findValue(value : wxString, caseSensitive : bool) : int</text>
+ <text x="1328" y="338" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getImageObjects() : wxArray</text>
+ <rect width="242" x="1509" y="431" height="479" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="1630" y="443" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >imageObject</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="445" y2="445" x1="1509" x2="1750" />
+ <text x="1514" y="457" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- filePath : wxString</text>
+ <text x="1514" y="471" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileTitle : wxString</text>
+ <text x="1514" y="485" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileDescription : wxString</text>
+ <text x="1514" y="499" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileCategory : wxString</text>
+ <text x="1514" y="513" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileLabels : wxArrayString</text>
+ <text x="1514" y="527" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- filePersons : wxArrayString</text>
+ <text x="1514" y="541" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileObjects : wxArrayString</text>
+ <text x="1514" y="555" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileLocations : wxArrayString</text>
+ <text x="1514" y="569" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- filePositions : wxArrayString</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="571" y2="571" x1="1509" x2="1750" />
+ <text x="1514" y="583" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ imageObject(path : wxString)</text>
+ <text x="1514" y="597" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFilePath() : wxString</text>
+ <text x="1514" y="611" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFileTitle() : wxString</text>
+ <text x="1514" y="625" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFileDescription() : wxString</text>
+ <text x="1514" y="639" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getCategory() : wxString</text>
+ <text x="1514" y="653" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ setFilePath(nfilePath : wxString)</text>
+ <text x="1514" y="667" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ setFileTitle(nfileTitle : wxString)</text>
+ <text x="1514" y="681" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ setFileDescription(nfileDescription : wxString)</text>
+ <text x="1514" y="695" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ setFileCategory(nfileCategory : wxString)</text>
+ <text x="1514" y="709" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFileLabels() : wxArrayString</text>
+ <text x="1514" y="723" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFilePersons() : wxArrayString</text>
+ <text x="1514" y="737" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFileObjects() : wxArrayString</text>
+ <text x="1514" y="751" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFileLocations() : wxArrayString</text>
+ <text x="1514" y="765" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ getFilePositions() : wxArrayString</text>
+ <text x="1514" y="779" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ addFileLables(nfileLabel : wxString)</text>
+ <text x="1514" y="793" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ addFilePersons(nfilePerson : wxString)</text>
+ <text x="1514" y="807" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ addFileObjects(nfileObject : wxString)</text>
+ <text x="1514" y="821" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ addFileLocations(nfileLocation : wxString)</text>
+ <text x="1514" y="835" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ addFilePositions(nfilePosition : wxString)</text>
+ <text x="1514" y="849" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ delFileLabels(nfileLabel : wxString)</text>
+ <text x="1514" y="863" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ delFilePersons(nfilePerson : wxString)</text>
+ <text x="1514" y="877" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ delFileObjects(nfileObject : wxString)</text>
+ <text x="1514" y="891" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ delFileLocations(nfileLocation : wxString)</text>
+ <text x="1514" y="905" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ delFilePositions(nfilePosition : wxString)</text>
+ <rect width="229" x="886" y="75" height="210" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="1000" y="87" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >mainPanel</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="89" y2="89" x1="886" x2="1114" />
+ <text x="891" y="101" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- mainCaption : wxStaticText</text>
+ <text x="891" y="115" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- findDescription : wxStaticText</text>
+ <text x="891" y="129" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- listDescription : wxStaticText</text>
+ <text x="891" y="143" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- inputDescription : wxStaticText</text>
+ <text x="891" y="157" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- inputWizard : wxButton</text>
+ <text x="891" y="171" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- inputPath : wxButton</text>
+ <text x="891" y="185" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- inputDir : wxButton</text>
+ <text x="891" y="199" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileList : wxButton</text>
+ <text x="891" y="213" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- labelList : wxButton</text>
+ <text x="891" y="227" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- personList : wxButton</text>
+ <text x="891" y="241" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- positionList : wxButton</text>
+ <text x="891" y="255" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- findBy : wxButton</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="257" y2="257" x1="886" x2="1114" />
+ <text x="891" y="269" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ mainPanel(parent : wxWindow)</text>
+ <text x="891" y="283" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ eventHandler(event : wxCommandEvent)</text>
+ <rect width="135" x="1023" y="542" height="56" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="1090" y="554" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >fileListPanel</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="556" y2="556" x1="1023" x2="1157" />
+ <text x="1028" y="568" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myFileList : fileIndex</text>
+ <text x="1028" y="582" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- fileSelector : wxTextCtrl</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="584" y2="584" x1="1023" x2="1157" />
+ <text x="1028" y="596" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ fileListPanel()</text>
+ <rect width="167" x="1007" y="622" height="56" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="1090" y="634" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >labeListPanel</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="636" y2="636" x1="1007" x2="1173" />
+ <text x="1012" y="648" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myLabelList : wxArrayString</text>
+ <text x="1012" y="662" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- labelSelector : wxListCtrl</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="664" y2="664" x1="1007" x2="1173" />
+ <text x="1012" y="676" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ labeListPanel()</text>
+ <rect width="107" x="547" y="956" height="28" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="600" y="968" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >specificGridPanel</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="970" y2="970" x1="547" x2="653" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="977" y2="977" x1="547" x2="653" />
+ <rect width="165" x="1008" y="702" height="56" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="1090" y="714" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >personListPanel</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="716" y2="716" x1="1008" x2="1172" />
+ <text x="1013" y="728" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myPersonList : wxArrayString</text>
+ <text x="1013" y="742" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- personSelector : wxTextCtrl</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="744" y2="744" x1="1008" x2="1172" />
+ <text x="1013" y="756" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ personListPanel()</text>
+ <rect width="162" x="1009" y="772" height="56" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="1090" y="784" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >objectListPanel</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="786" y2="786" x1="1009" x2="1170" />
+ <text x="1014" y="798" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myObjectList : wxArrayString</text>
+ <text x="1014" y="812" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- objectSelector : wxTextCtrl</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="814" y2="814" x1="1009" x2="1170" />
+ <text x="1014" y="826" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ objectListPanel()</text>
+ <rect width="169" x="1006" y="846" height="49" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="1090" y="858" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >positionListPanel</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="860" y2="860" x1="1006" x2="1174" />
+ <text x="1011" y="872" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myPositionList : wxArrayString</text>
+ <text x="1011" y="886" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- positionSelector : wxTextCtrl</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="888" y2="888" x1="1006" x2="1174" />
+ <rect width="100" x="680" y="956" height="28" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="730" y="968" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >imageGridPanel</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="970" y2="970" x1="680" x2="779" />
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="977" y2="977" x1="680" x2="779" />
+ <rect width="265" x="458" y="1054" height="112" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="590" y="1066" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >genericResultPanel</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="1068" y2="1068" x1="458" x2="722" />
+ <text x="463" y="1080" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- description : wxStaticText</text>
+ <text x="463" y="1094" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- editButton : wxButton</text>
+ <text x="463" y="1108" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- viewButton : wxButton</text>
+ <text x="463" y="1122" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- deleteButton : wxButton</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="1124" y2="1124" x1="458" x2="722" />
+ <text x="463" y="1136" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ genericResultPanel()</text>
+ <text x="463" y="1150" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ gridEventHandler(event : wxGridEvent)</text>
+ <text x="463" y="1164" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ genericEventHandler(event : wxCommandEvent)</text>
+ <rect width="229" x="496" y="1179" height="602" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="610" y="1191" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >genericFilePanel</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="1193" y2="1193" x1="496" x2="724" />
+ <text x="501" y="1205" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- pathText : wxStaticText</text>
+ <text x="501" y="1219" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- titleText : wxStaticText</text>
+ <text x="501" y="1233" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- descriptionBox : wxStaticBox</text>
+ <text x="501" y="1247" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- categoryBox : wxStaticBox</text>
+ <text x="501" y="1261" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- labelBox : wxStaticBox</text>
+ <text x="501" y="1275" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- personBox : wxStaticBox</text>
+ <text x="501" y="1289" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- objectBox : wxStaticBox</text>
+ <text x="501" y="1303" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- locationBox : wxStaticBox</text>
+ <text x="501" y="1317" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- positionBox : wxStaticBox</text>
+ <text x="501" y="1331" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- descriptionInput : wxTextCtrl</text>
+ <text x="501" y="1345" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- categoryInput : wxTextCtrl</text>
+ <text x="501" y="1359" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- labelInput : wxTextCtrl</text>
+ <text x="501" y="1373" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- personInput : wxTextCtrl</text>
+ <text x="501" y="1387" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- objectInput : wxTextCtrl</text>
+ <text x="501" y="1401" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- locationIInput : wxTextCtrl</text>
+ <text x="501" y="1415" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- positionInput : wxTextCtrl</text>
+ <text x="501" y="1429" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- categoryOldList : wxListCtrl</text>
+ <text x="501" y="1443" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- labelOldList : wxListCtrl</text>
+ <text x="501" y="1457" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- personOldList : wxListCtrl</text>
+ <text x="501" y="1471" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- objectOldList : wxListCtrl</text>
+ <text x="501" y="1485" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- locationOldList : wxListCtrl</text>
+ <text x="501" y="1499" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- positionOldList : wxListCtrl</text>
+ <text x="501" y="1513" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- catgorySelected : wxStaticText</text>
+ <text x="501" y="1527" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- labelSelected : wxListCtrl</text>
+ <text x="501" y="1541" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- personSelected : wxListCtrl</text>
+ <text x="501" y="1555" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- objectSelected : wxListCtrl</text>
+ <text x="501" y="1569" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- locationSelected : wxListCtrl</text>
+ <text x="501" y="1583" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- positionSelected : wxListCtrl</text>
+ <text x="501" y="1597" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- categoryAdd : wxButton</text>
+ <text x="501" y="1611" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- labelAdd : wxButton</text>
+ <text x="501" y="1625" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- personAdd : wxButton</text>
+ <text x="501" y="1639" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- objectAdd : wxButton</text>
+ <text x="501" y="1653" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- locationAdd : wxButton</text>
+ <text x="501" y="1667" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- positionAdd : wxButton</text>
+ <text x="501" y="1681" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- labelSelect : wxButton</text>
+ <text x="501" y="1695" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- personSelect : wxButton</text>
+ <text x="501" y="1709" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- objectSelect : wxButton</text>
+ <text x="501" y="1723" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- locationSelect : wxButton</text>
+ <text x="501" y="1737" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- positionSelect : wxButton</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="1739" y2="1739" x1="496" x2="724" />
+ <text x="501" y="1751" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ genericFilePanel()</text>
+ <text x="501" y="1765" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ eventHandler(event : wxCommandEvent)</text>
+ <rect width="167" x="907" y="1195" height="70" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="990" y="1207" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >singleFilePanel</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="1209" y2="1209" x1="907" x2="1073" />
+ <text x="912" y="1221" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myImageObject : imageObject</text>
+ <text x="912" y="1235" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myFileIndex : fileIndex</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="1237" y2="1237" x1="907" x2="1073" />
+ <text x="912" y="1249" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ singleFilePanel()</text>
+ <text x="912" y="1263" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ saveData()</text>
+ <rect width="188" x="346" y="953" height="35" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="440" y="965" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >drawingPanel</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="967" y2="967" x1="346" x2="533" />
+ <text x="351" y="979" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- drawingClass : imageDrawingClass</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="981" y2="981" x1="346" x2="533" />
+ <rect width="265" x="458" y="731" height="98" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="590" y="743" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >genericListPanel</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="745" y2="745" x1="458" x2="722" />
+ <text x="463" y="757" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- editButton : wxButton</text>
+ <text x="463" y="771" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- deleteButton : wxButton</text>
+ <text x="463" y="785" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- viewButton : wxButton</text>
+ <text x="463" y="799" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- setMultipleAttributeButton : wxButton</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="801" y2="801" x1="458" x2="722" />
+ <text x="463" y="813" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ gridEventHandler(event : wxGridEvent)</text>
+ <text x="463" y="827" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ genericEventHandler(event : wxCommandEvent)</text>
+ <rect width="411" x="15" y="751" height="98" transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" />
+ <text x="220" y="763" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:italic;font-weight:700;font-family:Sans Serif;" text-anchor="middle" >imageDrawingClass</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="765" y2="765" x1="15" x2="425" />
+ <text x="20" y="777" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myDC : wxPaintDC</text>
+ <text x="20" y="791" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myBitMap : wxBitmap</text>
+ <text x="20" y="805" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >- myImage : wxImage</text>
+ <line transform="translate(-15,-75)" style="stroke:rgb(255,0,0);stroke-width:0.9;fill:rgb(255,255,192);" y1="807" y2="807" x1="15" x2="425" />
+ <text x="20" y="819" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ imageDrawingClass(parent : wxWindow, id : wxWindowID, myImage : wxImage)</text>
+ <text x="20" y="833" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ convertImage()</text>
+ <text x="20" y="847" transform="translate(-15,-75)" style="fill:rgb(0,0,0);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" >+ onPaint(ev : wxPaintEvent)</text>
+ <text x="1730" y="395" transform="translate(-15,-75)" style="fill:rgb(50,50,50);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" text-anchor="middle" >Collecting imageObjects</text>
+ <text x="1330" y="355" transform="translate(-15,-75)" style="fill:rgb(50,50,50);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" text-anchor="middle" >+myFileIdex</text>
+ <text x="1460" y="765" transform="translate(-15,-75)" style="fill:rgb(50,50,50);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" text-anchor="middle" >+myImageObject</text>
+ <text x="1600" y="355" transform="translate(-15,-75)" style="fill:rgb(50,50,50);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" text-anchor="middle" >+myFileIndex</text>
+ <text x="400" y="895" transform="translate(-15,-75)" style="fill:rgb(50,50,50);stroke-width:0;font-size:10;font-style:normal;font-weight:400;font-family:Sans Serif;" text-anchor="middle" >+drawingClass</text>
 </svg>

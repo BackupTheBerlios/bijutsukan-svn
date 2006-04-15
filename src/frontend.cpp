@@ -28,6 +28,7 @@ EVT_MENU(ID_inputDirectory, mainFrame::eventHandler )
 EVT_MENU(ID_inputURL, mainFrame::eventHandler )
 EVT_MENU(ID_inputULRMirror, mainFrame::eventHandler )
 EVT_MENU(ID_inputWizard, mainFrame::eventHandler )
+EVT_MENU(ID_genericFilePanel, mainFrame::eventHandler )
 END_EVENT_TABLE()
 
 
@@ -49,6 +50,7 @@ void mainFrame::makeMenu()
   inputMenu = new wxMenu;
   categoryMenu = new wxMenu;
   optionsMenu = new wxMenu;
+  debugMenu = new wxMenu;
 
   fileMenu->AppendSeparator();
   fileMenu->Append(ID_fileAbout, _("About"));
@@ -83,11 +85,14 @@ void mainFrame::makeMenu()
 
   optionsMenu->Append(ID_optionsEmpty, _("Empty"));
 
+  debugMenu->Append(ID_genericFilePanel, _("show abstract panel genericFilePanel"));
+
   menuBar->Append(fileMenu, _("File"));
   menuBar->Append(findMenu, _("Find"));
   menuBar->Append(inputMenu, _("New"));
   menuBar->Append(categoryMenu, _("Manage Categories"));
   menuBar->Append(optionsMenu, _("Options"));
+  menuBar->Append(debugMenu, _("Debug"));
   
   SetMenuBar(menuBar);
 }
@@ -112,6 +117,13 @@ void mainFrame::eventHandler(wxCommandEvent &event)
 	myAboutPanel->Show(true);
 	break;
       }
+    case ID_genericFilePanel:
+      {
+	currentEvent = ID_genericFilePanel;
+	myGenericFilePanel = new genericFilePanel(this);
+	myGenericFilePanel->Show(true);
+	break;
+      }
     }
 }
 
@@ -127,6 +139,11 @@ void mainFrame::deletePanel()
 	      myAboutPanel->Destroy();
 	      break;
 	    }
+	case ID_genericFilePanel:
+	  {
+	    myGenericFilePanel->Show(false);
+	    myGenericFilePanel->Destroy();
+	  }
 	}
     }
   currentEvent = 0;

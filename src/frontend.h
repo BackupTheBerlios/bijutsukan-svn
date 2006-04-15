@@ -8,6 +8,7 @@
 
 #include "panels/aboutpanel.h"
 #include "panels/mainpanel.h"
+#include "panels/genericfilepanel.h"
 
 class mainFrame: public wxFrame
 {
@@ -28,6 +29,8 @@ private:
   
  
   aboutPanel *myAboutPanel;
+  genericFilePanel *myGenericFilePanel;
+  
 
   wxMenuBar *menuBar;
   wxMenu *fileMenu;
@@ -36,6 +39,7 @@ private:
   wxMenu *inputMenu;
   wxMenu *categoryMenu;
   wxMenu *optionsMenu;
+  wxMenu *debugMenu;
 
   DECLARE_EVENT_TABLE();
 };
@@ -68,7 +72,8 @@ enum
     ID_inputDirectory,
     ID_inputURL,
     ID_inputULRMirror,
-    ID_inputWizard
+    ID_inputWizard,
+    ID_genericFilePanel
   };
 
 #endif

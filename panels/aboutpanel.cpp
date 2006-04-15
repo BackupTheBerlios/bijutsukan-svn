@@ -20,4 +20,7 @@ aboutPanel::aboutPanel(wxWindow* parent)
   
   SetSizer(mainSizer);
   mainSizer->SetSizeHints(this);
-}
+};
+
+
+

@@ -16,30 +16,34 @@ class genericFilePanel: public wxPanel
 
  private:
 
+  void initSizers();
+
   wxBoxSizer
-    mainSizer,
+    *mainSizer,
     
-    descriptionHSizer,
+    *categoryHSizerL,
+    *categoryHSizerR,
+    *categoryVSizer,
     
-    categoryHSizer,
-    categoryVSizer,
-    
-    labelHSizer,
-    labelVSizer,
+    *labelHSizerL,
+    *labelHSizerR,
+    *labelVSizer,
 
-    objectHSizer,
-    objectVSizer,
+    *objectHSizerL,
+    *objectHSizerR,
+    *objectVSizer,
 
-    locationHSizer,
-    locationVSizer;
+    *locationHSizerL,
+    *locationHSizerR,
+    *locationVSizer;
     
   wxStaticBoxSizer
-    descriptionBox,
-    categoryBox,
-    labelBox,
-    objectBox,
-    locationBox,
-    positionBox;
+    *descriptionBox,
+    *categoryBox,
+    *labelBox,
+    *objectBox,
+    *locationBox,
+    *positionBox;
 
   wxStaticText
     pathText,

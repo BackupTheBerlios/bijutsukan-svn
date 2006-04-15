@@ -43,8 +43,17 @@ END_EVENT_TABLE()
 genericFilePanel::genericFilePanel(wxWindow* parent)
   : wxPanel(parent, -1, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _("genericFilePanel"))
 {
-  
+  initSizers();
 }
+
+void genericFilePanel::initSizers()
+{
+  //  mainSizer = new wxBoxSizer;
+  //  descriptionHSizer = new wxBoxSizer;
+  //  categoryHSizer = new wxBoxSizer;
+
+}
+
 
 void genericFilePanel::eventHandler(wxCommandEvent &event)
 {

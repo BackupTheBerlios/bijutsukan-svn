@@ -31,53 +31,53 @@ void genericFilePanel::fillSizers()
 {
   descriptionBox->Add(descriptionInput);
 
-  categoryHSizerL->Add(newCategoryText, 1, wxALIGN_CENTER, 0);
-  categoryButtonSizer->Add(categoryInput, 1, wxALIGN_CENTER, 0);
-  categoryButtonSizer->Add(categoryAdd, 1, wxALIGN_CENTER, 0);
-  categoryHSizerL->Add(categoryButtonSizer, 1, wxALIGN_CENTER, 0);
-  categoryHSizerL->Add(selectedText, 1, wxALIGN_CENTER, 0);
-  categoryHSizerR->Add(oldCategoryText, 1, wxALIGN_CENTER, 0);
-  categoryHSizerR->Add(categoryOldList, 1, wxALIGN_CENTER, 0);
+  categoryHSizerL->Add(newCategoryText);
+  categoryButtonSizer->Add(categoryInput);
+  categoryButtonSizer->Add(categoryAdd);
+  categoryHSizerL->Add(categoryButtonSizer);
+  categoryHSizerL->Add(selectedText);
+  categoryHSizerR->Add(oldCategoryText);
+  categoryHSizerR->Add(categoryOldList);
 
-  labelHSizerL->Add(newLabelText, 1, wxALIGN_CENTER, 0);
-  labelButtonSizer->Add(labelInput, 1, wxALIGN_CENTER, 0);
-  labelButtonSizer->Add(labelAdd, 1, wxALIGN_CENTER, 0);
-  labelHSizerL->Add(labelButtonSizer, 1, wxALIGN_CENTER, 0);
-  labelHSizerL->Add(selectedText, 1, wxALIGN_CENTER, 0);
-  labelHSizerR->Add(labelSelected, 1, wxALIGN_CENTER, 0);
-  labelHSizerR->Add(labelOldList, 1, wxALIGN_CENTER, 0);
+  labelHSizerL->Add(newLabelText);
+  labelButtonSizer->Add(labelInput);
+  labelButtonSizer->Add(labelAdd);
+  labelHSizerL->Add(labelButtonSizer);
+  labelHSizerL->Add(selectedText);
+  labelHSizerR->Add(labelSelected);
+  labelHSizerR->Add(labelOldList);
 
-  personHSizerL->Add(newPersonText, 1, wxALIGN_CENTER, 0);
-  personButtonSizer->Add(personInput, 1, wxALIGN_CENTER, 0);
-  personButtonSizer->Add(personAdd, 1, wxALIGN_CENTER, 0);
-  personHSizerL->Add(personButtonSizer, 1, wxALIGN_CENTER, 0);
-  personHSizerL->Add(selectedText, 1, wxALIGN_CENTER, 0);
-  personHSizerR->Add(personSelected, 1, wxALIGN_CENTER, 0);
-  personHSizerR->Add(personOldList, 1, wxALIGN_CENTER, 0);
+  personHSizerL->Add(newPersonText);
+  personButtonSizer->Add(personInput);
+  personButtonSizer->Add(personAdd);
+  personHSizerL->Add(personButtonSizer);
+  personHSizerL->Add(selectedText);
+  personHSizerR->Add(personSelected);
+  personHSizerR->Add(personOldList);
 
-  objectHSizerL->Add(newObjectText, 1, wxALIGN_CENTER, 0);
-  objectButtonSizer->Add(objectInput, 1, wxALIGN_CENTER, 0);
-  objectButtonSizer->Add(objectAdd, 1, wxALIGN_CENTER, 0);
-  objectHSizerL->Add(objectButtonSizer, 1, wxALIGN_CENTER, 0);
-  objectHSizerL->Add(selectedText, 1, wxALIGN_CENTER, 0);
-  objectHSizerR->Add(objectSelected, 1, wxALIGN_CENTER, 0);
-  objectHSizerR->Add(objectOldList, 1, wxALIGN_CENTER, 0);
+  objectHSizerL->Add(newObjectText);
+  objectButtonSizer->Add(objectInput);
+  objectButtonSizer->Add(objectAdd);
+  objectHSizerL->Add(objectButtonSizer);
+  objectHSizerL->Add(selectedText);
+  objectHSizerR->Add(objectSelected);
+  objectHSizerR->Add(objectOldList);
 
-  locationHSizerL->Add(newLocationText, 1, wxALIGN_CENTER, 0);
-  locationButtonSizer->Add(locationInput, 1, wxALIGN_CENTER, 0);
-  locationButtonSizer->Add(locationAdd, 1, wxALIGN_CENTER, 0);
-  locationHSizerL->Add(locationButtonSizer, 1, wxALIGN_CENTER, 0);
-  locationHSizerL->Add(selectedText, 1, wxALIGN_CENTER, 0);
-  locationHSizerR->Add(locationSelected, 1, wxALIGN_CENTER, 0);
-  locationHSizerR->Add(locationOldList, 1, wxALIGN_CENTER, 0);
+  locationHSizerL->Add(newLocationText);
+  locationButtonSizer->Add(locationInput);
+  locationButtonSizer->Add(locationAdd);
+  locationHSizerL->Add(locationButtonSizer);
+  locationHSizerL->Add(selectedText);
+  locationHSizerR->Add(locationSelected);
+  locationHSizerR->Add(locationOldList);
 
-  positionHSizerL->Add(newPositionText, 1, wxALIGN_CENTER, 0);
-  positionButtonSizer->Add(positionInput, 1, wxALIGN_CENTER, 0);
-  positionButtonSizer->Add(positionAdd, 1, wxALIGN_CENTER, 0);
-  positionHSizerL->Add(positionButtonSizer, 1, wxALIGN_CENTER, 0);
-  positionHSizerL->Add(selectedText, 1, wxALIGN_CENTER, 0);
-  positionHSizerR->Add(positionSelected, 1, wxALIGN_CENTER, 0);
-  positionHSizerR->Add(positionOldList, 1, wxALIGN_CENTER, 0);
+  positionHSizerL->Add(newPositionText);
+  positionButtonSizer->Add(positionInput);
+  positionButtonSizer->Add(positionAdd);
+  positionHSizerL->Add(positionButtonSizer);
+  positionHSizerL->Add(selectedText);
+  positionHSizerR->Add(positionSelected);
+  positionHSizerR->Add(positionOldList);
 
   
 }
@@ -177,42 +177,42 @@ void genericFilePanel::initPrimitives()
 
 void genericFilePanel::initSizers()
 {
-  mainVSizer = new wxBoxSizer(wxVERTICAL);
-  mainHSizerL = new wxBoxSizer(wxHORIZONTAL);
-  mainHSizerR = new wxBoxSizer(wxHORIZONTAL);
+  mainVSizer = new wxBoxSizer(wxHORIZONTAL);
+  mainHSizerL = new wxBoxSizer(wxVERTICAL);
+  mainHSizerR = new wxBoxSizer(wxVERTICAL);
 
-  categoryHSizerL = new wxBoxSizer(wxHORIZONTAL);
-  categoryHSizerR = new wxBoxSizer(wxHORIZONTAL);
+  categoryHSizerL = new wxBoxSizer(wxVERTICAL);
+  categoryHSizerR = new wxBoxSizer(wxVERTICAL);
 
-  labelHSizerL = new wxBoxSizer(wxHORIZONTAL);
-  labelHSizerR = new wxBoxSizer(wxHORIZONTAL);
+  labelHSizerL = new wxBoxSizer(wxVERTICAL);
+  labelHSizerR = new wxBoxSizer(wxVERTICAL);
 
-  objectHSizerL = new wxBoxSizer(wxHORIZONTAL);
-  objectHSizerR = new wxBoxSizer(wxHORIZONTAL);
+  objectHSizerL = new wxBoxSizer(wxVERTICAL);
+  objectHSizerR = new wxBoxSizer(wxVERTICAL);
 
-  locationHSizerL = new wxBoxSizer(wxHORIZONTAL);
-  locationHSizerR = new wxBoxSizer(wxHORIZONTAL);
+  locationHSizerL = new wxBoxSizer(wxVERTICAL);
+  locationHSizerR = new wxBoxSizer(wxVERTICAL);
 
-  personHSizerL = new wxBoxSizer(wxHORIZONTAL);
-  personHSizerR = new wxBoxSizer(wxHORIZONTAL);
+  personHSizerL = new wxBoxSizer(wxVERTICAL);
+  personHSizerR = new wxBoxSizer(wxVERTICAL);
   
-  positionHSizerR = new wxBoxSizer(wxHORIZONTAL);
-  positionHSizerL = new wxBoxSizer(wxHORIZONTAL);
+  positionHSizerR = new wxBoxSizer(wxVERTICAL);
+  positionHSizerL = new wxBoxSizer(wxVERTICAL);
 
-  labelButtonSizer = new wxBoxSizer(wxVERTICAL);
-  personButtonSizer = new wxBoxSizer(wxVERTICAL);
-  objectButtonSizer = new wxBoxSizer(wxVERTICAL);
-  locationButtonSizer = new wxBoxSizer(wxVERTICAL);
-  positionButtonSizer = new wxBoxSizer(wxVERTICAL);
-  categoryButtonSizer = new wxBoxSizer(wxVERTICAL);
+  labelButtonSizer = new wxBoxSizer(wxHORIZONTAL);
+  personButtonSizer = new wxBoxSizer(wxHORIZONTAL);
+  objectButtonSizer = new wxBoxSizer(wxHORIZONTAL);
+  locationButtonSizer = new wxBoxSizer(wxHORIZONTAL);
+  positionButtonSizer = new wxBoxSizer(wxHORIZONTAL);
+  categoryButtonSizer = new wxBoxSizer(wxHORIZONTAL);
 
-  descriptionBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Description"));
-  categoryBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Category"));
-  labelBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Label"));
-  objectBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Objects"));
-  personBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Persons"));
-  locationBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Locations"));
-  positionBox = new wxStaticBoxSizer(wxVERTICAL, this, _("Positions"));
+  descriptionBox = new wxStaticBoxSizer(wxHORIZONTAL, this, _("Description"));
+  categoryBox = new wxStaticBoxSizer(wxHORIZONTAL, this, _("Category"));
+  labelBox = new wxStaticBoxSizer(wxHORIZONTAL, this, _("Label"));
+  objectBox = new wxStaticBoxSizer(wxHORIZONTAL, this, _("Objects"));
+  personBox = new wxStaticBoxSizer(wxHORIZONTAL, this, _("Persons"));
+  locationBox = new wxStaticBoxSizer(wxHORIZONTAL, this, _("Locations"));
+  positionBox = new wxStaticBoxSizer(wxHORIZONTAL, this, _("Positions"));
   
 
 }

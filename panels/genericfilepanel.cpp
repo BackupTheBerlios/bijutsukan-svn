@@ -48,7 +48,7 @@ genericFilePanel::genericFilePanel(wxWindow* parent)
   placeElements();
 }
 
-void placeElements()
+void genericFilePanel::placeElements()
 {
   mainVSizer->Add(mainHSizerL);
   mainVSizer->Add(mainHSizerR);

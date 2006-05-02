@@ -39,6 +39,7 @@ mainFrame::mainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
   currentEvent=0;
   dbIsOpen=false;
   makeMenu();
+  myFrameSize = size;
 }
 
 void mainFrame::makeMenu()
@@ -121,6 +122,7 @@ void mainFrame::eventHandler(wxCommandEvent &event)
       {
 	currentEvent = ID_genericFilePanel;
 	myGenericFilePanel = new genericFilePanel(this);
+	myGenericFilePanel->SetSizeHints(myFrameSize);
 	myGenericFilePanel->Show(true);
 	break;
       }

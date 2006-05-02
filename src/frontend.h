@@ -26,6 +26,7 @@ private:
   bool dbIsOpen;
   wxString dbFileString;
   wxFileName *dbFileName;
+  wxSize myFrameSize;
   
  
   aboutPanel *myAboutPanel;

@@ -115,6 +115,7 @@ void mainFrame::eventHandler(wxCommandEvent &event)
       {
 	currentEvent = ID_fileAbout;
 	myAboutPanel = new aboutPanel(this);
+	myAboutPanel->SetSizeHints(myFrameSize);
 	myAboutPanel->Show(true);
 	break;
       }

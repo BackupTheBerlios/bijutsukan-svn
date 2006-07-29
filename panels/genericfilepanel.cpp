@@ -23,9 +23,9 @@ genericFilePanel::genericFilePanel(wxWindow* parent)
   initPrimitives();
   placeSizers();
   fillSizers();
+  mainVSizer->SetSizeHints(this);
   SetSizer(mainVSizer);
   mainVSizer->Layout();
-  mainVSizer->SetSizeHints(this);
 }
 
 void genericFilePanel::fillSizers()

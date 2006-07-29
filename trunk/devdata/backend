@@ -1,0 +1,16 @@
+Backend:
+	listAttributes()
+	listAttributeValues(Attr)
+	getBild(BildID)
+	getBildBin(BildID)
+	storeBild(Bild)
+	delBild(BildID)
+	listBilder({Attr : [(Val, matchType), ...], ...})
+
+Bild:
+	str URI (z.b. file://)
+	str Name (default filename)
+	str Description
+	{} Exif
+	
+	{Attr : [Val, ...]} Attributes 

@@ -2,7 +2,7 @@ import md5
 
 class Bild(object):
   def __init__(self,
-               Path=""
+               Path="",
                URI="",
                Name="",
                Description="",

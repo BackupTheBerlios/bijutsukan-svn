@@ -4,7 +4,7 @@ import bild
 class pBackend(object):
   def __init__(self, pPath):
     self.pPath = pPath
-    self.Data = pickle.load(self.pPath)
+    self.Data = pickle.load(open(self.pPath))
 
   def listAttributes(self):
     return self.Data["Attributes"]

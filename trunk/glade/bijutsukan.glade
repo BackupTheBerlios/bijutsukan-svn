@@ -2,7 +2,7 @@
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
 <!-- Generated with glade3
 	Version: 3.0.0
-	Date: Wed Aug 16 15:46:51 2006
+	Date: Wed Aug 16 18:57:00 2006
 	User: daddel9
 	Host: menchi
 -->
@@ -27,6 +27,7 @@
                       <widget class="GtkMenuItem" id="menuitem1">
                         <property name="visible">True</property>
                         <property name="label">Test</property>
+                        <signal name="activate" handler="onAddImage"/>
                       </widget>
                     </child>
                   </widget>
@@ -75,36 +76,36 @@
               <placeholder/>
             </child>
             <child>
-              <widget class="GtkFrame" id="tagsFrame12">
+              <widget class="GtkFrame" id="tagsFrame">
                 <property name="visible">True</property>
                 <property name="label_xalign">0.000000</property>
                 <property name="shadow_type">GTK_SHADOW_NONE</property>
                 <child>
-                  <widget class="GtkAlignment" id="alignment13">
+                  <widget class="GtkAlignment" id="alignment1">
                     <property name="visible">True</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <widget class="GtkVBox" id="vbox26">
+                      <widget class="GtkVBox" id="vbox2">
                         <property name="visible">True</property>
                         <child>
-                          <widget class="GtkHBox" id="hbox25">
+                          <widget class="GtkHBox" id="hbox1">
                             <property name="visible">True</property>
                             <child>
-                              <widget class="GtkTreeView" id="personsAvailTree">
+                              <widget class="GtkTreeView" id="tagsAvailTree">
                                 <property name="visible">True</property>
                               </widget>
                             </child>
                             <child>
-                              <widget class="GtkVBox" id="vbox27">
+                              <widget class="GtkVBox" id="vbox3">
                                 <property name="visible">True</property>
                                 <child>
-                                  <widget class="GtkButton" id="personsDeSelectButton">
+                                  <widget class="GtkButton" id="tagsDeSelectButton">
                                     <property name="visible">True</property>
                                     <property name="label" translatable="yes">&lt;-</property>
                                   </widget>
                                 </child>
                                 <child>
-                                  <widget class="GtkButton" id="personsSelectButton">
+                                  <widget class="GtkButton" id="tagsSelectButton">
                                     <property name="visible">True</property>
                                     <property name="label" translatable="yes">-&gt;</property>
                                   </widget>
@@ -118,7 +119,7 @@
                               </packing>
                             </child>
                             <child>
-                              <widget class="GtkTreeView" id="personsSelectedTree">
+                              <widget class="GtkTreeView" id="tagsSelectedView">
                                 <property name="visible">True</property>
                               </widget>
                               <packing>
@@ -128,16 +129,16 @@
                           </widget>
                         </child>
                         <child>
-                          <widget class="GtkHBox" id="hbox26">
+                          <widget class="GtkHBox" id="hbox2">
                             <property name="visible">True</property>
                             <child>
-                              <widget class="GtkLabel" id="label25">
+                              <widget class="GtkLabel" id="label2">
                                 <property name="visible">True</property>
-                                <property name="label" translatable="yes">new Person:</property>
+                                <property name="label" translatable="yes">new Tags:</property>
                               </widget>
                             </child>
                             <child>
-                              <widget class="GtkEntry" id="personsNewEntry">
+                              <widget class="GtkEntry" id="tagsNewEntry">
                                 <property name="visible">True</property>
                               </widget>
                               <packing>
@@ -145,7 +146,7 @@
                               </packing>
                             </child>
                             <child>
-                              <widget class="GtkButton" id="personsNewAdd">
+                              <widget class="GtkButton" id="tagsNewAdd">
                                 <property name="visible">True</property>
                                 <property name="label" translatable="yes">Add</property>
                               </widget>
@@ -163,9 +164,9 @@
                   </widget>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="label26">
+                  <widget class="GtkLabel" id="label1">
                     <property name="visible">True</property>
-                    <property name="label" translatable="yes">&lt;b&gt;Persons&lt;/b&gt;</property>
+                    <property name="label" translatable="yes">&lt;b&gt;Tags&lt;/b&gt;</property>
                     <property name="use_markup">True</property>
                   </widget>
                   <packing>
@@ -174,41 +175,41 @@
                 </child>
               </widget>
               <packing>
-                <property name="top_attach">1</property>
-                <property name="bottom_attach">2</property>
+                <property name="left_attach">1</property>
+                <property name="right_attach">2</property>
               </packing>
             </child>
             <child>
-              <widget class="GtkFrame" id="tagsFrame11">
+              <widget class="GtkFrame" id="tagsFrame2">
                 <property name="visible">True</property>
                 <property name="label_xalign">0.000000</property>
                 <property name="shadow_type">GTK_SHADOW_NONE</property>
                 <child>
-                  <widget class="GtkAlignment" id="alignment12">
+                  <widget class="GtkAlignment" id="alignment3">
                     <property name="visible">True</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <widget class="GtkVBox" id="vbox24">
+                      <widget class="GtkVBox" id="vbox6">
                         <property name="visible">True</property>
                         <child>
-                          <widget class="GtkHBox" id="hbox23">
+                          <widget class="GtkHBox" id="hbox5">
                             <property name="visible">True</property>
                             <child>
-                              <widget class="GtkTreeView" id="placesAvailTree">
+                              <widget class="GtkTreeView" id="takenAvailTree">
                                 <property name="visible">True</property>
                               </widget>
                             </child>
                             <child>
-                              <widget class="GtkVBox" id="vbox25">
+                              <widget class="GtkVBox" id="vbox7">
                                 <property name="visible">True</property>
                                 <child>
-                                  <widget class="GtkButton" id="placesDeSelectButton">
+                                  <widget class="GtkButton" id="takenDeSelectButton">
                                     <property name="visible">True</property>
                                     <property name="label" translatable="yes">&lt;-</property>
                                   </widget>
                                 </child>
                                 <child>
-                                  <widget class="GtkButton" id="placesSelectButton">
+                                  <widget class="GtkButton" id="takenSelectButton">
                                     <property name="visible">True</property>
                                     <property name="label" translatable="yes">-&gt;</property>
                                   </widget>
@@ -222,7 +223,7 @@
                               </packing>
                             </child>
                             <child>
-                              <widget class="GtkTreeView" id="placesSelectedView">
+                              <widget class="GtkTreeView" id="takenSelectedView">
                                 <property name="visible">True</property>
                               </widget>
                               <packing>
@@ -232,16 +233,16 @@
                           </widget>
                         </child>
                         <child>
-                          <widget class="GtkHBox" id="hbox24">
+                          <widget class="GtkHBox" id="hbox6">
                             <property name="visible">True</property>
                             <child>
-                              <widget class="GtkLabel" id="label23">
+                              <widget class="GtkLabel" id="label5">
                                 <property name="visible">True</property>
-                                <property name="label" translatable="yes">new Places:</property>
+                                <property name="label" translatable="yes">new Position:</property>
                               </widget>
                             </child>
                             <child>
-                              <widget class="GtkEntry" id="placesNewEntry">
+                              <widget class="GtkEntry" id="takenNewEntry">
                                 <property name="visible">True</property>
                               </widget>
                               <packing>
@@ -249,7 +250,7 @@
                               </packing>
                             </child>
                             <child>
-                              <widget class="GtkButton" id="placesNewAdd">
+                              <widget class="GtkButton" id="takenNewAdd">
                                 <property name="visible">True</property>
                                 <property name="label" translatable="yes">Add</property>
                               </widget>
@@ -267,9 +268,9 @@
                   </widget>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="label24">
+                  <widget class="GtkLabel" id="label6">
                     <property name="visible">True</property>
-                    <property name="label" translatable="yes">&lt;b&gt;Places&lt;/b&gt;</property>
+                    <property name="label" translatable="yes">&lt;b&gt;Taken from (Position)&lt;/b&gt;</property>
                     <property name="use_markup">True</property>
                   </widget>
                   <packing>
@@ -278,6 +279,8 @@
                 </child>
               </widget>
               <packing>
+                <property name="left_attach">1</property>
+                <property name="right_attach">2</property>
                 <property name="top_attach">2</property>
                 <property name="bottom_attach">3</property>
               </packing>
@@ -389,36 +392,36 @@
               </packing>
             </child>
             <child>
-              <widget class="GtkFrame" id="tagsFrame2">
+              <widget class="GtkFrame" id="tagsFrame11">
                 <property name="visible">True</property>
                 <property name="label_xalign">0.000000</property>
                 <property name="shadow_type">GTK_SHADOW_NONE</property>
                 <child>
-                  <widget class="GtkAlignment" id="alignment3">
+                  <widget class="GtkAlignment" id="alignment12">
                     <property name="visible">True</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <widget class="GtkVBox" id="vbox6">
+                      <widget class="GtkVBox" id="vbox24">
                         <property name="visible">True</property>
                         <child>
-                          <widget class="GtkHBox" id="hbox5">
+                          <widget class="GtkHBox" id="hbox23">
                             <property name="visible">True</property>
                             <child>
-                              <widget class="GtkTreeView" id="takenAvailTree">
+                              <widget class="GtkTreeView" id="placesAvailTree">
                                 <property name="visible">True</property>
                               </widget>
                             </child>
                             <child>
-                              <widget class="GtkVBox" id="vbox7">
+                              <widget class="GtkVBox" id="vbox25">
                                 <property name="visible">True</property>
                                 <child>
-                                  <widget class="GtkButton" id="takenDeSelectButton">
+                                  <widget class="GtkButton" id="placesDeSelectButton">
                                     <property name="visible">True</property>
                                     <property name="label" translatable="yes">&lt;-</property>
                                   </widget>
                                 </child>
                                 <child>
-                                  <widget class="GtkButton" id="takenSelectButton">
+                                  <widget class="GtkButton" id="placesSelectButton">
                                     <property name="visible">True</property>
                                     <property name="label" translatable="yes">-&gt;</property>
                                   </widget>
@@ -432,7 +435,7 @@
                               </packing>
                             </child>
                             <child>
-                              <widget class="GtkTreeView" id="takenSelectedView">
+                              <widget class="GtkTreeView" id="placesSelectedView">
                                 <property name="visible">True</property>
                               </widget>
                               <packing>
@@ -442,16 +445,16 @@
                           </widget>
                         </child>
                         <child>
-                          <widget class="GtkHBox" id="hbox6">
+                          <widget class="GtkHBox" id="hbox24">
                             <property name="visible">True</property>
                             <child>
-                              <widget class="GtkLabel" id="label5">
+                              <widget class="GtkLabel" id="label23">
                                 <property name="visible">True</property>
-                                <property name="label" translatable="yes">new Position:</property>
+                                <property name="label" translatable="yes">new Places:</property>
                               </widget>
                             </child>
                             <child>
-                              <widget class="GtkEntry" id="takenNewEntry">
+                              <widget class="GtkEntry" id="placesNewEntry">
                                 <property name="visible">True</property>
                               </widget>
                               <packing>
@@ -459,7 +462,7 @@
                               </packing>
                             </child>
                             <child>
-                              <widget class="GtkButton" id="takenNewAdd">
+                              <widget class="GtkButton" id="placesNewAdd">
                                 <property name="visible">True</property>
                                 <property name="label" translatable="yes">Add</property>
                               </widget>
@@ -477,9 +480,9 @@
                   </widget>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="label6">
+                  <widget class="GtkLabel" id="label24">
                     <property name="visible">True</property>
-                    <property name="label" translatable="yes">&lt;b&gt;Taken from (Position)&lt;/b&gt;</property>
+                    <property name="label" translatable="yes">&lt;b&gt;Places&lt;/b&gt;</property>
                     <property name="use_markup">True</property>
                   </widget>
                   <packing>
@@ -488,43 +491,41 @@
                 </child>
               </widget>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="right_attach">2</property>
                 <property name="top_attach">2</property>
                 <property name="bottom_attach">3</property>
               </packing>
             </child>
             <child>
-              <widget class="GtkFrame" id="tagsFrame">
+              <widget class="GtkFrame" id="tagsFrame12">
                 <property name="visible">True</property>
                 <property name="label_xalign">0.000000</property>
                 <property name="shadow_type">GTK_SHADOW_NONE</property>
                 <child>
-                  <widget class="GtkAlignment" id="alignment1">
+                  <widget class="GtkAlignment" id="alignment13">
                     <property name="visible">True</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <widget class="GtkVBox" id="vbox2">
+                      <widget class="GtkVBox" id="vbox26">
                         <property name="visible">True</property>
                         <child>
-                          <widget class="GtkHBox" id="hbox1">
+                          <widget class="GtkHBox" id="hbox25">
                             <property name="visible">True</property>
                             <child>
-                              <widget class="GtkTreeView" id="tagsAvailTree">
+                              <widget class="GtkTreeView" id="personsAvailTree">
                                 <property name="visible">True</property>
                               </widget>
                             </child>
                             <child>
-                              <widget class="GtkVBox" id="vbox3">
+                              <widget class="GtkVBox" id="vbox27">
                                 <property name="visible">True</property>
                                 <child>
-                                  <widget class="GtkButton" id="tagsDeSelectButton">
+                                  <widget class="GtkButton" id="personsDeSelectButton">
                                     <property name="visible">True</property>
                                     <property name="label" translatable="yes">&lt;-</property>
                                   </widget>
                                 </child>
                                 <child>
-                                  <widget class="GtkButton" id="tagsSelectButton">
+                                  <widget class="GtkButton" id="personsSelectButton">
                                     <property name="visible">True</property>
                                     <property name="label" translatable="yes">-&gt;</property>
                                   </widget>
@@ -538,7 +539,7 @@
                               </packing>
                             </child>
                             <child>
-                              <widget class="GtkTreeView" id="tagsSelectedView">
+                              <widget class="GtkTreeView" id="personsSelectedTree">
                                 <property name="visible">True</property>
                               </widget>
                               <packing>
@@ -548,16 +549,16 @@
                           </widget>
                         </child>
                         <child>
-                          <widget class="GtkHBox" id="hbox2">
+                          <widget class="GtkHBox" id="hbox26">
                             <property name="visible">True</property>
                             <child>
-                              <widget class="GtkLabel" id="label2">
+                              <widget class="GtkLabel" id="label25">
                                 <property name="visible">True</property>
-                                <property name="label" translatable="yes">new Tags:</property>
+                                <property name="label" translatable="yes">new Person:</property>
                               </widget>
                             </child>
                             <child>
-                              <widget class="GtkEntry" id="tagsNewEntry">
+                              <widget class="GtkEntry" id="personsNewEntry">
                                 <property name="visible">True</property>
                               </widget>
                               <packing>
@@ -565,7 +566,7 @@
                               </packing>
                             </child>
                             <child>
-                              <widget class="GtkButton" id="tagsNewAdd">
+                              <widget class="GtkButton" id="personsNewAdd">
                                 <property name="visible">True</property>
                                 <property name="label" translatable="yes">Add</property>
                               </widget>
@@ -583,9 +584,9 @@
                   </widget>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="label1">
+                  <widget class="GtkLabel" id="label26">
                     <property name="visible">True</property>
-                    <property name="label" translatable="yes">&lt;b&gt;Tags&lt;/b&gt;</property>
+                    <property name="label" translatable="yes">&lt;b&gt;Persons&lt;/b&gt;</property>
                     <property name="use_markup">True</property>
                   </widget>
                   <packing>
@@ -594,8 +595,8 @@
                 </child>
               </widget>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="right_attach">2</property>
+                <property name="top_attach">1</property>
+                <property name="bottom_attach">2</property>
               </packing>
             </child>
           </widget>
@@ -863,6 +864,16 @@
                                     <property name="n_rows">1</property>
                                     <property name="n_columns">2</property>
                                     <child>
+                                      <widget class="GtkButton" id="categoryButton">
+                                        <property name="visible">True</property>
+                                        <property name="label" translatable="yes">Change</property>
+                                      </widget>
+                                      <packing>
+                                        <property name="x_options">GTK_EXPAND</property>
+                                        <property name="y_options">GTK_EXPAND</property>
+                                      </packing>
+                                    </child>
+                                    <child>
                                       <widget class="GtkButton" id="categoryEdit">
                                         <property name="visible">True</property>
                                         <property name="label" translatable="yes">button</property>
@@ -870,16 +881,6 @@
                                       <packing>
                                         <property name="left_attach">1</property>
                                         <property name="right_attach">2</property>
-                                        <property name="x_options">GTK_EXPAND</property>
-                                        <property name="y_options">GTK_EXPAND</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <widget class="GtkButton" id="categoryButton">
-                                        <property name="visible">True</property>
-                                        <property name="label" translatable="yes">Change</property>
-                                      </widget>
-                                      <packing>
                                         <property name="x_options">GTK_EXPAND</property>
                                         <property name="y_options">GTK_EXPAND</property>
                                       </packing>
@@ -985,6 +986,12 @@
                                 <property name="n_rows">2</property>
                                 <property name="n_columns">1</property>
                                 <child>
+                                  <widget class="GtkTreeView" id="tagsSelected">
+                                    <property name="height_request">149</property>
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                                <child>
                                   <widget class="GtkButton" id="tagsDelButton">
                                     <property name="visible">True</property>
                                     <property name="label" translatable="yes">Delete</property>
@@ -995,12 +1002,6 @@
                                     <property name="x_options">GTK_EXPAND</property>
                                     <property name="y_options">GTK_EXPAND</property>
                                   </packing>
-                                </child>
-                                <child>
-                                  <widget class="GtkTreeView" id="tagsSelected">
-                                    <property name="height_request">149</property>
-                                    <property name="visible">True</property>
-                                  </widget>
                                 </child>
                               </widget>
                               <packing>
@@ -1067,12 +1068,6 @@
                                 <property name="n_rows">2</property>
                                 <property name="n_columns">1</property>
                                 <child>
-                                  <widget class="GtkTreeView" id="personsSelected">
-                                    <property name="height_request">149</property>
-                                    <property name="visible">True</property>
-                                  </widget>
-                                </child>
-                                <child>
                                   <widget class="GtkButton" id="personsDelButton">
                                     <property name="visible">True</property>
                                     <property name="label" translatable="yes">Delete</property>
@@ -1083,6 +1078,12 @@
                                     <property name="x_options">GTK_EXPAND</property>
                                     <property name="y_options">GTK_EXPAND</property>
                                   </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkTreeView" id="personsSelected">
+                                    <property name="height_request">149</property>
+                                    <property name="visible">True</property>
+                                  </widget>
                                 </child>
                               </widget>
                               <packing>
@@ -1149,6 +1150,12 @@
                                 <property name="n_rows">2</property>
                                 <property name="n_columns">1</property>
                                 <child>
+                                  <widget class="GtkTreeView" id="objectsSelected">
+                                    <property name="height_request">149</property>
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                                <child>
                                   <widget class="GtkButton" id="objectsDelButton">
                                     <property name="visible">True</property>
                                     <property name="label" translatable="yes">Delete</property>
@@ -1159,12 +1166,6 @@
                                     <property name="x_options">GTK_EXPAND</property>
                                     <property name="y_options">GTK_EXPAND</property>
                                   </packing>
-                                </child>
-                                <child>
-                                  <widget class="GtkTreeView" id="objectsSelected">
-                                    <property name="height_request">149</property>
-                                    <property name="visible">True</property>
-                                  </widget>
                                 </child>
                               </widget>
                               <packing>
@@ -1231,12 +1232,6 @@
                                 <property name="n_rows">2</property>
                                 <property name="n_columns">1</property>
                                 <child>
-                                  <widget class="GtkTreeView" id="placesSelected">
-                                    <property name="height_request">149</property>
-                                    <property name="visible">True</property>
-                                  </widget>
-                                </child>
-                                <child>
                                   <widget class="GtkButton" id="placesDelButton">
                                     <property name="visible">True</property>
                                     <property name="label" translatable="yes">Delete</property>
@@ -1247,6 +1242,12 @@
                                     <property name="x_options">GTK_EXPAND</property>
                                     <property name="y_options">GTK_EXPAND</property>
                                   </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkTreeView" id="placesSelected">
+                                    <property name="height_request">149</property>
+                                    <property name="visible">True</property>
+                                  </widget>
                                 </child>
                               </widget>
                               <packing>
@@ -1313,6 +1314,12 @@
                                 <property name="n_rows">2</property>
                                 <property name="n_columns">1</property>
                                 <child>
+                                  <widget class="GtkTreeView" id="positionsSelected">
+                                    <property name="height_request">149</property>
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                                <child>
                                   <widget class="GtkButton" id="positionsDelButton">
                                     <property name="visible">True</property>
                                     <property name="label" translatable="yes">Delete</property>
@@ -1323,12 +1330,6 @@
                                     <property name="x_options">GTK_EXPAND</property>
                                     <property name="y_options">GTK_EXPAND</property>
                                   </packing>
-                                </child>
-                                <child>
-                                  <widget class="GtkTreeView" id="positionsSelected">
-                                    <property name="height_request">149</property>
-                                    <property name="visible">True</property>
-                                  </widget>
                                 </child>
                               </widget>
                               <packing>
@@ -1395,10 +1396,22 @@
             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
             <property name="layout_style">GTK_BUTTONBOX_END</property>
             <child>
-              <placeholder/>
+              <widget class="GtkButton" id="inputCancelButton">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Cancel</property>
+                <property name="response_id">-6</property>
+              </widget>
             </child>
             <child>
-              <placeholder/>
+              <widget class="GtkButton" id="inputOkButton">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">OK</property>
+                <property name="response_id">-5</property>
+                <signal name="clicked" handler="onInputOkButton"/>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+              </packing>
             </child>
           </widget>
           <packing>

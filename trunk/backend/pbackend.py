@@ -1,10 +1,40 @@
 import pickle
 import bild
 
+attrList = [
+  "name",
+  "description",
+  "exif",
+  "tags",
+  "persons",
+  "objects",
+  "places",
+  "positions"
+  ]
+attrDict = {
+  "name":"",
+  "description":"",
+  "exif":{},
+  "tags":[],
+  "persons":[],
+  "objects":[],
+  "places":[],
+  "positions":[]
+  }
+
+
+
 class pBackend(object):
   def __init__(self, pPath):
     self.pPath = pPath
-    self.Data = pickle.load(open(self.pPath))
+    try:
+      self.Data = pickle.load(open(self.pPath))
+    except:
+      self.Data={
+        "Attributes":attrList,
+        "Items":{},
+        }
+      self.__save__()
 
   def listAttributes(self):
     return self.Data["Attributes"]
@@ -12,6 +42,7 @@ class pBackend(object):
   def listAttributeValues(self,Attr):
     attrList = []
     for bild in self.Data["Items"]:
+      print bild
       try:
         attrList.append( bild.Attributes[Attr] )
       except:
@@ -33,13 +64,14 @@ class pBackend(object):
       myBild.Name = Bild.Name
       myBild.Description = Bild.Description
       myBild.Exif = Bild.Exif
-      myBild.Attributes = Bild.Attributes      
+      myBild.Attributes = Bild.Attributes
+      print myBild
     except:
       self.Data["Items"][Bild.BildID] = Bild
       self.__save__()
 
   def __save__(self):
-    pickle.dump(self.Data,self.pPath)
+    pickle.dump(self.Data,open(self.pPath,"w"))
 
   def delBild(self,BildID):
     self.Data["Items"].__delitem__(BildID)
@@ -49,19 +81,31 @@ class pBackend(object):
   def listBilder(self,Match):
     Bilds = self.Data["Items"]
     results = []
-    for item in Bilds:
+    if Match == {}:
+      return Bilds
+    for k, item in Bilds.iteritems():
       # all match requests against all attributes
       for attr, val in Match.iteritems():
         for a, v in item.Attributes.iteritems():
           # if the current bild attribute is the attribute the match wants
           if a==attr:
+            
+            typ = val[1] #match type
+            res = val[0] #match 
+            
+            if type(v)==type(""):
+              if typ=="exact":
+                if v == val:
+                  results.append(item)
+              if typ=="contains":
+                if val in v:
+                  results.append(item)
 
             # if its a list loop it
             if type(v)==type([]):
               for item in v:
                 # looping all results for this match
                 for item in val:
-                  res, typ = item
                   # all match types
                   if typ == "exact":
                     if res == v:

@@ -2,7 +2,7 @@
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
 <!-- Generated with glade3
 	Version: 3.0.0
-	Date: Wed Aug 16 15:08:46 2006
+	Date: Wed Aug 16 15:46:51 2006
 	User: daddel9
 	Host: menchi
 -->
@@ -637,12 +637,12 @@
                 <property name="visible">True</property>
                 <child>
                   <widget class="GtkImage" id="image1">
-                    <property name="width_request">544</property>
+                    <property name="width_request">499</property>
                     <property name="visible">True</property>
                   </widget>
                 </child>
                 <child>
-                  <widget class="GtkTreeView" id="treeview2">
+                  <widget class="GtkTreeView" id="stepsTree">
                     <property name="visible">True</property>
                   </widget>
                   <packing>
@@ -661,9 +661,9 @@
                       <widget class="GtkVBox" id="vbox19">
                         <property name="visible">True</property>
                         <child>
-                          <widget class="GtkButton" id="button1">
+                          <widget class="GtkButton" id="prevButton">
                             <property name="visible">True</property>
-                            <property name="label" translatable="yes">button</property>
+                            <property name="label" translatable="yes">&lt;-</property>
                           </widget>
                           <packing>
                             <property name="fill">False</property>
@@ -922,7 +922,14 @@
                           </packing>
                         </child>
                         <child>
-                          <placeholder/>
+                          <widget class="GtkLabel" id="label3">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">exif informations here - dunno how to do it ...</property>
+                          </widget>
+                          <packing>
+                            <property name="position">4</property>
+                            <property name="tab_expand">False</property>
+                          </packing>
                         </child>
                         <child>
                           <placeholder/>
@@ -931,7 +938,80 @@
                           </packing>
                         </child>
                         <child>
-                          <placeholder/>
+                          <widget class="GtkHBox" id="hbox14">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkVBox" id="vbox17">
+                                <property name="width_request">119</property>
+                                <property name="visible">True</property>
+                                <property name="homogeneous">True</property>
+                                <child>
+                                  <widget class="GtkTable" id="table9">
+                                    <property name="visible">True</property>
+                                    <property name="n_rows">1</property>
+                                    <property name="n_columns">1</property>
+                                    <child>
+                                      <widget class="GtkEntry" id="tagsEntry">
+                                        <property name="visible">True</property>
+                                      </widget>
+                                    </child>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkTable" id="table10">
+                                    <property name="visible">True</property>
+                                    <property name="n_rows">1</property>
+                                    <property name="n_columns">1</property>
+                                    <child>
+                                      <widget class="GtkButton" id="tagsAddButton">
+                                        <property name="visible">True</property>
+                                        <property name="label" translatable="yes">Add</property>
+                                      </widget>
+                                      <packing>
+                                        <property name="x_options">GTK_EXPAND</property>
+                                        <property name="y_options">GTK_EXPAND</property>
+                                      </packing>
+                                    </child>
+                                  </widget>
+                                  <packing>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkTable" id="table11">
+                                <property name="visible">True</property>
+                                <property name="n_rows">2</property>
+                                <property name="n_columns">1</property>
+                                <child>
+                                  <widget class="GtkButton" id="tagsDelButton">
+                                    <property name="visible">True</property>
+                                    <property name="label" translatable="yes">Delete</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="top_attach">1</property>
+                                    <property name="bottom_attach">2</property>
+                                    <property name="x_options">GTK_EXPAND</property>
+                                    <property name="y_options">GTK_EXPAND</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkTreeView" id="tagsSelected">
+                                    <property name="height_request">149</property>
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">5</property>
+                            <property name="tab_expand">False</property>
+                          </packing>
                         </child>
                         <child>
                           <placeholder/>
@@ -940,7 +1020,80 @@
                           </packing>
                         </child>
                         <child>
-                          <placeholder/>
+                          <widget class="GtkHBox" id="hbox15">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkVBox" id="vbox18">
+                                <property name="width_request">119</property>
+                                <property name="visible">True</property>
+                                <property name="homogeneous">True</property>
+                                <child>
+                                  <widget class="GtkTable" id="table12">
+                                    <property name="visible">True</property>
+                                    <property name="n_rows">1</property>
+                                    <property name="n_columns">1</property>
+                                    <child>
+                                      <widget class="GtkEntry" id="personsEntry">
+                                        <property name="visible">True</property>
+                                      </widget>
+                                    </child>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkTable" id="table13">
+                                    <property name="visible">True</property>
+                                    <property name="n_rows">1</property>
+                                    <property name="n_columns">1</property>
+                                    <child>
+                                      <widget class="GtkButton" id="personsAddButton">
+                                        <property name="visible">True</property>
+                                        <property name="label" translatable="yes">Add</property>
+                                      </widget>
+                                      <packing>
+                                        <property name="x_options">GTK_EXPAND</property>
+                                        <property name="y_options">GTK_EXPAND</property>
+                                      </packing>
+                                    </child>
+                                  </widget>
+                                  <packing>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkTable" id="table14">
+                                <property name="visible">True</property>
+                                <property name="n_rows">2</property>
+                                <property name="n_columns">1</property>
+                                <child>
+                                  <widget class="GtkTreeView" id="personsSelected">
+                                    <property name="height_request">149</property>
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkButton" id="personsDelButton">
+                                    <property name="visible">True</property>
+                                    <property name="label" translatable="yes">Delete</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="top_attach">1</property>
+                                    <property name="bottom_attach">2</property>
+                                    <property name="x_options">GTK_EXPAND</property>
+                                    <property name="y_options">GTK_EXPAND</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">6</property>
+                            <property name="tab_expand">False</property>
+                          </packing>
                         </child>
                         <child>
                           <placeholder/>
@@ -949,7 +1102,80 @@
                           </packing>
                         </child>
                         <child>
-                          <placeholder/>
+                          <widget class="GtkHBox" id="hbox16">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkVBox" id="vbox21">
+                                <property name="width_request">119</property>
+                                <property name="visible">True</property>
+                                <property name="homogeneous">True</property>
+                                <child>
+                                  <widget class="GtkTable" id="table15">
+                                    <property name="visible">True</property>
+                                    <property name="n_rows">1</property>
+                                    <property name="n_columns">1</property>
+                                    <child>
+                                      <widget class="GtkEntry" id="objectsEntry">
+                                        <property name="visible">True</property>
+                                      </widget>
+                                    </child>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkTable" id="table16">
+                                    <property name="visible">True</property>
+                                    <property name="n_rows">1</property>
+                                    <property name="n_columns">1</property>
+                                    <child>
+                                      <widget class="GtkButton" id="objectsAddButton">
+                                        <property name="visible">True</property>
+                                        <property name="label" translatable="yes">Add</property>
+                                      </widget>
+                                      <packing>
+                                        <property name="x_options">GTK_EXPAND</property>
+                                        <property name="y_options">GTK_EXPAND</property>
+                                      </packing>
+                                    </child>
+                                  </widget>
+                                  <packing>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkTable" id="table17">
+                                <property name="visible">True</property>
+                                <property name="n_rows">2</property>
+                                <property name="n_columns">1</property>
+                                <child>
+                                  <widget class="GtkButton" id="objectsDelButton">
+                                    <property name="visible">True</property>
+                                    <property name="label" translatable="yes">Delete</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="top_attach">1</property>
+                                    <property name="bottom_attach">2</property>
+                                    <property name="x_options">GTK_EXPAND</property>
+                                    <property name="y_options">GTK_EXPAND</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkTreeView" id="objectsSelected">
+                                    <property name="height_request">149</property>
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">7</property>
+                            <property name="tab_expand">False</property>
+                          </packing>
                         </child>
                         <child>
                           <placeholder/>
@@ -958,7 +1184,162 @@
                           </packing>
                         </child>
                         <child>
+                          <widget class="GtkHBox" id="hbox17">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkVBox" id="vbox22">
+                                <property name="width_request">119</property>
+                                <property name="visible">True</property>
+                                <property name="homogeneous">True</property>
+                                <child>
+                                  <widget class="GtkTable" id="table18">
+                                    <property name="visible">True</property>
+                                    <property name="n_rows">1</property>
+                                    <property name="n_columns">1</property>
+                                    <child>
+                                      <widget class="GtkEntry" id="placesEntry">
+                                        <property name="visible">True</property>
+                                      </widget>
+                                    </child>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkTable" id="table19">
+                                    <property name="visible">True</property>
+                                    <property name="n_rows">1</property>
+                                    <property name="n_columns">1</property>
+                                    <child>
+                                      <widget class="GtkButton" id="placesAddButton">
+                                        <property name="visible">True</property>
+                                        <property name="label" translatable="yes">Add</property>
+                                      </widget>
+                                      <packing>
+                                        <property name="x_options">GTK_EXPAND</property>
+                                        <property name="y_options">GTK_EXPAND</property>
+                                      </packing>
+                                    </child>
+                                  </widget>
+                                  <packing>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkTable" id="table20">
+                                <property name="visible">True</property>
+                                <property name="n_rows">2</property>
+                                <property name="n_columns">1</property>
+                                <child>
+                                  <widget class="GtkTreeView" id="placesSelected">
+                                    <property name="height_request">149</property>
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkButton" id="placesDelButton">
+                                    <property name="visible">True</property>
+                                    <property name="label" translatable="yes">Delete</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="top_attach">1</property>
+                                    <property name="bottom_attach">2</property>
+                                    <property name="x_options">GTK_EXPAND</property>
+                                    <property name="y_options">GTK_EXPAND</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">8</property>
+                            <property name="tab_expand">False</property>
+                          </packing>
+                        </child>
+                        <child>
                           <placeholder/>
+                          <packing>
+                            <property name="type">tab</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHBox" id="hbox18">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkVBox" id="vbox23">
+                                <property name="width_request">119</property>
+                                <property name="visible">True</property>
+                                <property name="homogeneous">True</property>
+                                <child>
+                                  <widget class="GtkTable" id="table21">
+                                    <property name="visible">True</property>
+                                    <property name="n_rows">1</property>
+                                    <property name="n_columns">1</property>
+                                    <child>
+                                      <widget class="GtkEntry" id="positionsEntry">
+                                        <property name="visible">True</property>
+                                      </widget>
+                                    </child>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkTable" id="table22">
+                                    <property name="visible">True</property>
+                                    <property name="n_rows">1</property>
+                                    <property name="n_columns">1</property>
+                                    <child>
+                                      <widget class="GtkButton" id="positionsAddButton">
+                                        <property name="visible">True</property>
+                                        <property name="label" translatable="yes">Add</property>
+                                      </widget>
+                                      <packing>
+                                        <property name="x_options">GTK_EXPAND</property>
+                                        <property name="y_options">GTK_EXPAND</property>
+                                      </packing>
+                                    </child>
+                                  </widget>
+                                  <packing>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkTable" id="table23">
+                                <property name="visible">True</property>
+                                <property name="n_rows">2</property>
+                                <property name="n_columns">1</property>
+                                <child>
+                                  <widget class="GtkButton" id="positionsDelButton">
+                                    <property name="visible">True</property>
+                                    <property name="label" translatable="yes">Delete</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="top_attach">1</property>
+                                    <property name="bottom_attach">2</property>
+                                    <property name="x_options">GTK_EXPAND</property>
+                                    <property name="y_options">GTK_EXPAND</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkTreeView" id="positionsSelected">
+                                    <property name="height_request">149</property>
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                          <packing>
+                            <property name="position">9</property>
+                            <property name="tab_expand">False</property>
+                          </packing>
                         </child>
                         <child>
                           <placeholder/>
@@ -975,9 +1356,9 @@
                       <widget class="GtkVBox" id="vbox20">
                         <property name="visible">True</property>
                         <child>
-                          <widget class="GtkButton" id="button2">
+                          <widget class="GtkButton" id="nextButton">
                             <property name="visible">True</property>
-                            <property name="label" translatable="yes">button</property>
+                            <property name="label" translatable="yes">-&gt;</property>
                           </widget>
                           <packing>
                             <property name="fill">False</property>
@@ -991,7 +1372,7 @@
                   </widget>
                 </child>
                 <child>
-                  <widget class="GtkTreeView" id="treeview3">
+                  <widget class="GtkTreeView" id="availTree">
                     <property name="visible">True</property>
                   </widget>
                   <packing>

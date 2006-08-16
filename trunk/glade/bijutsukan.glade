@@ -2,7 +2,7 @@
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
 <!-- Generated with glade3
 	Version: 3.0.0
-	Date: Wed Aug 16 19:01:22 2006
+	Date: Wed Aug 16 19:10:33 2006
 	User: daddel9
 	Host: menchi
 -->
@@ -673,7 +673,7 @@
                       </widget>
                     </child>
                     <child>
-                      <widget class="GtkNotebook" id="notebook1">
+                      <widget class="GtkNotebook" id="entryUI">
                         <property name="width_request">453</property>
                         <property name="height_request">143</property>
                         <property name="visible">True</property>
@@ -775,7 +775,7 @@
                                     <property name="n_rows">1</property>
                                     <property name="n_columns">1</property>
                                     <child>
-                                      <widget class="GtkCalendar" id="dateCalendard">
+                                      <widget class="GtkCalendar" id="dateCalendar">
                                         <property name="visible">True</property>
                                       </widget>
                                     </child>
@@ -876,7 +876,7 @@
                                     <child>
                                       <widget class="GtkButton" id="categoryEdit">
                                         <property name="visible">True</property>
-                                        <property name="label" translatable="yes">button</property>
+                                        <property name="label" translatable="yes">Edit Categories</property>
                                       </widget>
                                       <packing>
                                         <property name="left_attach">1</property>

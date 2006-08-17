@@ -17,7 +17,9 @@ class Bijutsukan:
 		
         def onAddImage(self, widget):
             dlg = singleInputDialog("/home/daddel9/foo.jpg")
-            result = dlg.run()
+            bild, result = dlg.run()
+	    print bild
+	    print bild.Attributes
 
 
 
@@ -45,10 +47,26 @@ class singleInputDialog:
 		"onPersonsDel":self.onPersonsDelete,
 		"onObjectsDel":self.onObjectsDelete,
 		"onPositionsDel":self.onPositionsDelete,
-		"onPlacesDel":self.onPlacesDelete
+		"onPlacesDel":self.onPlacesDelete,
+		"onNameButton":self.onNameButton,
+		"onDateButton":self.onDateButton,
+		"onCategoryButton":self.onCategoryButton
 		})
 
 
+
+    def onNameButton(self, widget):
+	    self.Name = self.nameEntry.get_text()
+	    self.nameLabel.set_text("Name: %s"%self.Name)
+	    
+    def onDateButton(self, widget):
+	    self.Date = str(self.dateCalendar.get_date()) #TODO: make nice
+	    self.dateLabel.set_text("Date: %s"%self.Date)
+	    
+    def onCategoryButton(self, widget):
+	    self.Category=self.categoryInput.get_active_text()
+	    self.categoryLabel.set_text("Category: %s"%self.Category)
+	    
     def onTagsDelete(self, widget):
 	    selection = self.tagsSelected.get_selection()
 	    selected = selection.get_selected()
@@ -73,8 +91,6 @@ class singleInputDialog:
 	    selection = self.positionsSelected.get_selection()
 	    selected = selection.get_selected()
 	    self.positionsSelectedModel.remove(selected[1])
-
-
 
     def onPositionsButton(self, widget):
 	    self.positionsSelectedModel.append([self.positionsEntry.get_text()])
@@ -111,6 +127,9 @@ class singleInputDialog:
 	    self.stepsTree.get_selection().select_path((cpage))
 
     def initVars(self):
+	    self.Name=""
+	    self.Date=""
+	    self.Category=""
 	    self.tagsList=[]
 	    self.personsList=[]
 	    self.objectsList=[]
@@ -168,9 +187,10 @@ class singleInputDialog:
         
     def run(self):
 	result = self.dlg.run()
-	self.bild.Attributes["name"] = self.nameEntry.get_text()
-	self.bild.Attributes["date"] = str(self.dateCalendar.get_date())
-	self.bild.Attributes["category"] = self.categoryInput.get_active_text()
+
+	self.bild.Attributes["name"] = self.Name
+	self.bild.Attributes["date"] = self.Date
+	self.bild.Attributes["category"] = self.Category
 	self.bild.Attributes["tags"] = self.tagsList
 	self.bild.Attributes["persons"] = self.personsList
 	self.bild.Attributes["objects"] = self.objectsList
@@ -178,6 +198,8 @@ class singleInputDialog:
 	self.bild.Attributes["places"] = self.placesList
 	
         self.dlg.destroy()
+
+	return self.bild, result
 
     def getWidgets(self):
 	self.stepsTree = self.wTree.get_widget("stepsTree")

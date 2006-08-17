@@ -26,31 +26,31 @@ class singleInputDialog:
 	self.getWidgets()
         self.wTree.signal_autoconnect({
 		"onInputNextButton":self.onInputNextButton,
-		"onInputPrevButton":self.onInputPrevButton
+		"onInputPrevButton":self.onInputPrevButton,
+		"onInputSelectPosition":self.onInputSelectPosition
 		})
         self.Bild=None
 	self.createGUI()
 
     def createGUI(self):
 	self.entryUI.set_current_page(0)
-	self.stepsTreeColumn = gtk.TreeViewColumn("", gtk.CellRendererText(), text=0)
+
+	self.stepsTreeColumn = gtk.TreeViewColumn("Steps", gtk.CellRendererText(), text=0)
 	self.stepsTree.append_column(self.stepsTreeColumn)
 	self.stepsTreeModel = gtk.ListStore(str)
 	self.stepsTree.set_model(self.stepsTreeModel)
-	self.stepsTreeModel.append(["General Information"])
-	self.stepsTreeModel.append(["Name"])
-	self.stepsTreeModel.append(["Date"])
-	self.stepsTreeModel.append(["Category"])
-	self.stepsTreeModel.append(["Exif"])
-	self.stepsTreeModel.append(["Tags"])
-	self.stepsTreeModel.append(["Persons"])
-	self.stepsTreeModel.append(["Objects"])
-	self.stepsTreeModel.append(["Places"])
-	self.stepsTreeModel.append(["Positions"])
-    
-	
-	
+	for item in ["General Information","Name","Date","Category","Exif","Tags","Persons","Objects","Places","Positions"]:
+		self.stepsTreeModel.append([item])
 
+	self.availTreeColumn = gtk.TreeViewColumn("Available", gtk.CellRendererText(), text=0)
+	self.availTree.append_column(self.availTreeColumn)
+	self.availTreeModel = gtk.ListStore(str)
+	self.availTree.set_model(self.availTreeModel)
+
+
+    def onInputSelectPosition(self, widget, column, view):
+	    self.entryUI.set_current_page(column[0])
+	    
     def onInputNextButton(self, widget):
 	    self.entryUI.next_page()
 

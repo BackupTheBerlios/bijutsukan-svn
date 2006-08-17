@@ -53,7 +53,9 @@ class singleInputDialog:
 	    
     def onInputNextButton(self, widget):
 	    self.entryUI.next_page()
-
+	    cpage = self.entryUI.get_current_page()
+	    self.stepsTree.get_selection().select_path((cpage))
+	    
     def onInputPrevButton(self, widget):
 	    self.entryUI.prev_page()
         

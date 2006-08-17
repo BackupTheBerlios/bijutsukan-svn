@@ -15,7 +15,7 @@ class singleInputDialog:
 	self.getWidgets()
 
 	self.path = bildPath
-	self.creatBild()
+	self.createBild()
 	self.createGUI()
 	self.initVars()
     
@@ -120,7 +120,7 @@ class singleInputDialog:
 	    self.placesList=[]
 	    self.positionsList=[]
 
-    def creatBild(self):
+    def createBild(self):
 	if os.path.exists(self.path):
 		self.bild = backend.Bild(Path=self.path)
 		# TODO: do something with exifs

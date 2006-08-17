@@ -6,6 +6,7 @@ class Bild(object):
                Path="",
                URI="",
                Name="",
+               Date="",
                Description="",
                Exif={},
                Category="",
@@ -22,6 +23,7 @@ class Bild(object):
     self.Attributes=pbackend.attrDict
 
     self.Attributes["name"]=Name
+    self.Attributes["date"]=Date
     self.Attributes["description"]=Description
     self.Attributes["exif"]=Exif
     self.Attributes["persons"]=Category

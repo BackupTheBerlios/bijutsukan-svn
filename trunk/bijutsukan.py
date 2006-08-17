@@ -17,7 +17,7 @@ class Bijutsukan:
 		
         def onAddImage(self, widget):
             dlg = singleInputDialog("/home/daddel9/foo.jpg")
-            result, foo = dlg.run()
+            result = dlg.run()
 
 
 
@@ -37,11 +37,15 @@ class singleInputDialog:
 		"onInputPrevButton":self.onInputPrevButton,
 		"onInputSelectPosition":self.onInputSelectPosition,
 		"onTagsButton":self.onTagsButton,
-		"onTagsDelete":self.onTagsDelete,
 		"onPersonsButton":self.onPersonsButton,
 		"onObjectsButton":self.onObjectsButton,
 		"onPlacesButton":self.onPlacesButton,
-		"onPositionsButton":self.onPositionsButton
+		"onPositionsButton":self.onPositionsButton,
+		"onTagsDel":self.onTagsDelete,
+		"onPersonsDel":self.onPersonsDelete,
+		"onObjectsDel":self.onObjectsDelete,
+		"onPositionsDel":self.onPositionsDelete,
+		"onPlacesDel":self.onPlacesDelete
 		})
 
 
@@ -49,6 +53,27 @@ class singleInputDialog:
 	    selection = self.tagsSelected.get_selection()
 	    selected = selection.get_selected()
 	    self.tagsSelectedModel.remove(selected[1])
+
+    def onPersonsDelete(self, widget):
+	    selection = self.personsSelected.get_selection()
+	    selected = selection.get_selected()
+	    self.personsSelectedModel.remove(selected[1])
+
+    def onObjectsDelete(self, widget):
+	    selection = self.objectsSelected.get_selection()
+	    selected = selection.get_selected()
+	    self.objectsSelectedModel.remove(selected[1])
+
+    def onPlacesDelete(self, widget):
+	    selection = self.placesSelected.get_selection()
+	    selected = selection.get_selected()
+	    self.placesSelectedModel.remove(selected[1])
+
+    def onPositionsDelete(self, widget):
+	    selection = self.positionsSelected.get_selection()
+	    selected = selection.get_selected()
+	    self.positionsSelectedModel.remove(selected[1])
+
 
 
     def onPositionsButton(self, widget):
@@ -144,12 +169,12 @@ class singleInputDialog:
     def run(self):
 	result = self.dlg.run()
 	self.bild.Attributes["name"] = self.nameEntry.get_text()
-	self.bild.Attributes["date"] = str(self.dateCalender.get_date())
+	self.bild.Attributes["date"] = str(self.dateCalendar.get_date())
 	self.bild.Attributes["category"] = self.categoryInput.get_active_text()
 	self.bild.Attributes["tags"] = self.tagsList
 	self.bild.Attributes["persons"] = self.personsList
 	self.bild.Attributes["objects"] = self.objectsList
-	self.bild.Attributes["positions"] = self.posistionsList
+	self.bild.Attributes["positions"] = self.positionsList
 	self.bild.Attributes["places"] = self.placesList
 	
         self.dlg.destroy()

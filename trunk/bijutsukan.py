@@ -17,11 +17,13 @@ class Bijutsukan:
 			})
 		
         def onAddImage(self, widget):
-		
-		dlg = frontend.singleInputDialog("/home/daddel9/foo.jpsdg")
-		bild, result = dlg.run()
-		print bild
-		print bild.Attributes
+		fdlg = frontend.singleFileChooser()
+		fname, fresult = fdlg.run()
+		if fresult == -5:
+			cdlg = frontend.singleInputDialog(fname)
+			bild, cresult = cdlg.run()
+			if cresult == -5:
+				pass #TODO: store in backend
 
         
             

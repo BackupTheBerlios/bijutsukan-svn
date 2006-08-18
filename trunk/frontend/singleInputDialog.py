@@ -5,6 +5,8 @@ import gtk.glade
 import os.path
 import frontend
 import backend
+import tempfile
+import Image
 
 gladefile = "glade/bijutsukan.glade"
 
@@ -126,9 +128,20 @@ class singleInputDialog:
 		# TODO: do something with exifs
 	else:
 		print "BIIG ERROR!"
+    def createThumb(self):
+        self.tn = tempfile.mktemp(".jpg")
+        img = Image.open(self.path)
+        img = img.copy()
+        img.thumbnail((360,360))
+        img.save(self.tn)
+        del img
+    
 
     def createGUI(self):
 	self.entryUI.set_current_page(0)
+
+        self.createThumb()
+        self.image.set_from_file(self.tn)
 
 	self.stepsTreeColumn = gtk.TreeViewColumn("Steps", gtk.CellRendererText(), text=0)
 	self.stepsTree.append_column(self.stepsTreeColumn)
@@ -205,3 +218,5 @@ class singleInputDialog:
         self.positionsSelected = self.wTree.get_widget("positionsSelected")
         self.placesEntry = self.wTree.get_widget("placesEntry")
         self.placesSelected = self.wTree.get_widget("placesSelected")
+        self.image = self.wTree.get_widget("image")
+        

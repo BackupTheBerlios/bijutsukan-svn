@@ -40,3 +40,6 @@ class Bild(object):
   def __genBildID__(self):
     self.File = open(self.Path).read()
     self.BildID = md5.new( self.File ).hexdigest()
+
+  def getBildBin(self):
+    return self.File

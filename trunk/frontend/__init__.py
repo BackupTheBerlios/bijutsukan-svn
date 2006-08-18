@@ -1,3 +1,4 @@
-__all__ = ["singleInputDialog"]
+__all__ = ["singleInputDialog","singleFileChooser"]
 
 from singleInputDialog import *
+from singleFileChooser import *

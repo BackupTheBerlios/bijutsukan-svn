@@ -41,8 +41,7 @@ class pBackend(object):
 
   def listAttributeValues(self,Attr):
     attrList = []
-    for bild in self.Data["Items"]:
-      print bild
+    for id, bild in self.Data["Items"].iteritems():
       try:
         attrList.append( bild.Attributes[Attr] )
       except:

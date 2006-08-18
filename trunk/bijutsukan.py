@@ -15,6 +15,7 @@ class Bijutsukan:
 			"on_mainWindow_destroy" : gtk.main_quit,
 			"onAddImage" : self.onAddImage
 			})
+		self.pBackend = backend.pBackend(os.path.abspath(os.path.expanduser("~/.bijutsuStorage")))
 		
         def onAddImage(self, widget):
 		fdlg = frontend.singleFileChooser()
@@ -23,7 +24,8 @@ class Bijutsukan:
 			cdlg = frontend.singleInputDialog(fname)
 			bild, cresult = cdlg.run()
 			if cresult == -5:
-				pass #TODO: store in backend
+				self.pBackend.storeBild(bild)
+				
 	
 
         

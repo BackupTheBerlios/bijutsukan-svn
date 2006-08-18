@@ -208,7 +208,6 @@ class singleInputDialog:
         self.exifTreeModel = gtk.ListStore(str,str)
         self.exifTree.set_model(self.exifTreeModel)
         for k,v in self.exif.iteritems():
-            print "appending %s"%[k,v]
             self.exifTreeModel.append([k,v])
         
 

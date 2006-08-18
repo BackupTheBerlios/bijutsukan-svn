@@ -148,21 +148,29 @@ class singleInputDialog:
         data=backend.EXIF.process_file(open(self.path,"r"))
         # what do we need? - this is dumb work
         self.exif = {}
-        self.exif["ExposureBiasValue"] = str(data["EXIF ExposureBiasValue"])
-        self.exif["ExposureProgram"] = str(data["EXIF ExposureProgram"])
-        self.exif["ExposureTime"] = str(data["EXIF ExposureTime"])
-        self.exif["FNumber"] = str(data["EXIF FNumber"])
-        self.exif["FocalLength"] = str(data["EXIF FocalLength"])
-        self.exif["MeteringMode"] = str(data["EXIF MeteringMode"])
-        self.exif["SceneType"] = str(data["EXIF SceneType"])
-        self.exif["DateTime"] = str(data["Image DateTime"])
-        self.exif["Make"] = str(data["Image Make"])
-        self.exif["Model"] = str(data["Image Model"])
-        self.exif["BracketingMode"] = str(data["MakerNote BracketingMode"])
-        self.exif["FocusMode"] = str(data["MakerNote FocusMode"])
-        self.exif["ISOSetting"] = str(data["MakerNote ISOSetting"])
-        self.exif["Quality"] = str(data["MakerNote Quality"])
-        self.exif["ToneCompensation"] = str(data["MakerNote ToneCompensation"])
+        values = {
+            "ExposureBiasValue":"EXIF ExposureBiasValue",
+            "ExposureProgram":"EXIF ExposureProgram",
+            "ExposureTime":"EXIF ExposureTime",
+            "FNumber":"EXIF FNumber",
+            "FocalLength":"EXIF FocalLength",
+            "MeteringMode":"EXIF MeteringMode",
+            "SceneType":"EXIF SceneType",
+            "DateTime":"Image DateTime",
+            "Make":"Image Make",
+            "Model":"Image Model",
+            "BracketingMode":"MakerNote BracketingMode",
+            "FocusMode":"MakerNote FocusMode",
+            "ISOSetting":"MakerNote ISOSetting",
+            "Quality":"MakerNote Quality",
+            "ToneCompensation":"MakerNote ToneCompensation"
+            }
+        for k, v in values.iteritems():
+            try:
+                self.exif[k]=str(data[v])
+            except:
+                pass
+        print self.exif
         
     
 

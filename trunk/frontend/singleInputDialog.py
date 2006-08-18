@@ -124,8 +124,9 @@ class singleInputDialog:
 
     def createBild(self):
 	if os.path.exists(self.path):
-		self.bild = backend.Bild(Path=self.path)
-		# TODO: do something with exifs
+            self.parseExif()
+            self.bild = backend.Bild(Path=self.path)
+            # TODO: do something with exifs
 	else:
 		print "BIIG ERROR!"
     def createThumb(self):
@@ -135,6 +136,27 @@ class singleInputDialog:
         img.thumbnail((360,360))
         img.save(self.tn)
         del img
+
+    def parseExif(self):
+        data=backend.EXIF.process_file(open(self.path,"r"))
+        # what we need - this is dumb work
+        self.exif = {}
+        self.exif["ExposureBiasValue"] = str(data["EXIF ExposureBiasValue"])
+        self.exif["ExposureProgram"] = str(data["EXIF ExposureProgram"])
+        self.exif["ExposureTime"] = str(data["EXIF ExposureTime"])
+        self.exif["FNumber"] = str(data["EXIF FNumber"])
+        self.exif["FocalLength"] = str(data["EXIF FocalLength"])
+        self.exif["MeteringMode"] = str(data["EXIF MeteringMode"])
+        self.exif["SceneType"] = str(data["EXIF SceneType"])
+        self.exif["DateTime"] = str(data["Image DateTime"])
+        self.exif["Make"] = str(data["Image Make"])
+        self.exif["Model"] = str(data["Image Model"])
+        self.exif["BracketingMode"] = str(data["MakerNote BracketingMode"])
+        self.exif["FocusMode"] = str(data["MakerNote FocusMode"])
+        self.exif["ISOSetting"] = str(data["MakerNote ISOSetting"])
+        self.exif["Quality"] = str(data["MakerNote Quality"])
+        self.exif["ToneCompensation"] = str(data["MakerNote ToneCompensation"])
+        
     
 
     def createGUI(self):
@@ -193,6 +215,7 @@ class singleInputDialog:
 	self.bild.Attributes["objects"] = self.objectsList
 	self.bild.Attributes["positions"] = self.positionsList
 	self.bild.Attributes["places"] = self.placesList
+        self.bild.Attributes["exif"] = self.exif
 	
         self.dlg.destroy()
 

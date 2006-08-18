@@ -1,4 +1,6 @@
-__all__ = ['bild', 'pbackend']
+__all__ = ['bild', 'pbackend', 'EXIF']
 
 from bild import *
 from backend import *
+
+import EXIF

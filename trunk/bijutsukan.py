@@ -24,6 +24,7 @@ class Bijutsukan:
 			bild, cresult = cdlg.run()
 			if cresult == -5:
 				pass #TODO: store in backend
+	
 
         
             

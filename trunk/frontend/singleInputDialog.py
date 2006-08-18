@@ -126,7 +126,6 @@ class singleInputDialog:
 	if os.path.exists(self.path):
             self.parseExif()
             self.bild = backend.Bild(Path=self.path)
-            # TODO: do something with exifs
 	else:
 		print "BIIG ERROR!"
     def createThumb(self):
@@ -139,7 +138,7 @@ class singleInputDialog:
 
     def parseExif(self):
         data=backend.EXIF.process_file(open(self.path,"r"))
-        # what we need - this is dumb work
+        # what do we need? - this is dumb work
         self.exif = {}
         self.exif["ExposureBiasValue"] = str(data["EXIF ExposureBiasValue"])
         self.exif["ExposureProgram"] = str(data["EXIF ExposureProgram"])

@@ -1,0 +1,22 @@
+Backend:
+	pBackend:
+		- test listAttributeValues
+		- implement all match types
+		- implement dict matching
+	Bild:
+
+
+Frontend:
+	bijutsukan.glade:
+		
+	singleInputDialog:
+		- make date string nice or use some date object
+		- make use of availTree
+		- make exifs editable(?)
+
+Program:
+	bijutsukan:
+		- make a good menu
+		- toolbar?
+		- use the TreeView
+		- rethink ui

@@ -46,7 +46,7 @@ class pBackend(object):
       try:
         attrList.append( bild.Attributes[Attr] )
       except:
-        pass # TODO: add some errorhandling
+        pass
     return attrList
 
   def getBild(self,BildID):
@@ -117,7 +117,8 @@ class pBackend(object):
 
             # if its a dict
             if type(v) == type({}):
-              pass #TODO: are there dicts in Bild.Attributes? if so implement listBilder matching for it
+              pass #TODO: implement dicts
+            
             # if its a string
             if type(v) == type(""):
               # all match types

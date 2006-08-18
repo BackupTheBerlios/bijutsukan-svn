@@ -202,6 +202,17 @@ class singleInputDialog:
 	self.positionsSelectedModel = gtk.ListStore(str)
 	self.positionsSelected.set_model(self.positionsSelectedModel)
 
+        self.exifTreeColumn0 = gtk.TreeViewColumn("EXIF Name", gtk.CellRendererText(), text=0)
+        self.exifTreeColumn1 = gtk.TreeViewColumn("Value", gtk.CellRendererText(), text=1)
+        self.exifTree.append_column(self.exifTreeColumn0)
+        self.exifTree.append_column(self.exifTreeColumn1)
+        self.exifTreeModel = gtk.ListStore(str,str)
+        self.exifTree.set_model(self.exifTreeModel)
+        for k,v in self.exif.iteritems():
+            print "appending %s"%[k,v]
+            self.exifTreeModel.append([k,v])
+        
+
     
         
     def run(self):
@@ -241,5 +252,6 @@ class singleInputDialog:
         self.positionsSelected = self.wTree.get_widget("positionsSelected")
         self.placesEntry = self.wTree.get_widget("placesEntry")
         self.placesSelected = self.wTree.get_widget("placesSelected")
+        self.exifTree = self.wTree.get_widget("exifTree")
         self.image = self.wTree.get_widget("image")
         

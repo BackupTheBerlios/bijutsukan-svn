@@ -37,85 +37,93 @@ class singleInputDialog:
 		"onPlacesDel":self.onPlacesDelete,
 		"onNameButton":self.onNameButton,
 		"onDateButton":self.onDateButton,
-		"onCategoryButton":self.onCategoryButton
+		"onCategoryButton":self.onCategoryButton,
+                "onDescriptionButton":self.onDescriptionButton
 		})
 
+    def onDescriptionButton(self, widget):
+        self.Description = self.descriptionBuffer.get_text(
+            self.descriptionBuffer.get_start_iter(),
+            self.descriptionBuffer.get_end_iter()
+            )
+        self.descriptionLabel.set_text("Description:\n%s"%self.Description)
 
     def onNameButton(self, widget):
-	    self.Name = self.nameEntry.get_text()
-	    self.nameLabel.set_text("Name: %s"%self.Name)
-	    
+        self.Name = self.nameEntry.get_text()
+        self.nameLabel.set_text("Name: %s"%self.Name)
+        
     def onDateButton(self, widget):
-	    self.Date = str(self.dateCalendar.get_date()) #TODO: make nice
-	    self.dateLabel.set_text("Date: %s"%self.Date)
+        self.Date = str(self.dateCalendar.get_date()) #TODO: make nice
+        self.dateLabel.set_text("Date: %s"%self.Date)
 	    
     def onCategoryButton(self, widget):
-	    self.Category=self.categoryInput.get_active_text()
-	    self.categoryLabel.set_text("Category: %s"%self.Category)
+        self.Category=self.categoryInput.get_active_text()
+        self.categoryLabel.set_text("Category: %s"%self.Category)
 	    
     def onTagsDelete(self, widget):
-	    selection = self.tagsSelected.get_selection()
-	    selected = selection.get_selected()
-	    self.tagsSelectedModel.remove(selected[1])
-
+        selection = self.tagsSelected.get_selection()
+        selected = selection.get_selected()
+        self.tagsSelectedModel.remove(selected[1])
+        
     def onPersonsDelete(self, widget):
-	    selection = self.personsSelected.get_selection()
-	    selected = selection.get_selected()
-	    self.personsSelectedModel.remove(selected[1])
+        selection = self.personsSelected.get_selection()
+        selected = selection.get_selected()
+        self.personsSelectedModel.remove(selected[1])
 
     def onObjectsDelete(self, widget):
-	    selection = self.objectsSelected.get_selection()
-	    selected = selection.get_selected()
-	    self.objectsSelectedModel.remove(selected[1])
+        selection = self.objectsSelected.get_selection()
+        selected = selection.get_selected()
+        self.objectsSelectedModel.remove(selected[1])
 
     def onPlacesDelete(self, widget):
-	    selection = self.placesSelected.get_selection()
-	    selected = selection.get_selected()
-	    self.placesSelectedModel.remove(selected[1])
+        selection = self.placesSelected.get_selection()
+        selected = selection.get_selected()
+        self.placesSelectedModel.remove(selected[1])
 
     def onPositionsDelete(self, widget):
-	    selection = self.positionsSelected.get_selection()
-	    selected = selection.get_selected()
-	    self.positionsSelectedModel.remove(selected[1])
+        selection = self.positionsSelected.get_selection()
+        selected = selection.get_selected()
+        self.positionsSelectedModel.remove(selected[1])
 
     def onPositionsButton(self, widget):
-	    self.positionsSelectedModel.append([self.positionsEntry.get_text()])
-	    self.positionsList.append(self.positionsEntry.get_text())
+        self.positionsSelectedModel.append([self.positionsEntry.get_text()])
+        self.positionsList.append(self.positionsEntry.get_text())
 
 
     def onPlacesButton(self, widget):
-	    self.placesSelectedModel.append([self.placesEntry.get_text()])
-	    self.placesList.append(self.placesEntry.get_text())
+        self.placesSelectedModel.append([self.placesEntry.get_text()])
+        self.placesList.append(self.placesEntry.get_text())
 
     def onObjectsButton(self, widget):
-	    self.objectsSelectedModel.append([self.objectsEntry.get_text()])
-	    self.objectsList.append(self.objectsEntry.get_text())
+        self.objectsSelectedModel.append([self.objectsEntry.get_text()])
+        self.objectsList.append(self.objectsEntry.get_text())
 
     def onPersonsButton(self, widget):
-	    self.personsSelectedModel.append([self.personsEntry.get_text()])
-	    self.personsList.append(self.personsEntry.get_text())
+        self.personsSelectedModel.append([self.personsEntry.get_text()])
+        self.personsList.append(self.personsEntry.get_text())
 
     def onTagsButton(self, widget):
-	    self.tagsSelectedModel.append([self.tagsEntry.get_text()])
-	    self.tagsList.append(self.tagsEntry.get_text())
+        self.tagsSelectedModel.append([self.tagsEntry.get_text()])
+        self.tagsList.append(self.tagsEntry.get_text())
 
     def onInputSelectPosition(self, widget, column, view):
-	    self.entryUI.set_current_page(column[0])
+        self.entryUI.set_current_page(column[0])
 	    
     def onInputNextButton(self, widget):
-	    self.entryUI.next_page()
-	    cpage = self.entryUI.get_current_page()
-	    self.stepsTree.get_selection().select_path((cpage))
+        self.entryUI.next_page()
+        cpage = self.entryUI.get_current_page()
+        self.stepsTree.get_selection().select_path((cpage))
 	    
     def onInputPrevButton(self, widget):
-	    self.entryUI.prev_page()
-	    cpage = self.entryUI.get_current_page()
-	    self.stepsTree.get_selection().select_path((cpage))
+        self.entryUI.prev_page()
+        cpage = self.entryUI.get_current_page()
+        self.stepsTree.get_selection().select_path((cpage))
 
     def initVars(self):
 	    self.Name=""
 	    self.Date=""
 	    self.Category=""
+            self.Description=""
 	    self.tagsList=[]
 	    self.personsList=[]
 	    self.objectsList=[]
@@ -209,6 +217,9 @@ class singleInputDialog:
         self.exifTree.set_model(self.exifTreeModel)
         for k,v in self.exif.iteritems():
             self.exifTreeModel.append([k,v])
+
+        self.descriptionBuffer = gtk.TextBuffer()
+        self.descriptionEntry.set_buffer(self.descriptionBuffer)
         
 
     
@@ -251,5 +262,8 @@ class singleInputDialog:
         self.placesEntry = self.wTree.get_widget("placesEntry")
         self.placesSelected = self.wTree.get_widget("placesSelected")
         self.exifTree = self.wTree.get_widget("exifTree")
+        self.descriptionEntry = self.wTree.get_widget("descriptionEntry")
+        self.descriptionButton = self.wTree.get_widget("descriptionButton")
+        self.descriptionLabel = self.wTree.get_widget("descriptionLabel")
         self.image = self.wTree.get_widget("image")
         

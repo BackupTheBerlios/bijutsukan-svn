@@ -2,7 +2,7 @@
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
 <!-- Generated with glade3
 	Version: 3.0.0
-	Date: Fri Aug 18 16:03:04 2006
+	Date: Fri Aug 18 16:03:55 2006
 	User: daddel9
 	Host: cheza
 -->
@@ -720,6 +720,7 @@
                     <property name="width_request">453</property>
                     <property name="height_request">143</property>
                     <property name="visible">True</property>
+                    <property name="show_tabs">False</property>
                     <signal name="focus_tab" handler="onPositionsDel"/>
                     <child>
                       <widget class="GtkTable" id="table6">

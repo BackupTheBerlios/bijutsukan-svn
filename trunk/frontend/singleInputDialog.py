@@ -162,7 +162,6 @@ class singleInputDialog:
                 self.exif[k]=str(data[v])
             except:
                 pass
-        print self.exif
         
     
 

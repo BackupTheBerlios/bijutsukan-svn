@@ -8,7 +8,6 @@ gladefile = "glade/bijutsukan.glade"
 class showFileDialog:
   def __init__(self, bild):
     self.Bild = bild
-    print self.Bild.Attributes
     self.wTree = gtk.glade.XML(gladefile, "showFileDialog")
     self.dlg = self.wTree.get_widget("showFileDialog")
     self.getWidgets()

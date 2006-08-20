@@ -36,6 +36,7 @@ class Bijutsukan:
 			bild, cresult = cdlg.run()
 			if cresult == -5:
 				self.Backend.storeBild(bild)
+		self.getBilds()
 
 	def createGUI(self):
 		self.mainViewColumns = [

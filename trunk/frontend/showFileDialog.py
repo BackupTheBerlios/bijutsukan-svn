@@ -18,7 +18,7 @@ class showFileDialog:
   def createGUI(self):
     tmp = gtk.gdk.PixbufLoader()
     tmp.write(self.Bild.getBildBin())
-    pbuf = tmp.get_pixbuf().scale_simple(400, 400,gtk.gdk.INTERP_NEAREST)
+    pbuf = tmp.get_pixbuf().scale_simple(250, 250,gtk.gdk.INTERP_NEAREST)
     self.image.set_from_pixbuf(pbuf)
 
     self.name.set_text("Name: %s"%self.Bild.Attributes["name"])

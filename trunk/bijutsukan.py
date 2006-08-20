@@ -11,7 +11,7 @@ gladefile = "glade/bijutsukan.glade"
                 
 class Bijutsukan:
 	def __init__(self):
-		self.wTree = gtk.glade.XML(gladefile, "mainWindow") 
+		self.wTree = gtk.glade.XML(gladefile, "mainWindow")
 		self.wTree.signal_autoconnect({
 			"onMainQuit":gtk.main_quit,
 			"on_mainWindow_destroy" : gtk.main_quit,
@@ -26,6 +26,7 @@ class Bijutsukan:
 	def onMainRowClick(self, widget, column, view):
 		print "showing dialog for"
 		print self.bilds[column[0]].Attributes["name"]
+		self.showFileDialog = frontend.showFileDialog(self.bilds[column[0]])
 		
         def onAddImage(self, widget):
 		fdlg = frontend.singleFileChooser()

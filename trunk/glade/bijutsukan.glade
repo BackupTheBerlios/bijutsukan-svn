@@ -2,7 +2,7 @@
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
 <!-- Generated with glade3
 	Version: 3.0.0
-	Date: Sun Aug 20 13:12:43 2006
+	Date: Sun Aug 20 22:07:04 2006
 	User: daddel9
 	Host: cheza
 -->
@@ -1630,7 +1630,7 @@
   </widget>
   <widget class="GtkWindow" id="showFileDialog">
     <property name="default_width">800</property>
-    <property name="default_height">600</property>
+    <property name="default_height">650</property>
     <child>
       <widget class="GtkTable" id="table24">
         <property name="visible">True</property>
@@ -1723,6 +1723,7 @@ Oo?</property>
             <child>
               <widget class="GtkTreeView" id="positions">
                 <property name="visible">True</property>
+                <property name="headers_visible">False</property>
               </widget>
               <packing>
                 <property name="top_attach">1</property>
@@ -1796,6 +1797,7 @@ Oo?</property>
             <child>
               <widget class="GtkTreeView" id="tags">
                 <property name="visible">True</property>
+                <property name="headers_visible">False</property>
               </widget>
               <packing>
                 <property name="top_attach">1</property>
@@ -1827,6 +1829,7 @@ Oo?</property>
             <child>
               <widget class="GtkTreeView" id="persons">
                 <property name="visible">True</property>
+                <property name="headers_visible">False</property>
               </widget>
               <packing>
                 <property name="top_attach">1</property>
@@ -1849,6 +1852,7 @@ Oo?</property>
             <child>
               <widget class="GtkTreeView" id="objects">
                 <property name="visible">True</property>
+                <property name="headers_visible">False</property>
               </widget>
               <packing>
                 <property name="top_attach">1</property>
@@ -1892,6 +1896,7 @@ Oo?</property>
             <child>
               <widget class="GtkTreeView" id="places">
                 <property name="visible">True</property>
+                <property name="headers_visible">False</property>
               </widget>
               <packing>
                 <property name="top_attach">1</property>

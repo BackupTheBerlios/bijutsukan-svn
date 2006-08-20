@@ -16,7 +16,8 @@ class Bijutsukan:
 			"onMainQuit":gtk.main_quit,
 			"on_mainWindow_destroy" : gtk.main_quit,
 			"onAddImage" : self.onAddImage,
-			"onMainRowClick":self.onMainRowClick
+			"onMainRowClick":self.onMainRowClick,
+			"onMainDelete":self.onMainDelete
 			})
 		self.Backend = backend.pBackend(os.path.abspath(os.path.expanduser("~/.bijutsuStorage")))
 		self.getWidgets()
@@ -24,9 +25,14 @@ class Bijutsukan:
 		self.getBilds()
 
 	def onMainRowClick(self, widget, column, view):
-		print "showing dialog for"
-		print self.bilds[column[0]].Attributes["name"]
 		self.showFileDialog = frontend.showFileDialog(self.bilds[column[0]])
+	
+	def onMainDelete(self, widget):
+		selection = self.mainView.get_selection()
+		selected = selection.get_selected_rows()[1][0][0]
+		self.Backend.delBild(self.bilds[selected].BildID)
+		self.getBilds()
+		
 		
         def onAddImage(self, widget):
 		fdlg = frontend.singleFileChooser()

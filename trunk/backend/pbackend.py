@@ -74,7 +74,7 @@ class pBackend(object):
 
   def delBild(self,BildID):
     self.Data["Items"].__delitem__(BildID)
-    self.__safe__()
+    self.__save__()
 
   # Match like {Attr : [(Val, matchType),...], ...}
   def listBilder(self,Match):

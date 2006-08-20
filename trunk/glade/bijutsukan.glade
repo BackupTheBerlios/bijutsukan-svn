@@ -2,7 +2,7 @@
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
 <!-- Generated with glade3
 	Version: 3.0.0
-	Date: Sun Aug 20 22:07:04 2006
+	Date: Sun Aug 20 22:49:10 2006
 	User: daddel9
 	Host: cheza
 -->
@@ -731,16 +731,17 @@
                         <property name="n_rows">2</property>
                         <property name="n_columns">2</property>
                         <child>
-                          <widget class="GtkTextView" id="descriptionEntry">
+                          <widget class="GtkScrolledWindow" id="scrolledwindow11">
                             <property name="visible">True</property>
-                            <property name="wrap_mode">GTK_WRAP_CHAR</property>
-                            <property name="text" translatable="yes">
-</property>
+                            <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                            <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                            <child>
+                              <widget class="GtkTextView" id="descriptionEntry">
+                                <property name="visible">True</property>
+                                <property name="wrap_mode">GTK_WRAP_CHAR</property>
+                              </widget>
+                            </child>
                           </widget>
-                          <packing>
-                            <property name="x_options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
-                            <property name="y_options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
-                          </packing>
                         </child>
                         <child>
                           <widget class="GtkButton" id="descriptionButton">
@@ -1629,19 +1630,64 @@
     </child>
   </widget>
   <widget class="GtkWindow" id="showFileDialog">
-    <property name="default_width">800</property>
-    <property name="default_height">650</property>
+    <property name="default_width">1000</property>
+    <property name="default_height">760</property>
     <child>
       <widget class="GtkTable" id="table24">
         <property name="visible">True</property>
         <property name="n_rows">5</property>
         <property name="n_columns">7</property>
         <child>
-          <widget class="GtkLabel" id="label4">
+          <widget class="GtkVSeparator" id="vseparator1">
             <property name="visible">True</property>
-            <property name="label" translatable="yes">in the future here
-will be some buttons
-Oo?</property>
+          </widget>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="right_attach">2</property>
+            <property name="top_attach">2</property>
+            <property name="bottom_attach">3</property>
+            <property name="x_options">GTK_SHRINK | GTK_FILL</property>
+            <property name="y_options">GTK_SHRINK | GTK_FILL</property>
+            <property name="x_padding">7</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkTable" id="table26">
+            <property name="visible">True</property>
+            <property name="n_rows">2</property>
+            <property name="n_columns">1</property>
+            <child>
+              <widget class="GtkLabel" id="category">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Category: ...</property>
+              </widget>
+              <packing>
+                <property name="top_attach">1</property>
+                <property name="bottom_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="name">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Name: ...</property>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="top_attach">2</property>
+            <property name="bottom_attach">3</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkScrolledWindow" id="scrolledwindow9">
+            <property name="visible">True</property>
+            <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+            <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+            <child>
+              <widget class="GtkTreeView" id="exif">
+                <property name="visible">True</property>
+              </widget>
+            </child>
           </widget>
           <packing>
             <property name="left_attach">6</property>
@@ -1659,6 +1705,9 @@ Oo?</property>
             <property name="right_attach">6</property>
             <property name="top_attach">4</property>
             <property name="bottom_attach">5</property>
+            <property name="x_options">GTK_SHRINK | GTK_FILL</property>
+            <property name="y_options">GTK_SHRINK | GTK_FILL</property>
+            <property name="x_padding">7</property>
           </packing>
         </child>
         <child>
@@ -1670,6 +1719,9 @@ Oo?</property>
             <property name="right_attach">4</property>
             <property name="top_attach">4</property>
             <property name="bottom_attach">5</property>
+            <property name="x_options">GTK_SHRINK | GTK_FILL</property>
+            <property name="y_options">GTK_SHRINK | GTK_FILL</property>
+            <property name="x_padding">7</property>
           </packing>
         </child>
         <child>
@@ -1681,6 +1733,8 @@ Oo?</property>
             <property name="right_attach">2</property>
             <property name="top_attach">4</property>
             <property name="bottom_attach">5</property>
+            <property name="x_options">GTK_SHRINK | GTK_FILL</property>
+            <property name="y_options">GTK_SHRINK | GTK_FILL</property>
           </packing>
         </child>
         <child>
@@ -1689,8 +1743,15 @@ Oo?</property>
             <property name="n_rows">2</property>
             <property name="n_columns">1</property>
             <child>
-              <widget class="GtkTextView" id="description">
+              <widget class="GtkScrolledWindow" id="scrolledwindow7">
                 <property name="visible">True</property>
+                <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <child>
+                  <widget class="GtkTextView" id="description">
+                    <property name="visible">True</property>
+                  </widget>
+                </child>
               </widget>
               <packing>
                 <property name="top_attach">1</property>
@@ -1721,9 +1782,16 @@ Oo?</property>
             <property name="n_rows">2</property>
             <property name="n_columns">1</property>
             <child>
-              <widget class="GtkTreeView" id="positions">
+              <widget class="GtkScrolledWindow" id="scrolledwindow8">
                 <property name="visible">True</property>
-                <property name="headers_visible">False</property>
+                <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <child>
+                  <widget class="GtkTreeView" id="positions">
+                    <property name="visible">True</property>
+                    <property name="headers_visible">False</property>
+                  </widget>
+                </child>
               </widget>
               <packing>
                 <property name="top_attach">1</property>
@@ -1756,6 +1824,8 @@ Oo?</property>
             <property name="right_attach">6</property>
             <property name="top_attach">2</property>
             <property name="bottom_attach">3</property>
+            <property name="x_options">GTK_SHRINK | GTK_FILL</property>
+            <property name="y_options">GTK_SHRINK | GTK_FILL</property>
           </packing>
         </child>
         <child>
@@ -1767,17 +1837,8 @@ Oo?</property>
             <property name="right_attach">4</property>
             <property name="top_attach">2</property>
             <property name="bottom_attach">3</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="GtkVSeparator" id="vseparator1">
-            <property name="visible">True</property>
-          </widget>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="right_attach">2</property>
-            <property name="top_attach">2</property>
-            <property name="bottom_attach">3</property>
+            <property name="x_options">GTK_SHRINK | GTK_FILL</property>
+            <property name="y_options">GTK_SHRINK | GTK_FILL</property>
           </packing>
         </child>
         <child>
@@ -1786,22 +1847,29 @@ Oo?</property>
             <property name="n_rows">2</property>
             <property name="n_columns">1</property>
             <child>
+              <widget class="GtkScrolledWindow" id="scrolledwindow3">
+                <property name="visible">True</property>
+                <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <child>
+                  <widget class="GtkTreeView" id="tags">
+                    <property name="visible">True</property>
+                    <property name="headers_visible">False</property>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="top_attach">1</property>
+                <property name="bottom_attach">2</property>
+              </packing>
+            </child>
+            <child>
               <widget class="GtkLabel" id="label11">
                 <property name="visible">True</property>
                 <property name="label" translatable="yes">Tags:</property>
               </widget>
               <packing>
                 <property name="y_options">GTK_FILL</property>
-              </packing>
-            </child>
-            <child>
-              <widget class="GtkTreeView" id="tags">
-                <property name="visible">True</property>
-                <property name="headers_visible">False</property>
-              </widget>
-              <packing>
-                <property name="top_attach">1</property>
-                <property name="bottom_attach">2</property>
               </packing>
             </child>
           </widget>
@@ -1818,22 +1886,29 @@ Oo?</property>
             <property name="n_rows">2</property>
             <property name="n_columns">1</property>
             <child>
+              <widget class="GtkScrolledWindow" id="scrolledwindow4">
+                <property name="visible">True</property>
+                <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <child>
+                  <widget class="GtkTreeView" id="persons">
+                    <property name="visible">True</property>
+                    <property name="headers_visible">False</property>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="top_attach">1</property>
+                <property name="bottom_attach">2</property>
+              </packing>
+            </child>
+            <child>
               <widget class="GtkLabel" id="label12">
                 <property name="visible">True</property>
                 <property name="label" translatable="yes">Persons:</property>
               </widget>
               <packing>
                 <property name="y_options">GTK_FILL</property>
-              </packing>
-            </child>
-            <child>
-              <widget class="GtkTreeView" id="persons">
-                <property name="visible">True</property>
-                <property name="headers_visible">False</property>
-              </widget>
-              <packing>
-                <property name="top_attach">1</property>
-                <property name="bottom_attach">2</property>
               </packing>
             </child>
           </widget>
@@ -1850,9 +1925,16 @@ Oo?</property>
             <property name="n_rows">2</property>
             <property name="n_columns">1</property>
             <child>
-              <widget class="GtkTreeView" id="objects">
+              <widget class="GtkScrolledWindow" id="scrolledwindow5">
                 <property name="visible">True</property>
-                <property name="headers_visible">False</property>
+                <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <child>
+                  <widget class="GtkTreeView" id="objects">
+                    <property name="visible">True</property>
+                    <property name="headers_visible">False</property>
+                  </widget>
+                </child>
               </widget>
               <packing>
                 <property name="top_attach">1</property>
@@ -1894,9 +1976,16 @@ Oo?</property>
             <property name="n_rows">2</property>
             <property name="n_columns">1</property>
             <child>
-              <widget class="GtkTreeView" id="places">
+              <widget class="GtkScrolledWindow" id="scrolledwindow6">
                 <property name="visible">True</property>
-                <property name="headers_visible">False</property>
+                <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                <child>
+                  <widget class="GtkTreeView" id="places">
+                    <property name="visible">True</property>
+                    <property name="headers_visible">False</property>
+                  </widget>
+                </child>
               </widget>
               <packing>
                 <property name="top_attach">1</property>
@@ -1916,47 +2005,6 @@ Oo?</property>
           <packing>
             <property name="top_attach">4</property>
             <property name="bottom_attach">5</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="GtkTable" id="table26">
-            <property name="visible">True</property>
-            <property name="n_rows">3</property>
-            <property name="n_columns">1</property>
-            <child>
-              <widget class="GtkLabel" id="category">
-                <property name="visible">True</property>
-                <property name="label" translatable="yes">Category:</property>
-              </widget>
-              <packing>
-                <property name="top_attach">2</property>
-                <property name="bottom_attach">3</property>
-              </packing>
-            </child>
-            <child>
-              <widget class="GtkLabel" id="name">
-                <property name="visible">True</property>
-                <property name="label" translatable="yes">Name: </property>
-              </widget>
-              <packing>
-                <property name="top_attach">1</property>
-                <property name="bottom_attach">2</property>
-                <property name="x_options">GTK_FILL</property>
-              </packing>
-            </child>
-            <child>
-              <widget class="GtkLabel" id="filename">
-                <property name="visible">True</property>
-                <property name="label" translatable="yes">Filename: </property>
-              </widget>
-              <packing>
-                <property name="x_options">GTK_FILL</property>
-              </packing>
-            </child>
-          </widget>
-          <packing>
-            <property name="top_attach">2</property>
-            <property name="bottom_attach">3</property>
           </packing>
         </child>
         <child>

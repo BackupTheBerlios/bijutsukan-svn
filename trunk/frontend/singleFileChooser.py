@@ -14,6 +14,9 @@ class singleFileChooser:
         self.dlg = self.wTree.get_widget("singleFileChooser")
         
     def run(self):
+      ffilter = gtk.FileFilter()
+      ffilter.add_mime_type("image/*")
+      self.dlg.set_filter(ffilter)
       result = self.dlg.run()
       fname = self.dlg.get_filename()
       self.dlg.destroy()

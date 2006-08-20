@@ -38,8 +38,17 @@ class Bild(object):
       self.__genBildID__()
 
   def __genBildID__(self):
-    self.File = open(self.Path).read()
-    self.BildID = md5.new( self.File ).hexdigest()
+    self.File = open(self.Path)
+    self.BildID = md5.new( self.File.read() ).hexdigest()
+    self.File.close()
+    del self.File
+    self.File=""
 
   def getBildBin(self):
-    return self.File
+    self.File = open(self.Path)
+    tmp=self.File.read()
+    self.File.close()
+    del self.File
+    self.File=""
+    return tmp
+  

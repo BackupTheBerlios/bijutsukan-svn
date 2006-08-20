@@ -2,7 +2,7 @@
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
 <!-- Generated with glade3
 	Version: 3.0.0
-	Date: Fri Aug 18 16:03:55 2006
+	Date: Sun Aug 20 02:32:08 2006
 	User: daddel9
 	Host: cheza
 -->
@@ -30,9 +30,15 @@
                     <child>
                       <widget class="GtkMenuItem" id="menuitem1">
                         <property name="visible">True</property>
-                        <property name="label">Test</property>
-                        <property name="use_underline">True</property>
+                        <property name="label">Add single Image</property>
                         <signal name="activate" handler="onAddImage"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkMenuItem" id="menuitem2">
+                        <property name="visible">True</property>
+                        <property name="label">Quit</property>
+                        <signal name="activate" handler="onMainQuit"/>
                       </widget>
                     </child>
                   </widget>
@@ -45,19 +51,9 @@
           </packing>
         </child>
         <child>
-          <widget class="GtkScrolledWindow" id="scrolledwindow1">
+          <widget class="GtkTreeView" id="mainView">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="shadow_type">GTK_SHADOW_IN</property>
-            <child>
-              <widget class="GtkTreeView" id="treeview1">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="has_focus">True</property>
-                <property name="fixed_height_mode">True</property>
-                <signal name="button_press_event" handler="on_treeview1_button_press_event"/>
-              </widget>
-            </child>
+            <signal name="row_activated" handler="onMainRowClick"/>
           </widget>
           <packing>
             <property name="position">1</property>

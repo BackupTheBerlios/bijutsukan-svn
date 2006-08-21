@@ -29,14 +29,14 @@ class showFileDialog:
     self.tagsModel = gtk.ListStore(str)
     self.tags.set_model(self.tagsModel)
     for item in self.Bild.Attributes["tags"]:
-      self.tagsModel.append(item)
+      self.tagsModel.append([item])
 
     self.personsColumn = gtk.TreeViewColumn("", gtk.CellRendererText(), text=0)
     self.persons.append_column(self.personsColumn)
     self.personsModel = gtk.ListStore(str)
     self.persons.set_model(self.personsModel)
     for item in self.Bild.Attributes["persons"]:
-      self.personsModel.append(item)
+      self.personsModel.append([item])
     
 
     self.objectsColumn = gtk.TreeViewColumn("", gtk.CellRendererText(), text=0)
@@ -44,21 +44,21 @@ class showFileDialog:
     self.objectsModel = gtk.ListStore(str)
     self.objects.set_model(self.objectsModel)
     for item in self.Bild.Attributes["objects"]:
-      self.objectsModel.append(item)
+      self.objectsModel.append([item])
 
     self.placesColumn = gtk.TreeViewColumn("", gtk.CellRendererText(), text=0)
     self.places.append_column(self.placesColumn)
     self.placesModel = gtk.ListStore(str)
     self.places.set_model(self.placesModel)
     for item in self.Bild.Attributes["places"]:
-      self.placesModel.append(item)
+      self.placesModel.append([item])
 
     self.positionsColumn = gtk.TreeViewColumn("", gtk.CellRendererText(), text=0)
     self.positions.append_column(self.positionsColumn)
     self.positionsModel = gtk.ListStore(str)
     self.positions.set_model(self.positionsModel)
     for item in self.Bild.Attributes["positions"]:
-      self.positionsModel.append(item)
+      self.positionsModel.append([item])
 
     self.exifColumns = [
       gtk.TreeViewColumn("Exif Name", gtk.CellRendererText(), text=0),

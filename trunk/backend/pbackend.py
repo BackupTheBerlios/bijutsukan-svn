@@ -118,9 +118,8 @@ class pBackend(object):
                   #TODO: implement match types
 
 
-# an idiom
+"""
 ########################
-
 # *kw and **kw is better..
     def isString(v,res,typ,item,results):
         if typ == "exact":
@@ -142,7 +141,6 @@ class pBackend(object):
 
 
     { types.StringType : isString, types.IntType : isInt, types.DictType : isDict, types.ListType : isList}[v](v,res,typ,item,results)
-
 #######################
 """
             # if its a dict
@@ -165,4 +163,3 @@ class pBackend(object):
           else:
             pass #next item
     return results  
-    """

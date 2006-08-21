@@ -1,5 +1,6 @@
 import pickle
 import bild
+import types
 
 attrList = [
   "name",
@@ -74,7 +75,7 @@ class pBackend(object):
 
   def delBild(self,BildID):
     self.Data["Items"].__delitem__(BildID)
-    self.__save__()
+    self.__safe__()
 
   # Match like {Attr : [(Val, matchType),...], ...}
   def listBilder(self,Match):
@@ -92,7 +93,8 @@ class pBackend(object):
             typ = val[1] #match type
             res = val[0] #match 
             
-            if type(v)==type(""):
+            #if type(v)==type(""):
+            if type(v) == types.StringType:
               if typ=="exact":
                 if v == val:
                   results.append(item)
@@ -101,7 +103,8 @@ class pBackend(object):
                   results.append(item)
 
             # if its a list loop it
-            if type(v)==type([]):
+            #if type(v)==type([]):
+            if type(v) == types.ListType:
               for item in v:
                 # looping all results for this match
                 for item in val:
@@ -114,12 +117,42 @@ class pBackend(object):
                       results.append(item)
                   #TODO: implement match types
 
+
+# an idiom
+########################
+
+# *kw and **kw is better..
+    def isString(v,res,typ,item,results):
+        if typ == "exact":
+            if res == v:
+                results.append(item)
+        if typ == "contains":
+            if v in res:
+                results.append(item)
+        return results
+
+    def isInt(v,res,typ,item,results):
+        pass
+      
+    def isDict(v,res,typ,item,results):
+        pass
+
+    def isList(v,res,typ,item,results):
+        pass
+
+
+    { types.StringType : isString, types.IntType : isInt, types.DictType : isDict, types.ListType : isList}[v](v,res,typ,item,results)
+
+#######################
+"""
             # if its a dict
-            if type(v) == type({}):
+            #if type(v) == type({}):
+            if type(v) == types.DictType:
               pass #TODO: implement dicts
             
             # if its a string
-            if type(v) == type(""):
+            #if type(v) == type(""):
+            if type(v) == types.StringType:
               # all match types
               if typ == "exact":
                 if res == v:
@@ -131,5 +164,5 @@ class pBackend(object):
                       
           else:
             pass #next item
-      
     return results  
+    """

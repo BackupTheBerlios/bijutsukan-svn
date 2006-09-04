@@ -72,9 +72,11 @@ class Bijutsukan:
 		for k, item in self.Backend.listBilder({}).iteritems():
 			self.bilds.append(item)
 			tmp = gtk.gdk.PixbufLoader()
-			tmp.write(item.getBildBin())
-			pbuf = tmp.get_pixbuf().scale_simple(100, 100 ,gtk.gdk.INTERP_NEAREST)
-			self.mainViewModel.append([
+			bildbin = item.getBildBin()
+			if bildbin != None:
+			   tmp.write(bildbin)
+			   pbuf = tmp.get_pixbuf().scale_simple(100, 100 ,gtk.gdk.INTERP_NEAREST)
+			   self.mainViewModel.append([
 				pbuf,
 				item.Attributes["name"],
 				item.Attributes["category"]

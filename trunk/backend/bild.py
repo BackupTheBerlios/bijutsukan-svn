@@ -45,10 +45,17 @@ class Bild(object):
     self.File=""
 
   def getBildBin(self):
-    self.File = open(self.Path)
-    tmp=self.File.read()
-    self.File.close()
-    del self.File
-    self.File=""
-    return tmp
+    try:
+      self.File = open(self.Path)
+      tmp=self.File.read()
+      self.File.close()
+      del self.File
+      self.File=""
+      return tmp
+    except IOError, (errno, strerror):
+    	print "I/O error(%s): %s: %s" % (errno, self.Path, strerror)
+	return None
+    except:
+    	print "Unexpected error:", sys.exc_info()[0]
+	raise
   

@@ -1,5 +1,7 @@
 import pickle
 import bild
+from types import *
+import re
 
 attrList = [
   "name",
@@ -78,59 +80,55 @@ class pBackend(object):
     self.__save__()
 
   # Match like {Attr : [(Val, matchType),...], ...}
-  def listBilder(self,Match):
-    Bilds = self.Data["Items"]
+  def listBilder(self,match):
+    bilds = self.Data["Items"]
     results = []
-    if Match == {}:
-      return Bilds
-    for k, item in Bilds.iteritems():
-      # all match requests against all attributes
-      for attr, val in Match.iteritems():
-        for a, v in item.Attributes.iteritems():
-          # if the current bild attribute is the attribute the match wants
-          if a==attr:
-            
-            typ = val[1] #match type
-            res = val[0] #match 
-            
-            if type(v)==type(""):
-              if typ=="exact":
-                if v == val:
-                  results.append(item)
-              if typ=="contains":
-                if val in v:
-                  results.append(item)
-
-            # if its a list loop it
-            if type(v)==type([]):
-              for item in v:
-                # looping all results for this match
-                for item in val:
-                  # all match types
-                  if typ == "exact":
-                    if res == v:
-                      results.append(item)
-                  if typ == "contains":
-                    if v in res:
-                      results.append(item)
-                  #TODO: implement match types
-
-            # if its a dict
-            if type(v) == type({}):
-              pass #TODO: implement dicts
-            
-            # if its a string
-            if type(v) == type(""):
-              # all match types
-              if typ == "exact":
-                if res == v:
-                  results.append(item)
-              if typ == "contains":
-                if v in res:
-                  results.append(item)
-            #TODO: implement match types
-                      
-          else:
-            pass #next item
-      
+    if match == {}:
+      return bilds
+    # match like {a(ttr): m(atch)}
+    for a, m in match.iteritems():
+      print m
+      # bilds like {(bild)id: b(ild)}
+      for id, b in bilds:
+        # b.Attributes like {ba(bild.attribute): bav(bild attribute value)}
+        for ba, bav in b.Attributes.iteritems():
+          if ba == a:
+            # m like [v(alue), t(ype)
+            for v, t in m.iteritems():
+              # exact matching - type of value doesnt matter. == does it all
+              if t=="exact":
+                if v==bav:
+                  results.append(b)
+              elif t=="contains":
+                if type(bav) is StringType or type(bav) is ListType:
+                  if v in bav: # TODO: what happens if v is a list?
+                    results.append(b)
+                elif type(bav) is DictType:
+                  if v in bav.keys() or v in bav.values(): # TODO: what happens if v is a dict?
+                    results.append(b)
+              elif t=="regex":
+                if type(bav) is StringType:
+                  res=re.compile(v).search(bav)
+                  if res!=None:
+                    results.append(b)
+                elif type(bav) is ListType:
+                  reg=re.compile(v)
+                  for item in bav:
+                    res=reg.search(item)
+                    if res != None:
+                      results.append(b) # TODO: 2 times ... ?
+                elif type(bav) is DictType:
+                  reg=re.compile(v)
+                  for x,z in bav.iteritems():
+                    res1=reg.search(x)
+                    res2=reg.search(y)
+                    if res1 != None:
+                      results.append(b) # TODO: 2 times ... ?
+                    if res2 != None:
+                      results.append(b)
+                else:
+                  pass # cant match ...
+              else:
+                pass # wrong match type
+    #TODO remove dups!      
     return results  

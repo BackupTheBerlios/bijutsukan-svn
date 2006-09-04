@@ -6,6 +6,7 @@ import gtk.glade
 import os.path
 import backend
 import frontend
+import gobject
 
 gladefile = "glade/bijutsukan.glade"
                 
@@ -67,9 +68,10 @@ class Bijutsukan:
 		self.mainView = self.wTree.get_widget("mainView")
 
 	def getBilds(self):
-		self.mainViewModel.clear()
-		self.bilds=[]
-		for k, item in self.Backend.listBilder({}).iteritems():
+		try:
+		   self.mainViewModel.clear()
+		   self.bilds=[]
+		   for k, item in self.Backend.listBilder({}).iteritems():
 			self.bilds.append(item)
 			tmp = gtk.gdk.PixbufLoader()
 			bildbin = item.getBildBin()
@@ -80,9 +82,11 @@ class Bijutsukan:
 				pbuf,
 				item.Attributes["name"],
 				item.Attributes["category"]
-				])	
-
-        
+				])
+			tmp.close()
+		except gobject.GError, error:
+			print "gobject.GError: %s: %s" % (item.Path, error)
+			
             
 if __name__ == "__main__":
 	bijutsukan = Bijutsukan()

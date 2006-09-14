@@ -15,7 +15,7 @@ class singleFileChooser:
         
     def run(self):
       ffilter = gtk.FileFilter()
-      ffilter.add_mime_type("image/*")
+      ffilter.add_pixbuf_formats();
       self.dlg.set_filter(ffilter)
       result = self.dlg.run()
       fname = self.dlg.get_filename()
